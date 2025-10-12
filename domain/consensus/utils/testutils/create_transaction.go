@@ -1,10 +1,10 @@
 package testutils
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
 )
 
 // CreateTransaction create a transaction that spends the first output of provided transaction.

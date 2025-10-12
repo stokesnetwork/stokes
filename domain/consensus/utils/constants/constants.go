@@ -12,11 +12,18 @@ const (
 	// MaxScriptPublicKeyVersion is the current latest supported public key script version.
 	MaxScriptPublicKeyVersion uint16 = 0
 
-	// SompiPerKaspa is the number of sompi in one kaspa (1 KAS).
-	SompiPerKaspa = 100_000_000
+	// SompiPerStokes is the number of sompi in one stokes (1 STKS).
+	// STOKES: Renamed from SompiPerKaspa to reflect STOKES branding
+	SompiPerStokes = 100_000_000
+	
+	// SompiPerKaspa is kept for backward compatibility with existing code
+	SompiPerKaspa = SompiPerStokes
 
 	// MaxSompi is the maximum transaction amount allowed in sompi.
-	MaxSompi = uint64(29_000_000_000 * SompiPerKaspa)
+	// STOKES: Set to 12.6 billion STKS based on 50 STKS initial reward + 4-year halving
+	// Formula: 126,230,400 blocks/halving × 50 STKS × 2 (geometric series) = 12,623,040,000 STKS
+	// To change to 21M supply, reduce initial reward to 8.32 STKS in consensus_defaults.go
+	MaxSompi = uint64(12_623_040_000 * SompiPerStokes)
 
 	// MaxTxInSequenceNum is the maximum sequence number the sequence field
 	// of a transaction input can be.

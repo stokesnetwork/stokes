@@ -5,7 +5,7 @@
 package mempool
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/Sam-Stokes/stokes/infrastructure/logger"
 )
 
 var log = logger.RegisterSubSystem("TXMP")

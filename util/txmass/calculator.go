@@ -1,9 +1,9 @@
 package txmass
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionhelper"
 )
 
 // Calculator exposes methods to calculate the mass of a transaction

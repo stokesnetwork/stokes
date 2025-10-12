@@ -1,7 +1,7 @@
 package protocolerrors
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
+	"github.com/Sam-Stokes/stokes/domain/consensus/ruleerrors"
 	"github.com/pkg/errors"
 )
 

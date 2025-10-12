@@ -5,20 +5,20 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/kaspanet/kaspad/app/protocol/common"
+	"github.com/Sam-Stokes/stokes/app/protocol/common"
 
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/domain"
+	"github.com/Sam-Stokes/stokes/domain"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/app/protocol/flowcontext"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/Sam-Stokes/stokes/app/protocol/flowcontext"
+	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
+	"github.com/Sam-Stokes/stokes/infrastructure/config"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/connmanager"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter"
 )
 
 // Manager manages the p2p protocol

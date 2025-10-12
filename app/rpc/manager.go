@@ -1,17 +1,17 @@
 package rpc
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol"
-	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/utxoindex"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/Sam-Stokes/stokes/app/protocol"
+	"github.com/Sam-Stokes/stokes/app/rpc/rpccontext"
+	"github.com/Sam-Stokes/stokes/domain"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/Sam-Stokes/stokes/domain/utxoindex"
+	"github.com/Sam-Stokes/stokes/infrastructure/config"
+	"github.com/Sam-Stokes/stokes/infrastructure/logger"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/connmanager"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter"
 	"github.com/pkg/errors"
 )
 

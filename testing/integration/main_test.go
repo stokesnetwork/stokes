@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/Sam-Stokes/stokes/infrastructure/logger"
 	"os"
 	"testing"
 )

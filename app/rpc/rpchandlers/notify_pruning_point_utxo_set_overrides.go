@@ -1,9 +1,9 @@
 package rpchandlers
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/Sam-Stokes/stokes/app/rpc/rpccontext"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
 )
 
 // HandleNotifyPruningPointUTXOSetOverrideRequest handles the respectively named RPC command

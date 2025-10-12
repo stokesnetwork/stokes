@@ -3,7 +3,7 @@ package rpcclient
 import (
 	"strings"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/Sam-Stokes/stokes/app/appmessage"
 )
 
 // SubmitTransaction sends an RPC request respective to the function's name and returns the RPC server's response

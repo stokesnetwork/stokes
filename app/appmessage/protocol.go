@@ -16,7 +16,7 @@ const (
 	DefaultServices = SFNodeNetwork | SFNodeBloom | SFNodeCF
 )
 
-// ServiceFlag identifies services supported by a kaspa peer.
+// ServiceFlag identifies services supported by a stokes peer.
 type ServiceFlag uint64
 
 const (
@@ -89,28 +89,35 @@ func (f ServiceFlag) String() string {
 	return s
 }
 
-// KaspaNet represents which kaspa network a message belongs to.
+// KaspaNet represents which stokes network a message belongs to.
+// STOKES: Kept type name for compatibility but represents STOKES networks
 type KaspaNet uint32
 
-// Constants used to indicate the message kaspa network. They can also be
+// Constants used to indicate the message stokes network. They can also be
 // used to seek to the next message when a stream's state is unknown, but
 // this package does not provide that functionality since it's generally a
 // better idea to simply disconnect clients that are misbehaving over TCP.
+//
+// STOKES: Changed all magic bytes to prevent connection with Kaspa network
 const (
-	// Mainnet represents the main kaspa network.
-	Mainnet KaspaNet = 0x3ddcf71d
+	// Mainnet represents the main stokes network.
+	// Magic bytes: "STKS" in hex = 0x53544B53
+	Mainnet KaspaNet = 0x53544B53
 
 	// Testnet represents the test network.
-	Testnet KaspaNet = 0xddb8af8f
+	// Magic bytes: "TSTK" in hex = 0x5453544B
+	Testnet KaspaNet = 0x5453544B
 
 	// Simnet represents the simulation test network.
-	Simnet KaspaNet = 0x374dcf1c
+	// Magic bytes: "SSTK" in hex = 0x5353544B
+	Simnet KaspaNet = 0x5353544B
 
 	// Devnet represents the development test network.
-	Devnet KaspaNet = 0x732d87e1
+	// Magic bytes: "DSTK" in hex = 0x4453544B
+	Devnet KaspaNet = 0x4453544B
 )
 
-// bnStrings is a map of kaspa networks back to their constant names for
+// bnStrings is a map of stokes networks back to their constant names for
 // pretty printing.
 var bnStrings = map[KaspaNet]string{
 	Mainnet: "Mainnet",

@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/Sam-Stokes/stokes/app/appmessage"
 	"testing"
 )
 

@@ -5,18 +5,18 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
-	"github.com/kaspanet/kaspad/app/rpc/rpchandlers"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/model/testapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/domain/miningmanager"
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/Sam-Stokes/stokes/app/rpc/rpccontext"
+	"github.com/Sam-Stokes/stokes/app/rpc/rpchandlers"
+	"github.com/Sam-Stokes/stokes/domain/consensus"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/testapi"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/hashes"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/testutils"
+	"github.com/Sam-Stokes/stokes/domain/miningmanager"
+	"github.com/Sam-Stokes/stokes/infrastructure/config"
 )
 
 type fakeDomain struct {

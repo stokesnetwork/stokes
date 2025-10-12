@@ -1,20 +1,20 @@
 package protocol
 
 import (
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	"github.com/kaspanet/kaspad/app/protocol/flows/ready"
-	"github.com/kaspanet/kaspad/app/protocol/flows/v5"
+	"github.com/Sam-Stokes/stokes/app/protocol/common"
+	"github.com/Sam-Stokes/stokes/app/protocol/flows/ready"
+	"github.com/Sam-Stokes/stokes/app/protocol/flows/v5"
 	"sync"
 	"sync/atomic"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/flows/handshake"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
-	routerpkg "github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/Sam-Stokes/stokes/app/protocol/flows/handshake"
+	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
+	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/connmanager"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter"
+	routerpkg "github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

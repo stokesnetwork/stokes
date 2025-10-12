@@ -1,13 +1,13 @@
 package ready
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
+	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/Sam-Stokes/stokes/app/protocol/common"
 	"sync/atomic"
 
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	routerpkg "github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
+	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
+	routerpkg "github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

@@ -1,18 +1,18 @@
 package blockvalidator_test
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/testapi"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/testapi"
 	"reflect"
 	"runtime"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/blockheader"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/Sam-Stokes/stokes/domain/consensus"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/Sam-Stokes/stokes/domain/consensus/ruleerrors"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/blockheader"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/testutils"
+	"github.com/Sam-Stokes/stokes/util/mstime"
 	"github.com/pkg/errors"
 )
 

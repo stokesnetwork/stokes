@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/standalone"
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/Sam-Stokes/stokes/infrastructure/config"
+	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/standalone"
+	"github.com/Sam-Stokes/stokes/stability-tests/common"
+	"github.com/Sam-Stokes/stokes/util/panics"
+	"github.com/Sam-Stokes/stokes/util/profiling"
 )
 
 func main() {

@@ -2,7 +2,7 @@ package profiling
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/Sam-Stokes/stokes/infrastructure/logger"
 	"net"
 	"net/http"
 	"os"
@@ -12,7 +12,7 @@ import (
 	// Required for profiling
 	_ "net/http/pprof"
 
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/Sam-Stokes/stokes/util/panics"
 	"runtime"
 	"runtime/pprof"
 )

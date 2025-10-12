@@ -1,10 +1,10 @@
 package mergedepthmanager
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/Sam-Stokes/stokes/domain/consensus/ruleerrors"
+	"github.com/Sam-Stokes/stokes/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

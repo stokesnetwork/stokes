@@ -1,7 +1,7 @@
 package dagconfig
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
 	"time"
 )
 
@@ -47,9 +47,15 @@ const (
 	// (Higher values make pruning attacks easier by a constant, lower values make merging after a split or a spike
 	// in block take longer)
 	defaultMergeSetSizeLimit                       = defaultGHOSTDAGK * 10
-	defaultSubsidyGenesisReward                    = 1 * constants.SompiPerKaspa
-	defaultPreDeflationaryPhaseBaseSubsidy         = 500 * constants.SompiPerKaspa
-	defaultDeflationaryPhaseBaseSubsidy            = 440 * constants.SompiPerKaspa
+	
+	// STOKES: Bitcoin-style halving emission parameters
+	// Genesis block reward (first block only)
+	defaultSubsidyGenesisReward                    = 50 * constants.SompiPerStokes
+	// Initial block reward: 50 STKS (matches Bitcoin's initial reward)
+	defaultPreDeflationaryPhaseBaseSubsidy         = 50 * constants.SompiPerStokes
+	// This is unused in halving model but kept for compatibility
+	defaultDeflationaryPhaseBaseSubsidy            = 50 * constants.SompiPerStokes
+	
 	defaultCoinbasePayloadScriptPublicKeyMaxLength = 150
 	// defaultDifficultyAdjustmentWindowSize is the number of blocks in a block's past used to calculate its difficulty
 	// target.
@@ -75,13 +81,15 @@ const (
 
 	defaultPruningProofM = 1000
 
-	// defaultDeflationaryPhaseDaaScore is the DAA score after which the pre-deflationary period
-	// switches to the deflationary period. This number is calculated as follows:
-	// We define a year as 365.25 days
-	// Half a year in seconds = 365.25 / 2 * 24 * 60 * 60 = 15778800
-	// The network was down for three days shortly after launch
-	// Three days in seconds = 3 * 24 * 60 * 60 = 259200
-	defaultDeflationaryPhaseDaaScore = 15778800 - 259200
+	// STOKES: Halving interval configuration
+	// Bitcoin halves every 210,000 blocks (~4 years at 10 min/block)
+	// STOKES targets 1 block/second, so 4 years = 4 * 365.25 * 24 * 60 * 60 = 126,230,400 seconds
+	// We use DAA score (which approximates seconds) for halving intervals
+	defaultHalvingIntervalDaaScore = uint64(4 * 365.25 * 24 * 60 * 60) // ~126.23M blocks (4 years)
+	
+	// defaultDeflationaryPhaseDaaScore is kept for compatibility but unused in halving model
+	// In STOKES, halving starts immediately after genesis (no pre-deflationary phase)
+	defaultDeflationaryPhaseDaaScore = 0
 
 	defaultMergeDepth = 3600
 )

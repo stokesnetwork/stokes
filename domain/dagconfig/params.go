@@ -8,14 +8,14 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/util/network"
+	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/Sam-Stokes/stokes/util/network"
 
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/Sam-Stokes/stokes/util"
 )
 
 // These variables are the DAG proof-of-work limit parameters for each default
@@ -181,6 +181,10 @@ type Params struct {
 	// DeflationaryPhaseDaaScore is the DAA score after which the monetary policy switches
 	// to its deflationary phase
 	DeflationaryPhaseDaaScore uint64
+	
+	// STOKES: HalvingIntervalDaaScore defines the interval (in DAA score) at which
+	// the block reward halves (Bitcoin-style halving)
+	HalvingIntervalDaaScore uint64
 
 	DisallowDirectBlocksOnTopOfGenesis bool
 
@@ -209,32 +213,12 @@ func (p *Params) PruningDepth() uint64 {
 // MainnetParams defines the network parameters for the main Kaspa network.
 var MainnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kaspa-mainnet",
+	Name:        "stokes-mainnet",
 	Net:         appmessage.Mainnet,
-	RPCPort:     "16110",
-	DefaultPort: "16111",
-	DNSSeeds: []string{
-		// This DNS seeder is run by Wolfie
-		"mainnet-dnsseed.kas.pa",
-		// This DNS seeder is run by Denis Mashkevich
-		"mainnet-dnsseed-1.kaspanet.org",
-		// This DNS seeder is run by Denis Mashkevich
-		"mainnet-dnsseed-2.kaspanet.org",
-		// This DNS seeder is run by Constantine Bytensky
-		"dnsseed.cbytensky.org",
-		// This DNS seeder is run by Georges Künzli
-		"seeder1.kaspad.net",
-		// This DNS seeder is run by Georges Künzli
-		"seeder2.kaspad.net",
-		// This DNS seeder is run by Georges Künzli
-		"seeder3.kaspad.net",
-		// This DNS seeder is run by Georges Künzli
-		"seeder4.kaspad.net",
-		// This DNS seeder is run by Tim
-		"kaspadns.kaspacalc.net",
-		// This DNS seeder is run by supertypo
-		"n-mainnet.kaspa.ws",
-	},
+	RPCPort:     "17110",  // STOKES: Changed from 16110 to avoid Kaspa conflicts
+	DefaultPort: "17111",  // STOKES: Changed from 16111 to avoid Kaspa conflicts
+	// STOKES: Removed all Kaspa DNS seeds - add your own seed nodes after launch
+	DNSSeeds: []string{},
 
 	// DAG parameters
 	GenesisBlock:                    &genesisBlock,
@@ -284,6 +268,7 @@ var MainnetParams = Params{
 	CoinbasePayloadScriptPublicKeyMaxLength: defaultCoinbasePayloadScriptPublicKeyMaxLength,
 	PruningProofM:                           defaultPruningProofM,
 	DeflationaryPhaseDaaScore:               defaultDeflationaryPhaseDaaScore,
+	HalvingIntervalDaaScore:                 defaultHalvingIntervalDaaScore,
 	DisallowDirectBlocksOnTopOfGenesis:      true,
 
 	// This is technically 255, but we clamped it at 256 - block level of mainnet genesis
@@ -295,15 +280,12 @@ var MainnetParams = Params{
 // TestnetParams defines the network parameters for the test Kaspa network.
 var TestnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kaspa-testnet-10",
+	Name:        "stokes-testnet",
 	Net:         appmessage.Testnet,
-	RPCPort:     "16210",
-	DefaultPort: "16211",
-	DNSSeeds: []string{
-		"testnet-10-dnsseed.kas.pa",
-		// This DNS seeder is run by Tiram
-		"seeder1-testnet.kaspad.net",
-	},
+	RPCPort:     "17210",  // STOKES: Changed from 16210
+	DefaultPort: "17211",  // STOKES: Changed from 16211
+	// STOKES: Removed Kaspa DNS seeds
+	DNSSeeds: []string{},
 
 	// DAG parameters
 	GenesisBlock:                    &testnetGenesisBlock,
@@ -353,6 +335,7 @@ var TestnetParams = Params{
 	CoinbasePayloadScriptPublicKeyMaxLength: defaultCoinbasePayloadScriptPublicKeyMaxLength,
 	PruningProofM:                           defaultPruningProofM,
 	DeflationaryPhaseDaaScore:               defaultDeflationaryPhaseDaaScore,
+	HalvingIntervalDaaScore:                 defaultHalvingIntervalDaaScore,
 
 	MaxBlockLevel: 250,
 	MergeDepth:    defaultMergeDepth,
@@ -367,10 +350,10 @@ var TestnetParams = Params{
 // just turn into another public testnet.
 var SimnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kaspa-simnet",
+	Name:        "stokes-simnet",
 	Net:         appmessage.Simnet,
-	RPCPort:     "16510",
-	DefaultPort: "16511",
+	RPCPort:     "17510",  // STOKES: Changed from 16510
+	DefaultPort: "17511",  // STOKES: Changed from 16511
 	DNSSeeds:    []string{}, // NOTE: There must NOT be any seeds.
 
 	// DAG parameters
@@ -419,6 +402,7 @@ var SimnetParams = Params{
 	CoinbasePayloadScriptPublicKeyMaxLength: defaultCoinbasePayloadScriptPublicKeyMaxLength,
 	PruningProofM:                           defaultPruningProofM,
 	DeflationaryPhaseDaaScore:               defaultDeflationaryPhaseDaaScore,
+	HalvingIntervalDaaScore:                 defaultHalvingIntervalDaaScore,
 
 	MaxBlockLevel: 250,
 	MergeDepth:    defaultMergeDepth,
@@ -427,10 +411,10 @@ var SimnetParams = Params{
 // DevnetParams defines the network parameters for the development Kaspa network.
 var DevnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kaspa-devnet",
+	Name:        "stokes-devnet",
 	Net:         appmessage.Devnet,
-	RPCPort:     "16610",
-	DefaultPort: "16611",
+	RPCPort:     "17610",  // STOKES: Changed from 16610
+	DefaultPort: "17611",  // STOKES: Changed from 16611
 	DNSSeeds:    []string{}, // NOTE: There must NOT be any seeds.
 
 	// DAG parameters
@@ -481,6 +465,7 @@ var DevnetParams = Params{
 	CoinbasePayloadScriptPublicKeyMaxLength: defaultCoinbasePayloadScriptPublicKeyMaxLength,
 	PruningProofM:                           defaultPruningProofM,
 	DeflationaryPhaseDaaScore:               defaultDeflationaryPhaseDaaScore,
+	HalvingIntervalDaaScore:                 defaultHalvingIntervalDaaScore,
 
 	MaxBlockLevel: 250,
 	MergeDepth:    defaultMergeDepth,

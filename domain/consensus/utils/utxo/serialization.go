@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionid"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/serialization"
+	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionid"
 	"github.com/pkg/errors"
 )
 

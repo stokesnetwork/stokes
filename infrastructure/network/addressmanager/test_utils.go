@@ -4,8 +4,8 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 )
 
