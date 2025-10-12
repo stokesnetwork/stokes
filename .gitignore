@@ -15,14 +15,15 @@ kaspad.db
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# Test binary, built with `go test -c` 
 *.test
 
-# Real binaries, build with `go build .`
-kaspad
+# Real binaries, build with `go build .` 
+stokesd
 cmd/gencerts/gencerts
-cmd/kaspactl/kaspactl
-cmd/kasminer/kaspaminer
+cmd/stokesctl/stokesctl
+cmd/stokesminer/stokesminer
+cmd/stokeswallet/stokeswallet
 *.exe
 *.exe~
 
@@ -46,7 +47,6 @@ _cgo_export.*
 
 _testmain.go
 
-
 # IDE
 .idea
 .vscode
@@ -61,3 +61,6 @@ coverage.txt
 
 testdbs/
 coverage.tmp
+
+# GitHub workflows (not needed for now)
+.github/
