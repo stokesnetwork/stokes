@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/cmd/kaspaminer/templatemanager"
+	"github.com/Sam-Stokes/stokes/cmd/stokesminer/templatemanager"
 	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/pow"

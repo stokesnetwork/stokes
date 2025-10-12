@@ -3,7 +3,7 @@ package libkaspawallet
 import (
 	"fmt"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet/bip32"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/bip32"
 	"github.com/Sam-Stokes/stokes/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"

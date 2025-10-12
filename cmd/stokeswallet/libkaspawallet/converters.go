@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 
 	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/pb"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
 	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionid"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/utxo"

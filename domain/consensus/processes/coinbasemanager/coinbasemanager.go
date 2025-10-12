@@ -9,7 +9,6 @@ import (
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionhelper"
 	"github.com/Sam-Stokes/stokes/infrastructure/db/database"
 	"github.com/pkg/errors"
-	"math"
 )
 
 type coinbaseManager struct {

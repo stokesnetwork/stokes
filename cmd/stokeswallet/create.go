@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/utils"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/bip32"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/utils"
 	"github.com/pkg/errors"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/keys"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/keys"
 )
 
 func create(conf *createConfig) error {

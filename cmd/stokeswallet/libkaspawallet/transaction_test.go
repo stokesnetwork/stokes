@@ -2,12 +2,12 @@ package libkaspawallet_test
 
 import (
 	"fmt"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/serialization"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
 	"strings"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
 	"github.com/Sam-Stokes/stokes/domain/consensus"
 	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"

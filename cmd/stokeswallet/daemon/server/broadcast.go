@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/serialization"
 	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
 	"github.com/Sam-Stokes/stokes/infrastructure/network/rpcclient"

@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
 	"github.com/Sam-Stokes/stokes/util"
 )
 

@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/server"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/keys"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/server"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/keys"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
 	"github.com/pkg/errors"
 )
 

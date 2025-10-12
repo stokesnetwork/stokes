@@ -1,8 +1,8 @@
 package libkaspawallet
 
 import (
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/bip32"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/serialization"
 	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/subnetworks"

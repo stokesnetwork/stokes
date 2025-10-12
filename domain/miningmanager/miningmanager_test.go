@@ -1,7 +1,7 @@
 package miningmanager_test
 
 import (
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
 	"github.com/Sam-Stokes/stokes/domain/consensusreference"
 	"github.com/Sam-Stokes/stokes/domain/miningmanager/model"
 	"github.com/Sam-Stokes/stokes/util"

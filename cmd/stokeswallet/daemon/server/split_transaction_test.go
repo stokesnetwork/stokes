@@ -3,9 +3,9 @@ package server
 import (
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/serialization"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/keys"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/keys"
 	"github.com/Sam-Stokes/stokes/util/txmass"
 
 	"github.com/Sam-Stokes/stokes/domain/dagconfig"
@@ -15,7 +15,7 @@ import (
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/utxo"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
 	"github.com/Sam-Stokes/stokes/domain/consensus"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/testutils"
 )

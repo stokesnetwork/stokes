@@ -3,7 +3,7 @@ package serialization
 import (
 	"math"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet/serialization/protoserialization"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/serialization/protoserialization"
 	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/subnetworks"
 	"github.com/pkg/errors"

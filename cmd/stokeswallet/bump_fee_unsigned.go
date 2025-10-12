@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/client"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/server"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/client"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/server"
 )
 
 func bumpFeeUnsigned(conf *bumpFeeUnsignedConfig) error {

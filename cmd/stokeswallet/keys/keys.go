@@ -12,7 +12,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/utils"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/utils"
 
 	"github.com/Sam-Stokes/stokes/domain/dagconfig"
 	"github.com/Sam-Stokes/stokes/util"

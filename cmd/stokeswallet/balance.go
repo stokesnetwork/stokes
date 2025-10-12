@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/client"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/utils"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/client"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/utils"
 )
 
 func balance(conf *balanceConfig) error {

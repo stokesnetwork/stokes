@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet/bip32"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/bip32"
 	"github.com/Sam-Stokes/stokes/domain/dagconfig"
 	"github.com/Sam-Stokes/stokes/util"
 	"github.com/pkg/errors"

@@ -16,8 +16,8 @@ import (
 
 	"github.com/Sam-Stokes/stokes/util/profiling"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/keys"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/keys"
 	"github.com/Sam-Stokes/stokes/domain/dagconfig"
 	"github.com/Sam-Stokes/stokes/infrastructure/network/rpcclient"
 	"github.com/Sam-Stokes/stokes/infrastructure/os/signal"

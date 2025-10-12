@@ -5,7 +5,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
 	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 
 	"github.com/Sam-Stokes/stokes/app/appmessage"

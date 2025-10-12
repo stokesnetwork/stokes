@@ -4,8 +4,8 @@ import (
 	"context"
 	"github.com/pkg/errors"
 
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/kaspawallet/libkaspawallet"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
 )
 
 type balancesType struct{ available, pending uint64 }
