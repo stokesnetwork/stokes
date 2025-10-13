@@ -90,3 +90,5 @@ LOCK
 LOG
 MANIFEST-*
 version
+
+TESTING_GUIDE.md
