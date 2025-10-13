@@ -1,43 +1,121 @@
-# Contributor Covenant Code of Conduct
+# Stokes Community Code of Conduct
+
+## Our Vision
+
+Stokes is a **fair-launch cryptocurrency** built on principles of transparency, decentralization, and community collaboration. We believe in combining the best of Bitcoin's economic model with Kaspa's technological innovation to create something truly unique.
 
 ## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+We are committed to fostering an open, welcoming, and inclusive community where everyone can contribute, learn, and grow together. We pledge to make participation in the Stokes project a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-## Our Standards
+## Our Values
 
-Examples of behavior that contributes to creating a positive environment include:
+**Transparency:** We believe in open development and honest communication.
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
+**Fairness:** No premine, no ICO, no special treatment. Everyone starts equal.
 
-Examples of unacceptable behavior by participants include:
+**Innovation:** We embrace new ideas while respecting proven solutions.
 
-* The use of sexualized language or imagery and unwelcome sexual attention or advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or electronic address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a professional setting
+**Collaboration:** We build together, learn together, and succeed together.
 
-## Our Responsibilities
+**Respect:** We treat all community members with dignity and kindness.
 
-Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
+## Community Standards
 
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
+### Encouraged Behavior
+
+* **Be welcoming and inclusive** - Help newcomers feel at home
+* **Be respectful** - Value different viewpoints and experiences
+* **Be constructive** - Offer helpful feedback and accept criticism gracefully
+* **Be collaborative** - Share knowledge and work together
+* **Be patient** - Remember everyone is learning
+* **Focus on what's best** - Prioritize the community and project success
+* **Show empathy** - Understand and support fellow community members
+
+### Unacceptable Behavior
+
+* Harassment, trolling, or personal attacks of any kind
+* Sexualized language, imagery, or unwelcome advances
+* Publishing others' private information without permission
+* Spam, scams, or misleading information
+* Disruptive behavior that hinders productive discussion
+* Any conduct that could reasonably be considered inappropriate in a professional setting
+
+## Project-Specific Guidelines
+
+### For Contributors
+
+* **Test your code** - Ensure changes work before submitting
+* **Document your work** - Clear comments and documentation help everyone
+* **Follow existing patterns** - Maintain consistency with the codebase
+* **Be patient with reviews** - Maintainers are volunteers too
+* **Respect the vision** - Understand Stokes' goals before proposing major changes
+
+### For Community Members
+
+* **Help others** - Share your knowledge and experience
+* **Report issues constructively** - Provide details and steps to reproduce
+* **Respect testnet resources** - Don't spam or attack the network
+* **Give credit** - Acknowledge others' contributions
+* **Stay on topic** - Keep discussions relevant and productive
+
+## Responsibilities
+
+Project maintainers are responsible for:
+
+* Clarifying standards of acceptable behavior
+* Taking appropriate and fair corrective action
+* Removing, editing, or rejecting contributions that violate this Code of Conduct
+* Temporarily or permanently banning contributors for inappropriate behavior
+
+Maintainers have the right and responsibility to maintain a healthy, productive community environment.
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project maintainers on this [Google form][gform]. The project maintainers will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The project maintainers are obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+### Reporting
 
-Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project.
+If you experience or witness unacceptable behavior, please report it by:
+
+* Opening a confidential issue on GitHub
+* Contacting project maintainers directly
+* Using community reporting channels (Discord/Telegram when available)
+
+All reports will be reviewed and investigated promptly and fairly. We are committed to maintaining confidentiality regarding the reporter of an incident.
+
+### Consequences
+
+Violations may result in:
+
+1. **Warning** - Private warning with explanation
+2. **Temporary Ban** - Temporary removal from community spaces
+3. **Permanent Ban** - Permanent removal from the project
+
+The severity of consequences depends on the nature and frequency of violations.
+
+## Scope
+
+This Code of Conduct applies to:
+
+* All Stokes project spaces (GitHub, Discord, Telegram, etc.)
+* Public spaces when representing the Stokes project
+* Private communications related to Stokes project matters
+
+## Our Commitment
+
+We are building Stokes for the long term. This means:
+
+* **Fair launch** - No premine, no insider advantages
+* **Community-driven** - Your voice matters
+* **Transparent development** - Open processes and decisions
+* **Sustainable growth** - Quality over hype
+
+By participating in Stokes, you're joining a community that values fairness, innovation, and collaboration. Let's build something great together.
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version]
+This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org), version 1.4, and customized for the Stokes project's values and vision.
 
-[gform]: https://forms.gle/dnKXMJL7VxdUjt3x5
-[homepage]: http://contributor-covenant.org
-[version]: http://contributor-covenant.org/version/1/4/
+---
+
+**Last Updated:** October 14, 2025  
+**Version:** 1.0
