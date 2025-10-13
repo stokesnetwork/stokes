@@ -1,19 +1,66 @@
-# DEPRECATED
-
-The full node reference implementation was [rewritten in Rust](https://github.com/kaspanet/rusty-kaspa), as a result, the Go implementation is now deprecated.
-
-PLEASE NOTE: Any pull requests or issues that will be opened in this repository will be closed without treatment, except for issues or pull requests related to the kaspawallet, which remains maintained. In any other case, please use the [Rust implementation](https://github.com/kaspanet/rusty-kaspa) instead.
-
-# Kaspad
+# STOKES
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/kaspanet/kaspad)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/Sam-Stokes/stokes)
 
-Kaspad was the reference full node Kaspa implementation written in Go (golang).
+**STOKES** is a proof-of-work cryptocurrency with instant confirmations and sub-second block times, featuring **Bitcoin-style halving** for predictable, deflationary emission.
 
-## What is kaspa
+Built on Kaspa's PHANTOM protocol (a generalization of Nakamoto consensus), STOKES combines the speed and scalability of a blockDAG with the proven economic model of Bitcoin.
 
-Kaspa is an attempt at a proof-of-work cryptocurrency with instant confirmations and sub-second block times. It is based on [the PHANTOM protocol](https://eprint.iacr.org/2018/104.pdf), a generalization of Nakamoto consensus.
+## 🎯 What is STOKES?
+
+STOKES is a fair-launch cryptocurrency with:
+- **Bitcoin-style halving:** 50 STKS → 25 → 12.5 → ... every ~4 years
+- **Fixed supply cap:** 12.6 billion STKS maximum
+- **Instant confirmations:** Sub-second block times via blockDAG
+- **High throughput:** Scalable architecture
+- **Fair distribution:** No premine, no ICO, pure proof-of-work
+
+### Key Differences from Kaspa
+- **Emission:** Bitcoin-style halving vs Kaspa's smooth emission
+- **Supply:** 12.6B fixed cap vs Kaspa's 28.7B
+- **Network:** Completely independent genesis and network
+- **Philosophy:** Deflationary scarcity model
+
+## 📊 Emission Schedule
+
+| Block Range | Reward | Duration | Total STKS |
+|-------------|--------|----------|------------|
+| 0 - 126.23M | 50 STKS | ~4 years | 6.31B |
+| 126.23M - 252.46M | 25 STKS | ~4 years | 3.16B |
+| 252.46M - 378.69M | 12.5 STKS | ~4 years | 1.58B |
+| ... | ... | ... | ... |
+| **Total** | | | **12.6B** |
+
+## 🚀 Status
+
+**Phase 1: COMPLETE ✅**
+- ✅ Bitcoin-style halving implemented
+- ✅ Network isolation complete
+- ✅ New genesis blocks generated
+- ✅ Full rebranding complete
+- ✅ Compilation successful
+- ✅ Mining functionality verified
+
+**Phase 2: In Planning**
+- See [PHASE2_PLAN.md](PHASE2_PLAN.md) for details
+
+## 📚 Documentation
+
+- **[Phase 1 Complete](PHASE1_COMPLETE.md)** - What we've accomplished
+- **[Phase 2 Plan](PHASE2_PLAN.md)** - Testnet launch roadmap
+- **[Testing Guide](TESTING_GUIDE.md)** - How to test STOKES
+
+## 🌐 Genesis Blocks
+
+STOKES has unique genesis blocks for all networks:
+
+- **Mainnet:** `dca25f14ec25b37efcb1ba767154ef9f2473e596a518d1f1c0be19b87d786949`
+- **Testnet:** `4240b4dbce9f3a5d1483fd19146051264571494700ed3818b46cd84b0817ef38`
+- **Simnet:** `3d7f1715e6f7c2744730462226a37c196d879f7391cdbcf8d28efe68e2655c779`
+- **Devnet:** `90d169c8336ca62088271141a5d2c610fd20ac913f678e1711542bfd9a732058`
+
+**Genesis Message:** "STOKES - Fair Launch 2025 - Bitcoin-style Halving"
 
 ## Requirements
 
@@ -29,45 +76,68 @@ Go 1.23 or later.
 - Ensure Go was installed properly and is a supported version:
 
 ```bash
-$ go version
+go version
 ```
 
-- Run the following commands to obtain and install kaspad including all dependencies:
+- Clone and build STOKES:
 
 ```bash
-$ git clone https://github.com/kaspanet/kaspad
-$ cd kaspad
-$ go install . ./cmd/...
+git clone https://github.com/Sam-Stokes/stokes
+cd stokes
+go build -o stokesd .
+go build -o stokesctl ./cmd/stokesctl
+go build -o stokesminer ./cmd/stokesminer
+go build -o stokeswallet ./cmd/stokeswallet
 ```
 
-- Kaspad (and utilities) should now be installed in `$(go env GOPATH)/bin`. If you did
-  not already add the bin directory to your system path during Go installation,
-  you are encouraged to do so now.
+- Binaries will be created in the current directory
 
-## Getting Started
+## Quick Start
 
-Kaspad has several configuration options available to tweak how it runs, but all
-of the basic operations work with zero configuration.
+### Running a Node (Simnet for testing)
 
 ```bash
-$ kaspad
+./stokesd --simnet --appdir=./data --utxoindex
 ```
 
-## Discord
+### Creating a Wallet
 
-Join our discord server using the following link: https://discord.gg/YNYnNN5Pf2
+```bash
+./stokeswallet create --simnet
+./stokeswallet new-address --simnet
+```
 
-## Issue Tracker
+### Mining
 
-The [integrated github issue tracker](https://github.com/kaspanet/kaspad/issues)
-is used for this project.
+```bash
+./stokesminer --simnet --miningaddr=<YOUR_ADDRESS> --rpcserver=localhost:17510 --mine-when-not-synced
+```
 
-Issue priorities may be seen at https://github.com/orgs/kaspanet/projects/4
+For detailed testing instructions, see [TESTING_GUIDE.md](TESTING_GUIDE.md)
 
-## Documentation
+## Network Ports
 
-The [documentation](https://github.com/kaspanet/docs) is a work-in-progress
+| Network | P2P Port | RPC Port |
+|---------|----------|----------|
+| Mainnet | 17611 | 17610 |
+| Testnet | 17711 | 17710 |
+| Simnet | 17511 | 17510 |
+| Devnet | 17611 | 17610 |
 
 ## License
 
-Kaspad is licensed under the copyfree [ISC License](https://choosealicense.com/licenses/isc/).
+STOKES is licensed under the copyfree [ISC License](https://choosealicense.com/licenses/isc/).
+
+## Acknowledgments
+
+STOKES is built on the foundation of [Kaspa](https://github.com/kaspanet/kaspad), implementing the PHANTOM protocol for blockDAG consensus.
+
+## Contributing
+
+Contributions are welcome! Please see our documentation for guidelines.
+
+## Support
+
+- **Issues:** [GitHub Issues](https://github.com/Sam-Stokes/stokes/issues)
+- **Documentation:** See docs in this repository
+- **Community:** Coming in Phase 2

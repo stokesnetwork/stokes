@@ -40,24 +40,24 @@ const (
 	Bech32PrefixUnknown Bech32Prefix = iota
 
 	// Prefix for the main network.
-	Bech32PrefixKaspa
+	Bech32PrefixStokes
 
 	// Prefix for the dev network.
-	Bech32PrefixKaspaDev
+	Bech32PrefixStokesDev
 
 	// Prefix for the test network.
-	Bech32PrefixKaspaTest
+	Bech32PrefixStokesTest
 
 	// Prefix for the simulation network.
-	Bech32PrefixKaspaSim
+	Bech32PrefixStokesSim
 )
 
 // Map from strings to Bech32 address prefix constants for parsing purposes.
 var stringsToBech32Prefixes = map[string]Bech32Prefix{
-	"kaspa":     Bech32PrefixKaspa,
-	"kaspadev":  Bech32PrefixKaspaDev,
-	"kaspatest": Bech32PrefixKaspaTest,
-	"kaspasim":  Bech32PrefixKaspaSim,
+	"stokes":     Bech32PrefixStokes,
+	"stokesdev":  Bech32PrefixStokesDev,
+	"stokestest": Bech32PrefixStokesTest,
+	"stokessim":  Bech32PrefixStokesSim,
 }
 
 // ParsePrefix attempts to parse a Bech32 address prefix.

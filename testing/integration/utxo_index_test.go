@@ -6,7 +6,6 @@ import (
 
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/utxo"
 
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/Sam-Stokes/stokes/app/appmessage"
 	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
@@ -14,6 +13,7 @@ import (
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionid"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
 	"github.com/Sam-Stokes/stokes/util"
+	"github.com/kaspanet/go-secp256k1"
 )
 
 func TestUTXOIndex(t *testing.T) {
@@ -184,7 +184,7 @@ func buildTransactionForUTXOIndexTest(t *testing.T, entry *appmessage.UTXOsByAdd
 	txIns := make([]*appmessage.TxIn, 1)
 	txIns[0] = appmessage.NewTxIn(appmessage.NewOutpoint(transactionID, entry.Outpoint.Index), []byte{}, 0, 1)
 
-	payeeAddress, err := util.DecodeAddress(miningAddress1, util.Bech32PrefixKaspaSim)
+	payeeAddress, err := util.DecodeAddress(miningAddress1, util.Bech32PrefixStokesSim)
 	if err != nil {
 		t.Fatalf("Error decoding payeeAddress: %+v", err)
 	}

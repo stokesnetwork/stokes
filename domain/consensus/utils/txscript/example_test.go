@@ -7,6 +7,7 @@ package txscript_test
 import (
 	"encoding/hex"
 	"fmt"
+
 	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
@@ -23,7 +24,7 @@ func ExamplePayToAddrScript() {
 	// the address type. It is also required for the upcoming call to
 	// PayToAddrScript.
 	addressStr := "kaspa:qqj9fg59mptxkr9j0y53j5mwurcmda5mtza9n6v9pm9uj8h0wgk6uma5pvumr"
-	address, err := util.DecodeAddress(addressStr, util.Bech32PrefixKaspa)
+	address, err := util.DecodeAddress(addressStr, util.Bech32PrefixStokes)
 	if err != nil {
 		fmt.Println(err)
 		return

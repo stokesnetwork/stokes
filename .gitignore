@@ -19,11 +19,17 @@ kaspad.db
 *.test
 
 # Real binaries, build with `go build .` 
+stokes
 stokesd
+stokesctl
+stokesminer
+stokeswallet
+gengenesis
 cmd/gencerts/gencerts
 cmd/stokesctl/stokesctl
 cmd/stokesminer/stokesminer
 cmd/stokeswallet/stokeswallet
+cmd/gengenesis/gengenesis
 *.exe
 *.exe~
 
@@ -64,3 +70,23 @@ coverage.tmp
 
 # GitHub workflows (not needed for now)
 .github/
+
+# Test data directories (simnet, devnet, testnet data)
+simnet-data/
+simnet-data1/
+simnet-data2/
+node1-data/
+node2-data/
+test-data/
+devnet-data/
+testnet-data/
+*-data/
+
+# Database files
+*.ldb
+*.bak
+CURRENT
+LOCK
+LOG
+MANIFEST-*
+version

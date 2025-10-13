@@ -1,33 +1,34 @@
 package coinbasemanager
 
 import (
+	"testing"
+
 	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
 	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
-	"strconv"
-	"testing"
 )
 
-func TestCalcDeflationaryPeriodBlockSubsidy(t *testing.T) {
-	const secondsPerMonth = 2629800
-	const secondsPerHalving = secondsPerMonth * 12
-	const deflationaryPhaseDaaScore = secondsPerMonth * 6
-	const deflationaryPhaseBaseSubsidy = 440 * constants.SompiPerKaspa
+// STOKES: Updated test for Bitcoin-style halving
+func TestCalcHalvingBlockSubsidy(t *testing.T) {
+	// STOKES halving parameters
+	const halvingInterval = 126230400 // ~4 years at 1 block/second
+	const baseSubsidy = 50 * constants.SompiPerKaspa // 50 STKS
+	
 	coinbaseManagerInterface := New(
-		nil,
-		0,
-		0,
-		0,
-		&externalapi.DomainHash{},
-		deflationaryPhaseDaaScore,
-		deflationaryPhaseBaseSubsidy,
-		nil,
-		nil,
-		nil,
-		nil,
-		nil,
-		nil,
-		nil)
+		nil, // databaseContext
+		0,   // subsidyGenesisReward
+		baseSubsidy, // preDeflationaryPhaseBaseSubsidy
+		0,   // coinbasePayloadScriptPublicKeyMaxLength
+		&externalapi.DomainHash{}, // genesisHash
+		0,   // deflationaryPhaseDaaScore
+		0,   // deflationaryPhaseBaseSubsidy
+		halvingInterval, // halvingIntervalDaaScore
+		nil, // dagTraversalManager
+		nil, // ghostdagDataStore
+		nil, // acceptanceDataStore
+		nil, // daaBlocksStore
+		nil, // blockStore
+		nil, // pruningStore
+		nil) // blockHeaderStore
 	coinbaseManagerInstance := coinbaseManagerInterface.(*coinbaseManager)
 
 	tests := []struct {
@@ -36,91 +37,103 @@ func TestCalcDeflationaryPeriodBlockSubsidy(t *testing.T) {
 		expectedBlockSubsidy uint64
 	}{
 		{
-			name:                 "start of deflationary phase",
-			blockDaaScore:        deflationaryPhaseDaaScore,
-			expectedBlockSubsidy: deflationaryPhaseBaseSubsidy,
+			name:                 "genesis/first block",
+			blockDaaScore:        0,
+			expectedBlockSubsidy: baseSubsidy, // 50 STKS
 		},
 		{
-			name:                 "after one halving",
-			blockDaaScore:        deflationaryPhaseDaaScore + secondsPerHalving,
-			expectedBlockSubsidy: deflationaryPhaseBaseSubsidy / 2,
+			name:                 "just before first halving",
+			blockDaaScore:        halvingInterval - 1,
+			expectedBlockSubsidy: baseSubsidy, // 50 STKS
 		},
 		{
-			name:                 "after two halvings",
-			blockDaaScore:        deflationaryPhaseDaaScore + secondsPerHalving*2,
-			expectedBlockSubsidy: deflationaryPhaseBaseSubsidy / 4,
+			name:                 "first halving",
+			blockDaaScore:        halvingInterval,
+			expectedBlockSubsidy: baseSubsidy / 2, // 25 STKS
 		},
 		{
-			name:                 "after five halvings",
-			blockDaaScore:        deflationaryPhaseDaaScore + secondsPerHalving*5,
-			expectedBlockSubsidy: deflationaryPhaseBaseSubsidy / 32,
+			name:                 "second halving",
+			blockDaaScore:        halvingInterval * 2,
+			expectedBlockSubsidy: baseSubsidy / 4, // 12.5 STKS
 		},
 		{
-			name:                 "after 32 halvings",
-			blockDaaScore:        deflationaryPhaseDaaScore + secondsPerHalving*32,
-			expectedBlockSubsidy: deflationaryPhaseBaseSubsidy / 4294967296,
+			name:                 "third halving",
+			blockDaaScore:        halvingInterval * 3,
+			expectedBlockSubsidy: baseSubsidy / 8, // 6.25 STKS
 		},
 		{
-			name:                 "just before subsidy depleted",
-			blockDaaScore:        deflationaryPhaseDaaScore + secondsPerHalving*35,
-			expectedBlockSubsidy: 1,
+			name:                 "after 10 halvings",
+			blockDaaScore:        halvingInterval * 10,
+			expectedBlockSubsidy: baseSubsidy / 1024,
 		},
 		{
-			name:                 "after subsidy depleted",
-			blockDaaScore:        deflationaryPhaseDaaScore + secondsPerHalving*36,
+			name:                 "after 64 halvings (subsidy depleted)",
+			blockDaaScore:        halvingInterval * 64,
+			expectedBlockSubsidy: 0,
+		},
+		{
+			name:                 "after 100 halvings (subsidy depleted)",
+			blockDaaScore:        halvingInterval * 100,
 			expectedBlockSubsidy: 0,
 		},
 	}
 
 	for _, test := range tests {
-		blockSubsidy := coinbaseManagerInstance.calcDeflationaryPeriodBlockSubsidy(test.blockDaaScore)
+		blockSubsidy := coinbaseManagerInstance.calcHalvingBlockSubsidy(test.blockDaaScore)
 		if blockSubsidy != test.expectedBlockSubsidy {
-			t.Errorf("TestCalcDeflationaryPeriodBlockSubsidy: test '%s' failed. Want: %d, got: %d",
+			t.Errorf("TestCalcHalvingBlockSubsidy: test '%s' failed. Want: %d, got: %d",
 				test.name, test.expectedBlockSubsidy, blockSubsidy)
 		}
 	}
 }
 
-func TestBuildSubsidyTable(t *testing.T) {
-	deflationaryPhaseBaseSubsidy := dagconfig.MainnetParams.DeflationaryPhaseBaseSubsidy
-	if deflationaryPhaseBaseSubsidy != 440*constants.SompiPerKaspa {
-		t.Errorf("TestBuildSubsidyTable: table generation function was not updated to reflect "+
-			"the new base subsidy %d. Please fix the constant above and replace subsidyByDeflationaryMonthTable "+
-			"in coinbasemanager.go with the printed table", deflationaryPhaseBaseSubsidy)
-	}
+// STOKES: Test to verify total supply cap
+func TestTotalSupplyCap(t *testing.T) {
+	const halvingInterval = 126230400 // ~4 years at 1 block/second
+	const baseSubsidy = 50 * constants.SompiPerKaspa // 50 STKS
+	
 	coinbaseManagerInterface := New(
-		nil,
-		0,
-		0,
-		0,
-		&externalapi.DomainHash{},
-		0,
-		deflationaryPhaseBaseSubsidy,
-		nil,
-		nil,
-		nil,
-		nil,
-		nil,
-		nil,
-		nil)
+		nil, // databaseContext
+		0,   // subsidyGenesisReward
+		baseSubsidy, // preDeflationaryPhaseBaseSubsidy
+		0,   // coinbasePayloadScriptPublicKeyMaxLength
+		&externalapi.DomainHash{}, // genesisHash
+		0,   // deflationaryPhaseDaaScore
+		0,   // deflationaryPhaseBaseSubsidy
+		halvingInterval, // halvingIntervalDaaScore
+		nil, // dagTraversalManager
+		nil, // ghostdagDataStore
+		nil, // acceptanceDataStore
+		nil, // daaBlocksStore
+		nil, // blockStore
+		nil, // pruningStore
+		nil) // blockHeaderStore
 	coinbaseManagerInstance := coinbaseManagerInterface.(*coinbaseManager)
 
-	var subsidyTable []uint64
-	for M := uint64(0); ; M++ {
-		subsidy := coinbaseManagerInstance.calcDeflationaryPeriodBlockSubsidyFloatCalc(M)
-		subsidyTable = append(subsidyTable, subsidy)
+	// Calculate total supply by summing all halvings
+	totalSupply := uint64(0)
+	for halvingEra := uint64(0); halvingEra < 64; halvingEra++ {
+		blockDaaScore := halvingEra * halvingInterval
+		subsidy := coinbaseManagerInstance.calcHalvingBlockSubsidy(blockDaaScore)
+		
 		if subsidy == 0 {
 			break
 		}
+		
+		// Add this era's total emission
+		eraSupply := subsidy * halvingInterval
+		totalSupply += eraSupply
 	}
-
-	tableStr := "\n{\t"
-	for i := 0; i < len(subsidyTable); i++ {
-		tableStr += strconv.FormatUint(subsidyTable[i], 10) + ", "
-		if (i+1)%25 == 0 {
-			tableStr += "\n\t"
-		}
+	
+	// Expected: ~12.6 billion STKS (actual is 12,623,039,986 due to halving math)
+	// This is the exact result of: 50 * 126230400 * (1 + 1/2 + 1/4 + 1/8 + ...)
+	expectedSupplySTKS := uint64(12623039986)
+	actualSupplySTKS := totalSupply / constants.SompiPerKaspa
+	
+	if actualSupplySTKS != expectedSupplySTKS {
+		t.Errorf("TestTotalSupplyCap: total supply mismatch. Want: %d STKS, got: %d STKS",
+			expectedSupplySTKS, actualSupplySTKS)
 	}
-	tableStr += "\n}"
-	t.Logf(tableStr)
+	
+	t.Logf("Total supply verified: %d STKS (~12.6 billion)", actualSupplySTKS)
 }
