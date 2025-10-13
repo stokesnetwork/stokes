@@ -17,12 +17,17 @@ func HandleSubmitBlock(context *rpccontext.Context, _ *router.Router, request ap
 
 	var err error
 	isSynced := false
-	// The node is considered synced if it has peers and consensus state is nearly synced
-	if context.ProtocolManager.Context().HasPeers() {
+	// STOKES: Allow solo mining - if no peers, consider synced for solo testnet
+	hasPeers := context.ProtocolManager.Context().HasPeers()
+	if hasPeers {
+		// The node is considered synced if it has peers and consensus state is nearly synced
 		isSynced, err = context.ProtocolManager.Context().IsNearlySynced()
 		if err != nil {
 			return nil, err
 		}
+	} else {
+		// No peers = solo mode, always accept blocks
+		isSynced = true
 	}
 
 	if !context.Config.AllowSubmitBlockWhenNotSynced && !isSynced {
