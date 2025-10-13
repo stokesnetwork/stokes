@@ -1,22 +1,23 @@
-# 🚀 STOKES (STKS)
+# 🚀 Stokes (STKS)
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/Sam-Stokes/stokes)
 [![Testnet](https://img.shields.io/badge/testnet-live-green.svg)](https://sam-stokes.github.io/stokes)
 
-**STOKES** is a proof-of-work cryptocurrency combining the speed of Kaspa's blockDAG with Bitcoin's proven halving economics.
+**Stokes - also known as StokesCoin in its early release** is a proof-of-work, fair, decentralized cryptocurrency combining the speed of Kaspa's blockDAG with Bitcoin's proven halving economics.
 
-> **"Bitcoin's scarcity meets Kaspa's speed"**
+> **"Kaspa’s speed with Bitcoin’s halving."**
 
-Built on the PHANTOM protocol (a generalization of Nakamoto consensus), STOKES delivers instant confirmations with sub-second block times while maintaining a predictable, deflationary supply schedule.
+Built on the PHANTOM protocol (a generalization of Nakamoto consensus), Stokes delivers instant confirmations with sub-second block times while maintaining a predictable, deflationary supply schedule.
 
 ---
 
-## 🎯 What is STOKES?
+## 🎯 What is Stokes?
 
-STOKES is a **fair-launch cryptocurrency** designed for long-term value accrual through:
+Stokes is a **fair-launch cryptocurrency** designed for long-term value accrual through:
 
 ### Core Features
+
 - ⚡ **Instant Confirmations** - Sub-second block times via blockDAG architecture
 - 💎 **Bitcoin-Style Halving** - 50 STKS → 25 → 12.5... every ~4 years
 - 🔒 **Fixed Supply Cap** - 12.6 billion STKS maximum (vs Bitcoin's 21M)
@@ -24,36 +25,38 @@ STOKES is a **fair-launch cryptocurrency** designed for long-term value accrual 
 - 🌐 **High Throughput** - Scalable parallel block processing
 - 🔐 **Proven Security** - Battle-tested PHANTOM consensus
 
-### Why STOKES?
+### Why Stokes?
 
 **The Problem:** Most cryptocurrencies choose between speed OR scarcity:
+
 - Bitcoin: Scarce but slow (10 min blocks)
 - Kaspa: Fast but smooth emission (no halving events)
 
-**The Solution:** STOKES combines both:
+**The Solution:** Stokes combines both:
+
 - ✅ Fast like Kaspa (1 block/second)
 - ✅ Scarce like Bitcoin (halving every 4 years)
 - ✅ Fair distribution (pure PoW mining)
 
 ### Key Differences from Kaspa
 
-| Feature | STOKES | Kaspa |
-|---------|--------|-------|
-| **Emission** | Bitcoin-style halving | Smooth chromatic emission |
-| **Supply** | 12.6B fixed cap | 28.7B fixed cap |
-| **Halvings** | Every ~4 years | No halvings |
-| **Philosophy** | Deflationary scarcity | Smooth distribution |
-| **Network** | Independent genesis | Original Kaspa network |
+| Feature        | Stokes                | Kaspa                     |
+| -------------- | --------------------- | ------------------------- |
+| **Emission**   | Bitcoin-style halving | Smooth chromatic emission |
+| **Supply**     | 12.6B fixed cap       | 28.7B fixed cap           |
+| **Halvings**   | Every ~4 years        | No halvings               |
+| **Philosophy** | Deflationary scarcity | Smooth distribution       |
+| **Network**    | Independent genesis   | Original Kaspa network    |
 
 ## 📊 Emission Schedule
 
-| Block Range | Reward | Duration | Total STKS |
-|-------------|--------|----------|------------|
-| 0 - 126.23M | 50 STKS | ~4 years | 6.31B |
-| 126.23M - 252.46M | 25 STKS | ~4 years | 3.16B |
-| 252.46M - 378.69M | 12.5 STKS | ~4 years | 1.58B |
-| ... | ... | ... | ... |
-| **Total** | | | **12.6B** |
+| Block Range       | Reward    | Duration | Total STKS |
+| ----------------- | --------- | -------- | ---------- |
+| 0 - 126.23M       | 50 STKS   | ~4 years | 6.31B      |
+| 126.23M - 252.46M | 25 STKS   | ~4 years | 3.16B      |
+| 252.46M - 378.69M | 12.5 STKS | ~4 years | 1.58B      |
+| ...               | ...       | ...      | ...        |
+| **Total**         |           |          | **12.6B**  |
 
 ## 🚀 Current Status
 
@@ -72,19 +75,18 @@ STOKES is a **fair-launch cryptocurrency** designed for long-term value accrual 
 - **[Installation Guide](#-installation)** - Get started quickly
 - **[Mining Guide](#-mining)** - Start earning STKS
 - **[Wallet Guide](#-wallet-usage)** - Manage your coins
-- **[Testing Guide](TESTING_GUIDE.md)** - For developers
 - **[Troubleshooting](#-troubleshooting)** - Common issues
 
 ## 🌐 Genesis Blocks
 
-STOKES has unique genesis blocks for all networks:
+Stokes has unique genesis blocks for all networks:
 
 - **Mainnet:** `dca25f14ec25b37efcb1ba767154ef9f2473e596a518d1f1c0be19b87d786949`
 - **Testnet:** `4240b4dbce9f3a5d1483fd19146051264571494700ed3818b46cd84b0817ef38`
 - **Simnet:** `3d7f1715e6f7c2744730462226a37c196d879f7391cdbcf8d28efe68e2655c779`
 - **Devnet:** `90d169c8336ca62088271141a5d2c610fd20ac913f678e1711542bfd9a732058`
 
-**Genesis Message:** "STOKES - Fair Launch 2025 - Bitcoin-style Halving"
+**Genesis Message:** "Stokes - Fair Launch 2025 - Bitcoin-style Halving"
 
 ## 💻 Installation
 
@@ -95,6 +97,7 @@ STOKES has unique genesis blocks for all networks:
 ### Option 2: Build from Source
 
 **Requirements:**
+
 - Go 1.23 or later
 - Git
 - 2GB RAM minimum
@@ -103,37 +106,40 @@ STOKES has unique genesis blocks for all networks:
 **Steps:**
 
 1. **Install Go** (if not already installed):
+
    ```bash
    # Visit: https://go.dev/doc/install
    # Or use your package manager:
-   
+
    # macOS
    brew install go
-   
+
    # Ubuntu/Debian
    sudo apt install golang-go
-   
+
    # Verify installation
    go version  # Should show 1.23 or later
    ```
 
 2. **Clone the repository:**
+
    ```bash
    git clone https://github.com/Sam-Stokes/stokes
    cd stokes
    ```
 
 3. **Build all binaries:**
+
    ```bash
    # Build node
    go build -o stokesd .
-   
+
    # Build CLI tool
    go build -o stokesctl ./cmd/stokesctl
-   
+
    # Build miner
    go build -o stokesminer ./cmd/stokesminer
-   
+
    # Build wallet
    go build -o stokeswallet ./cmd/stokeswallet
    ```
@@ -164,6 +170,7 @@ STOKES has unique genesis blocks for all networks:
 ```
 
 **What you'll see:**
+
 ```
 [INF] KASD: Version 0.12.22
 [INF] KASD: UTXO index started
@@ -189,6 +196,7 @@ STOKES has unique genesis blocks for all networks:
 ```
 
 **Example output:**
+
 ```
 New address:
 stokestest:qpkpllexmwjpdfru335psxssd3v8hs2l2gp8qv74gm8ajrrpxv2e7mmsr4ucq
@@ -205,6 +213,7 @@ stokestest:qpkpllexmwjpdfru335psxssd3v8hs2l2gp8qv74gm8ajrrpxv2e7mmsr4ucq
 ```
 
 **What you'll see:**
+
 ```
 [INF] KSMN: Found block 761dc037... with parents [97b58165...]
 [INF] KSMN: Submitting block 761dc037... to 127.0.0.1:17710
@@ -221,7 +230,7 @@ stokestest:qpkpllexmwjpdfru335psxssd3v8hs2l2gp8qv74gm8ajrrpxv2e7mmsr4ucq
 ./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetBlockCount
 ```
 
-**Congratulations! You're now mining STOKES!** 🎉
+**Congratulations! You're now mining Stokes!** 🎉
 
 ## 💰 Wallet Usage
 
@@ -234,7 +243,7 @@ stokestest:qpkpllexmwjpdfru335psxssd3v8hs2l2gp8qv74gm8ajrrpxv2e7mmsr4ucq
 # You'll be prompted for:
 # 1. Password (choose a strong one!)
 # 2. Confirm password
-# 
+#
 # IMPORTANT: Write down your seed phrase shown on screen!
 # This is the ONLY way to recover your wallet if you lose the password.
 ```
@@ -291,11 +300,13 @@ stokestest:qpkpllexmwjpdfru335psxssd3v8hs2l2gp8qv74gm8ajrrpxv2e7mmsr4ucq
 ### Mining Performance
 
 **Expected hash rates:**
+
 - CPU (4 cores): ~100-200 Khash/s
 - CPU (8 cores): ~200-400 Khash/s
 - CPU (16 cores): ~400-800 Khash/s
 
 **Mining rewards:**
+
 - Current: **50 STKS** per block
 - Coinbase maturity: **100 blocks** (coins spendable after 100 confirmations)
 - Block time: ~1 second average
@@ -310,7 +321,7 @@ stokestest:qpkpllexmwjpdfru335psxssd3v8hs2l2gp8qv74gm8ajrrpxv2e7mmsr4ucq
 ./stokeswallet --testnet balance
 
 # Monitor miner output for:
-# [INF] KSMN: Found block ... 
+# [INF] KSMN: Found block ...
 # [INF] KSMN: Current hash rate is X Khash/s
 ```
 
@@ -329,6 +340,7 @@ To help the network, run a public node that accepts connections:
 ```
 
 **Firewall configuration:**
+
 ```bash
 # Allow P2P connections
 sudo ufw allow 17711/tcp
@@ -363,6 +375,7 @@ sudo ufw allow 17711/tcp
 **Problem:** Node fails to start or crashes immediately
 
 **Solutions:**
+
 ```bash
 # 1. Check if port is already in use
 lsof -i :17710
@@ -383,6 +396,7 @@ rm -rf ~/.stokes-testnet  # Linux
 **Problem:** Wallet daemon shows connection errors
 
 **Solutions:**
+
 ```bash
 # 1. Verify node is running
 ./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetBlockCount
@@ -403,11 +417,13 @@ pkill stokeswallet
 **Problem:** Miner runs but no blocks found
 
 **This is normal!** Mining is probabilistic. Factors:
+
 - Your hash rate (higher = more blocks)
 - Network difficulty (adjusts automatically)
 - Other miners on network
 
 **Tips:**
+
 - Be patient - blocks will come
 - Check hash rate is reasonable (~100+ Khash/s)
 - Ensure node is synced
@@ -420,6 +436,7 @@ pkill stokeswallet
 **This is normal!** Coinbase rewards require **100 block confirmations** before they're spendable.
 
 **Check maturity:**
+
 ```bash
 # Get current block count
 ./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetBlockCount
@@ -433,6 +450,7 @@ pkill stokeswallet
 **Problem:** Miner shows blocks rejected with "node is in IBD"
 
 **Solution:** This was fixed in recent updates. If you still see this:
+
 ```bash
 # 1. Pull latest code
 git pull origin master
@@ -449,20 +467,20 @@ go build -o stokesd .
 ### Network Ports
 
 | Network | P2P Port | RPC Port |
-|---------|----------|----------|
-| Mainnet | 17611 | 17610 |
-| Testnet | 17711 | 17710 |
-| Simnet | 17511 | 17510 |
-| Devnet | 17611 | 17610 |
+| ------- | -------- | -------- |
+| Mainnet | 17611    | 17610    |
+| Testnet | 17711    | 17710    |
+| Simnet  | 17511    | 17510    |
+| Devnet  | 17611    | 17610    |
 
 ### Address Prefixes
 
-| Network | Prefix | Example |
-|---------|--------|---------|
-| Mainnet | `stokes:` | `stokes:qpkpllexmw...` |
+| Network | Prefix        | Example                    |
+| ------- | ------------- | -------------------------- |
+| Mainnet | `stokes:`     | `stokes:qpkpllexmw...`     |
 | Testnet | `stokestest:` | `stokestest:qpkpllexmw...` |
-| Simnet | `stokessim:` | `stokessim:qpkpllexmw...` |
-| Devnet | `stokesdev:` | `stokesdev:qpkpllexmw...` |
+| Simnet  | `stokessim:`  | `stokessim:qpkpllexmw...`  |
+| Devnet  | `stokesdev:`  | `stokesdev:qpkpllexmw...`  |
 
 ### Useful Commands
 
@@ -510,10 +528,11 @@ go fmt ./...
 ## 📞 Support & Community
 
 - **GitHub Issues:** [Report bugs](https://github.com/Sam-Stokes/stokes/issues)
-- **Documentation:** This README and [TESTING_GUIDE.md](TESTING_GUIDE.md)
+- **Documentation:** This README and [docs/](docs/)
 - **Website:** [https://sam-stokes.github.io/stokes](https://sam-stokes.github.io/stokes)
 
 **Coming Soon:**
+
 - Discord server
 - Telegram group
 - Block explorer
@@ -521,11 +540,11 @@ go fmt ./...
 
 ## License
 
-STOKES is licensed under the copyfree [ISC License](https://choosealicense.com/licenses/isc/).
+Stokes is licensed under the copyfree [ISC License](https://choosealicense.com/licenses/isc/).
 
 ## Acknowledgments
 
-STOKES is built on the foundation of [Kaspa](https://github.com/kaspanet/kaspad), implementing the PHANTOM protocol for blockDAG consensus.
+Stokes is built on the foundation of [Kaspa](https://github.com/kaspanet/kaspad), implementing the PHANTOM protocol for blockDAG consensus.
 
 ## Contributing
 
