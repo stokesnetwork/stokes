@@ -4,11 +4,15 @@
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/stokesnetwork/stokes)
 [![Testnet](https://img.shields.io/badge/testnet-live-green.svg)](https://stokesnetwork.github.io/stokes)
 
-**Stokes - also known as StokesCoin in its early release** is a proof-of-work, fair, decentralized cryptocurrency combining the speed of Kaspa's blockDAG with Bitcoin's proven halving economics.
+> **🧪 Currently in Public Testnet - [Join Testing Now!](#-quick-start-testnet)**
 
-> **"Kaspa’s speed with Bitcoin’s halving."**
+**Stokes** is a proof-of-work, fair-launch cryptocurrency combining the speed of Kaspa's blockDAG with Bitcoin's proven halving economics.
+
+> **"Kaspa's speed with Bitcoin's halving."**
 
 Built on the PHANTOM protocol (a generalization of Nakamoto consensus), Stokes delivers instant confirmations with sub-second block times while maintaining a predictable, deflationary supply schedule.
+
+**🎯 Fair Launch Commitment:** Mainnet genesis will be generated on launch day to ensure no pre-mining and equal opportunity for all participants.
 
 ---
 
@@ -60,15 +64,29 @@ Stokes is a **fair-launch cryptocurrency** designed for long-term value accrual 
 
 ## 🚀 Current Status
 
-**✅ Testnet Live** - Public testing now available!
+**🧪 TESTNET PHASE - Help Us Test!**
 
-- ✅ Bitcoin-style halving implemented and tested
-- ✅ Solo and multi-node mining working
-- ✅ Wallet functionality complete
-- ✅ Network isolation verified
-- ✅ Genesis blocks generated for all networks
-- ⏳ Public seed nodes deploying soon
-- ⏳ Block explorer in development
+We're in public testnet to ensure a fair, bug-free mainnet launch. Join us in testing:
+
+**What's Working:**
+- ✅ Bitcoin-style halving (50 STKS → 25 → 12.5...)
+- ✅ Sub-second block times via blockDAG
+- ✅ Solo and multi-node mining
+- ✅ Wallet creation and transactions
+- ✅ Full node synchronization
+
+**What We're Testing:**
+- 🧪 Network stability under load
+- 🧪 Halving mechanism accuracy
+- 🧪 Mining difficulty adjustment
+- 🧪 Transaction validation
+- 🧪 Wallet security and usability
+
+**Coming Soon:**
+- 📅 Mainnet launch date announcement
+- 🌐 Public seed nodes
+- 📊 Block explorer
+- 💬 Community Discord/Telegram
 
 ## 📚 Documentation
 
@@ -77,16 +95,34 @@ Stokes is a **fair-launch cryptocurrency** designed for long-term value accrual 
 - **[Wallet Guide](#-wallet-usage)** - Manage your coins
 - **[Troubleshooting](#-troubleshooting)** - Common issues
 
-## 🌐 Genesis Blocks
+## ⚠️ TESTNET PHASE - Mainnet Not Yet Launched
 
-Stokes has unique genesis blocks for all networks:
+**Current Status:** Public Testnet Testing
 
-- **Mainnet:** `dca25f14ec25b37efcb1ba767154ef9f2473e596a518d1f1c0be19b87d786949`
+Stokes is currently in **testnet phase** to:
+- 🧪 Test the Bitcoin-style halving implementation
+- 🐛 Identify and fix bugs before mainnet
+- 👥 Build community and gather feedback
+- 📊 Validate network performance and security
+- 🎯 Ensure a truly fair launch
+
+**Mainnet Launch:** TBA - Will be announced with advance notice
+
+### Why Testnet First?
+
+We're committed to a **fair launch** where everyone starts together. By removing the mainnet genesis until launch day, we ensure:
+- ✅ No pre-mining possible
+- ✅ No insider advantage
+- ✅ Transparent development process
+- ✅ Community-tested software
+
+## 🌐 Testnet Genesis
+
 - **Testnet:** `4240b4dbce9f3a5d1483fd19146051264571494700ed3818b46cd84b0817ef38`
-- **Simnet:** `3d7f1715e6f7c2744730462226a37c196d879f7391cdbcf8d28efe68e2655c779`
 - **Devnet:** `90d169c8336ca62088271141a5d2c610fd20ac913f678e1711542bfd9a732058`
+- **Simnet:** `3d7f1715e6f7c2744730462226a37c196d879f7391cdbcf8d28efe68e2655c779`
 
-**Genesis Message:** "Stokes - Fair Launch 2025 - Bitcoin-style Halving"
+**Mainnet genesis will be generated on launch day to ensure fair distribution.**
 
 ## 💻 Installation
 
