@@ -91,8 +91,6 @@ We're in public testnet to ensure a fair, bug-free mainnet launch. Join us in te
 ## 📚 Documentation
 
 - **[Installation Guide](#-installation)** - Get started quickly
-- **[Mining Guide](#-mining)** - Start earning STKS
-- **[Wallet Guide](#-wallet-usage)** - Manage your coins
 - **[Troubleshooting](#-troubleshooting)** - Common issues
 
 ## ⚠️ TESTNET PHASE - Mainnet Not Yet Launched
@@ -564,7 +562,6 @@ go fmt ./...
 ## 📞 Support & Community
 
 - **GitHub Issues:** [Report bugs](https://github.com/stokesnetwork/stokes/issues)
-- **Documentation:** This README and [docs/](docs/)
 - **Website:** [https://stokesnetwork.github.io/stokes](https://stokesnetwork.github.io/stokes)
 
 **Coming Soon:**
@@ -581,13 +578,3 @@ Stokes is licensed under the copyfree [ISC License](https://choosealicense.com/l
 ## Acknowledgments
 
 Stokes is built on the foundation of [Kaspa](https://github.com/kaspanet/kaspad), implementing the PHANTOM protocol for blockDAG consensus.
-
-## Contributing
-
-Contributions are welcome! Please see our documentation for guidelines.
-
-## Support
-
-- **Issues:** [GitHub Issues](https://github.com/stokesnetwork/stokes/issues)
-- **Documentation:** See docs in this repository
-- **Community:** Coming in Phase 2
