@@ -1,5 +1,6 @@
 # Temp files
 *~
+.DS_Store
 
 # Databases
 kaspad.db
@@ -91,6 +92,11 @@ version
 TESTING_GUIDE.md
 RELEASE_CHECKLIST.md
 RELEASE.md
+
+# Release build scripts (keep in private repo only)
+create-release.sh
+generate-platform-readme.sh
+setup-cross-compile.sh
 
 # Release binaries (uploaded to GitHub Releases, not stored in git)
 releases/
