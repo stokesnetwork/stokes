@@ -69,6 +69,7 @@ Stokes is a **fair-launch cryptocurrency** designed for long-term value accrual 
 We're in public testnet to ensure a fair, bug-free mainnet launch. Join us in testing:
 
 **What's Working:**
+
 - ✅ Bitcoin-style halving (50 STKS → 25 → 12.5...)
 - ✅ Sub-second block times via blockDAG
 - ✅ Solo and multi-node mining
@@ -126,7 +127,25 @@ We're committed to a **fair launch** where everyone starts together. By removing
 
 ### Option 1: Download Pre-Built Binaries (Recommended)
 
-**Coming Soon:** Pre-built binaries for Linux, macOS, and Windows will be available on the [Releases](https://github.com/stokesnetwork/stokes/releases) page.
+Download the latest release for your platform from the [Releases](https://github.com/stokesnetwork/stokes/releases) page.
+
+**Available platforms:**
+
+- Linux (x64, ARM64)
+- macOS (Intel, Apple Silicon)
+- Windows (x64)
+
+**Quick install:**
+
+```bash
+# Linux/macOS: Extract and move to PATH
+tar -xzf stokes-v*-*.tar.gz
+cd stokes-v*-*
+sudo mv stokesd stokesctl stokesminer stokeswallet /usr/local/bin/
+
+# Verify installation
+stokesd --version
+```
 
 ### Option 2: Build from Source
 

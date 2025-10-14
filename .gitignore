@@ -68,9 +68,6 @@ coverage.txt
 testdbs/
 coverage.tmp
 
-# GitHub workflows (not needed for now)
-.github/
-
 # Test data directories (simnet, devnet, testnet data)
 simnet-data/
 simnet-data1/
@@ -93,6 +90,7 @@ version
 
 TESTING_GUIDE.md
 RELEASE_CHECKLIST.md
+RELEASE.md
 
 # Release binaries (uploaded to GitHub Releases, not stored in git)
 releases/

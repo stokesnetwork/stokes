@@ -1,0 +1,158 @@
+name: Release Binaries
+
+on:
+  push:
+    tags:
+      - 'v*'  # Trigger on version tags like v0.1.0, v1.0.0-testnet, etc.
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build Release Binaries
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          # Linux builds
+          - os: ubuntu-latest
+            goos: linux
+            goarch: amd64
+            output_suffix: linux-amd64
+          - os: ubuntu-latest
+            goos: linux
+            goarch: arm64
+            output_suffix: linux-arm64
+          
+          # macOS builds
+          - os: macos-latest
+            goos: darwin
+            goarch: amd64
+            output_suffix: macos-amd64
+          - os: macos-latest
+            goos: darwin
+            goarch: arm64
+            output_suffix: macos-arm64
+          
+          # Windows builds
+          - os: ubuntu-latest
+            goos: windows
+            goarch: amd64
+            output_suffix: windows-amd64
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23'
+
+      - name: Get version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Build binaries
+        env:
+          GOOS: ${{ matrix.goos }}
+          GOARCH: ${{ matrix.goarch }}
+          CGO_ENABLED: 0
+        run: |
+          # Build all binaries
+          go build -o stokesd-${{ matrix.output_suffix }}${{ matrix.goos == 'windows' && '.exe' || '' }} .
+          go build -o stokesctl-${{ matrix.output_suffix }}${{ matrix.goos == 'windows' && '.exe' || '' }} ./cmd/stokesctl
+          go build -o stokesminer-${{ matrix.output_suffix }}${{ matrix.goos == 'windows' && '.exe' || '' }} ./cmd/stokesminer
+          go build -o stokeswallet-${{ matrix.output_suffix }}${{ matrix.goos == 'windows' && '.exe' || '' }} ./cmd/stokeswallet
+
+      - name: Create archive
+        run: |
+          mkdir -p release-${{ matrix.output_suffix }}
+          mv stokesd-${{ matrix.output_suffix }}${{ matrix.goos == 'windows' && '.exe' || '' }} release-${{ matrix.output_suffix }}/
+          mv stokesctl-${{ matrix.output_suffix }}${{ matrix.goos == 'windows' && '.exe' || '' }} release-${{ matrix.output_suffix }}/
+          mv stokesminer-${{ matrix.output_suffix }}${{ matrix.goos == 'windows' && '.exe' || '' }} release-${{ matrix.output_suffix }}/
+          mv stokeswallet-${{ matrix.output_suffix }}${{ matrix.goos == 'windows' && '.exe' || '' }} release-${{ matrix.output_suffix }}/
+          
+          # Copy README and LICENSE
+          cp README.md release-${{ matrix.output_suffix }}/
+          cp LICENSE release-${{ matrix.output_suffix }}/
+          
+          # Create archive
+          if [ "${{ matrix.goos }}" = "windows" ]; then
+            cd release-${{ matrix.output_suffix }} && zip -r ../stokes-${{ steps.get_version.outputs.VERSION }}-${{ matrix.output_suffix }}.zip . && cd ..
+          else
+            tar -czf stokes-${{ steps.get_version.outputs.VERSION }}-${{ matrix.output_suffix }}.tar.gz -C release-${{ matrix.output_suffix }} .
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: stokes-${{ matrix.output_suffix }}
+          path: |
+            stokes-${{ steps.get_version.outputs.VERSION }}-${{ matrix.output_suffix }}.tar.gz
+            stokes-${{ steps.get_version.outputs.VERSION }}-${{ matrix.output_suffix }}.zip
+          if-no-files-found: ignore
+
+  release:
+    name: Create GitHub Release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Get version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Stokes ${{ steps.get_version.outputs.VERSION }}
+          body: |
+            ## Stokes ${{ steps.get_version.outputs.VERSION }}
+            
+            ### 🚀 Testnet Release
+            
+            This is a **testnet release** for public testing. Do not use for production.
+            
+            ### 📦 Downloads
+            
+            Choose the appropriate binary for your system:
+            
+            - **Linux (x64)**: `stokes-${{ steps.get_version.outputs.VERSION }}-linux-amd64.tar.gz`
+            - **Linux (ARM64)**: `stokes-${{ steps.get_version.outputs.VERSION }}-linux-arm64.tar.gz`
+            - **macOS (Intel)**: `stokes-${{ steps.get_version.outputs.VERSION }}-macos-amd64.tar.gz`
+            - **macOS (Apple Silicon)**: `stokes-${{ steps.get_version.outputs.VERSION }}-macos-arm64.tar.gz`
+            - **Windows (x64)**: `stokes-${{ steps.get_version.outputs.VERSION }}-windows-amd64.zip`
+            
+            ### 📚 Quick Start
+            
+            1. Download and extract the archive for your platform
+            2. Follow the [Quick Start Guide](https://github.com/stokesnetwork/stokes#-quick-start-testnet)
+            3. Join our community and report any issues!
+            
+            ### ⚠️ Important Notes
+            
+            - This is **testnet only** - coins have no real value
+            - Mainnet launch date: TBA
+            - Report bugs: [GitHub Issues](https://github.com/stokesnetwork/stokes/issues)
+            
+            ### 🔗 Links
+            
+            - **Website**: https://stokesnetwork.github.io/stokes
+            - **Documentation**: [README.md](https://github.com/stokesnetwork/stokes/blob/master/README.md)
+            - **Twitter**: [@StokesCoin](https://twitter.com/StokesCoin)
+          files: |
+            artifacts/**/*.tar.gz
+            artifacts/**/*.zip
+          draft: false
+          prerelease: ${{ contains(steps.get_version.outputs.VERSION, 'testnet') || contains(steps.get_version.outputs.VERSION, 'alpha') || contains(steps.get_version.outputs.VERSION, 'beta') }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
