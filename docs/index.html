@@ -292,32 +292,38 @@
       </table>
 
       <div class="downloads">
-        <h2>📦 Download Stokes</h2>
+        <h2>📦 Get Started with Stokes Testnet</h2>
         <p style="margin: 20px 0; font-size: 1.1em;">
-          Get started with Stokes testnet - available for Linux, macOS, and Windows
+          <strong>Currently:</strong> Build from source (pre-built binaries coming soon!)
         </p>
-        <a href="https://github.com/stokesnetwork/stokes/releases" class="cta">
-          Download Binaries
+        <a href="https://github.com/stokesnetwork/stokes" class="cta">
+          Build from Source
         </a>
-        <a href="https://github.com/stokesnetwork/stokes" class="cta cta-secondary">
-          View on GitHub
+        <a href="https://github.com/stokesnetwork/stokes#-quick-start-testnet" class="cta cta-secondary">
+          View Instructions
         </a>
+        <p style="margin-top: 15px; font-size: 0.95em; color: #666;">
+          📦 Pre-built binaries for Linux, macOS, and Windows coming soon!
+        </p>
       </div>
 
       <h2 class="section-title">Quick Start Guide</h2>
       <div class="guide-section">
-        <h3>Step 1: Download & Extract</h3>
-        <p>Download the appropriate binary for your system from the releases page.</p>
+        <h3>Step 1: Build from Source</h3>
+        <p>Clone the repository and build the binaries (requires Go 1.23+):</p>
         <pre>
-# Linux/macOS
-tar -xzf stokes-v0.1.0-testnet-linux-amd64.tar.gz
-cd stokes-v0.1.0-testnet
+# Clone repository
+git clone https://github.com/stokesnetwork/stokes
+cd stokes
 
-# Windows
-# Extract the .zip file and open folder in terminal
+# Build binaries
+go build -o stokesd .
+go build -o stokesctl ./cmd/stokesctl
+go build -o stokesminer ./cmd/stokesminer
+go build -o stokeswallet ./cmd/stokeswallet
         </pre>
 
-        <h3>Step 2: Start Node</h3>
+        <h3>Step 2: Start Testnet Node</h3>
         <pre>
 # Start testnet node
 ./stokesd --testnet --utxoindex --nodnsseed --nolisten
