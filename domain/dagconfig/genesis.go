@@ -16,64 +16,26 @@ import (
 // ============================================================
 // MAINNET GENESIS - STOKES
 // ============================================================
+// 
+// ⚠️ MAINNET GENESIS REMOVED FOR FAIR LAUNCH ⚠️
+//
+// Mainnet genesis will be generated on launch day to ensure:
+// - No pre-mining possible
+// - Fair launch for all participants
+// - Everyone starts at the same time
+//
+// For testing, use --testnet, --devnet, or --simnet flags
+//
+// Launch date: TBA
+// ============================================================
 
+// Placeholder mainnet genesis - WILL BE REPLACED ON LAUNCH DAY
 var genesisTxOuts = []*externalapi.DomainTransactionOutput{}
-
-var genesisTxPayload = []byte{
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Blue score
-	0x00, 0xf2, 0x05, 0x2a, 0x01, 0x00, 0x00, 0x00, // Subsidy (50 STKS)
-	0x00, 0x00, 0x32, 0x00, 0x53, 0x54, 0x4f, 0x4b, // Script version
-	0x45, 0x53, 0x20, 0x2d, 0x20, 0x46, 0x61, 0x69, // STOKES - Fair Launch 2025 - Bitcoin-style Halving
-	0x72, 0x20, 0x4c, 0x61, 0x75, 0x6e, 0x63, 0x68,
-	0x20, 0x32, 0x30, 0x32, 0x35, 0x20, 0x2d, 0x20,
-	0x42, 0x69, 0x74, 0x63, 0x6f, 0x69, 0x6e, 0x2d,
-	0x73, 0x74, 0x79, 0x6c, 0x65, 0x20, 0x48, 0x61,
-	0x6c, 0x76, 0x69, 0x6e, 0x67,
-}
-
-// genesisCoinbaseTx is the coinbase transaction for the genesis blocks for
-// the main network.
-var genesisCoinbaseTx = transactionhelper.NewSubnetworkTransaction(0,
-	[]*externalapi.DomainTransactionInput{}, genesisTxOuts,
-	&subnetworks.SubnetworkIDCoinbase, 0, genesisTxPayload)
-
-// genesisHash is the hash of the first block in the block DAG for the main
-// network (genesis block).
-var genesisHash = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
-	0xdc, 0xa2, 0x5f, 0x14, 0xec, 0x25, 0xb3, 0x7e,
-	0xfc, 0xb1, 0xba, 0x76, 0x71, 0x54, 0xef, 0x9f,
-	0x24, 0x73, 0xe5, 0x96, 0xa5, 0x18, 0xd1, 0xf1,
-	0xc0, 0xbe, 0x19, 0xb8, 0x7d, 0x78, 0x69, 0x49,
-})
-
-// genesisMerkleRoot is the hash of the first transaction in the genesis block
-// for the main network.
-var genesisMerkleRoot = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
-	0xcd, 0x59, 0xe0, 0x65, 0x22, 0x13, 0x03, 0xc3,
-	0x40, 0x3f, 0xee, 0x8d, 0xae, 0x0a, 0xa0, 0x79,
-	0xb9, 0x24, 0xde, 0x3b, 0x01, 0xb9, 0x76, 0xdd,
-	0x61, 0x01, 0x1e, 0x81, 0x27, 0xed, 0xd8, 0x21,
-})
-
-// genesisBlock defines the genesis block of the block DAG which serves as the
-// public transaction ledger for the main network.
-var genesisBlock = externalapi.DomainBlock{
-	Header: blockheader.NewImmutableBlockHeader(
-		0,
-		[]externalapi.BlockLevelParents{},
-		genesisMerkleRoot,
-		&externalapi.DomainHash{},
-		externalapi.NewDomainHashFromByteArray(muhash.EmptyMuHashHash.AsArray()),
-		1760309945665,
-		211244,
-		0,
-		0,
-		0,
-		big.NewInt(0),
-		&externalapi.DomainHash{},
-	),
-	Transactions: []*externalapi.DomainTransaction{genesisCoinbaseTx},
-}
+var genesisTxPayload = []byte{} // Empty - will be set on launch
+var genesisCoinbaseTx = (*externalapi.DomainTransaction)(nil) // Nil - will be set on launch
+var genesisHash = (*externalapi.DomainHash)(nil) // Nil - will be set on launch
+var genesisMerkleRoot = (*externalapi.DomainHash)(nil) // Nil - will be set on launch
+var genesisBlock = externalapi.DomainBlock{} // Empty - will be set on launch
 
 // ============================================================
 // DEVNET GENESIS - STOKES
