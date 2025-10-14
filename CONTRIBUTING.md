@@ -26,7 +26,7 @@ Welcome! Here's how to get started:
 1. **Read the documentation**
    - [README.md](README.md) - Project overview
    - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Community guidelines
-   - [Website](https://sam-stokes.github.io/stokes) - Quick start guide
+   - [Website](https://stokesnetwork.github.io/stokes) - Quick start guide
 
 2. **Set up your development environment**
    ```bash

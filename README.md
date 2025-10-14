@@ -2,7 +2,7 @@
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/stokesnetwork/stokes)
-[![Testnet](https://img.shields.io/badge/testnet-live-green.svg)](https://sam-stokes.github.io/stokes)
+[![Testnet](https://img.shields.io/badge/testnet-live-green.svg)](https://stokesnetwork.github.io/stokes)
 
 **Stokes - also known as StokesCoin in its early release** is a proof-of-work, fair, decentralized cryptocurrency combining the speed of Kaspa's blockDAG with Bitcoin's proven halving economics.
 
@@ -529,7 +529,7 @@ go fmt ./...
 
 - **GitHub Issues:** [Report bugs](https://github.com/stokesnetwork/stokes/issues)
 - **Documentation:** This README and [docs/](docs/)
-- **Website:** [https://sam-stokes.github.io/stokes](https://sam-stokes.github.io/stokes)
+- **Website:** [https://stokesnetwork.github.io/stokes](https://stokesnetwork.github.io/stokes)
 
 **Coming Soon:**
 
