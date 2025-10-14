@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/Sam-Stokes/stokes/stability-tests/common/rpc"
+	"github.com/stokesnetwork/stokes/stability-tests/common/rpc"
 
 	"github.com/pkg/errors"
 )

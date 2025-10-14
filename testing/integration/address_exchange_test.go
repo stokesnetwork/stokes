@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/network/addressmanager"
 	"testing"
 )
 

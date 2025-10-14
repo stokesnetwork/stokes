@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/pb"
 	"github.com/pkg/errors"
 )
 

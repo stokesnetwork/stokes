@@ -1,10 +1,10 @@
 package rpchandlers
 
 import (
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/app/rpc/rpccontext"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/hashes"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/rpc/rpccontext"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/hashes"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 )
 
 // HandleGetBlockDAGInfo handles the respectively named RPC command

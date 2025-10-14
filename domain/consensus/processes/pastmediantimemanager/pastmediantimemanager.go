@@ -3,10 +3,10 @@ package pastmediantimemanager
 import (
 	"sort"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/sorters"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/sorters"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 )
 

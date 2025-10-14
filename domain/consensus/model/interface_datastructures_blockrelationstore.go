@@ -1,6 +1,6 @@
 package model
 
-import "github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+import "github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 
 // BlockRelationStore represents a store of BlockRelations
 type BlockRelationStore interface {

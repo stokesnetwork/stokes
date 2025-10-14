@@ -3,21 +3,21 @@ package server
 import (
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/serialization"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet/serialization"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/keys"
-	"github.com/Sam-Stokes/stokes/util/txmass"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/keys"
+	"github.com/stokesnetwork/stokes/util/txmass"
 
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/utxo"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/txscript"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/utxo"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
-	"github.com/Sam-Stokes/stokes/domain/consensus"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/testutils"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet"
+	"github.com/stokesnetwork/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/testutils"
 )
 
 func TestEstimateComputeMassAfterSignatures(t *testing.T) {

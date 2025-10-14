@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/version"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/version"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/id"
-	"github.com/Sam-Stokes/stokes/util/mstime"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/id"
+	"github.com/stokesnetwork/stokes/util/mstime"
 )
 
 // MaxUserAgentLen is the maximum allowed length for the user agent field in a

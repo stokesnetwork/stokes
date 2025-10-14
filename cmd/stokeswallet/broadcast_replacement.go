@@ -6,9 +6,9 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/client"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/server"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/client"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/server"
 	"github.com/pkg/errors"
 )
 

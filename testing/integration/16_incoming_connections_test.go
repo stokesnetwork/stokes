@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/appmessage"
 )
 
 func Test16IncomingConnections(t *testing.T) {

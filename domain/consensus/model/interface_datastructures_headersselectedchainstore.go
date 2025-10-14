@@ -1,6 +1,6 @@
 package model
 
-import "github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+import "github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 
 // HeadersSelectedChainStore represents a store of the headers selected chain
 type HeadersSelectedChainStore interface {

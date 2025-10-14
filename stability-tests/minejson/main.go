@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus"
-	"github.com/Sam-Stokes/stokes/stability-tests/common"
-	"github.com/Sam-Stokes/stokes/stability-tests/common/mine"
-	"github.com/Sam-Stokes/stokes/stability-tests/common/rpc"
-	"github.com/Sam-Stokes/stokes/util/panics"
-	"github.com/Sam-Stokes/stokes/util/profiling"
+	"github.com/stokesnetwork/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/stability-tests/common"
+	"github.com/stokesnetwork/stokes/stability-tests/common/mine"
+	"github.com/stokesnetwork/stokes/stability-tests/common/rpc"
+	"github.com/stokesnetwork/stokes/util/panics"
+	"github.com/stokesnetwork/stokes/util/profiling"
 	"github.com/pkg/errors"
 )
 

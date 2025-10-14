@@ -4,10 +4,10 @@ import (
 	"path/filepath"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
-	"github.com/Sam-Stokes/stokes/stability-tests/common"
-	"github.com/Sam-Stokes/stokes/stability-tests/common/rpc"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/stability-tests/common"
+	"github.com/stokesnetwork/stokes/stability-tests/common/rpc"
 )
 
 const (

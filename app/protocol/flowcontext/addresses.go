@@ -1,7 +1,7 @@
 package flowcontext
 
 import (
-	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/network/addressmanager"
 )
 
 // AddressManager returns the address manager associated to the flow context.

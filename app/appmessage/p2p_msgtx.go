@@ -8,11 +8,11 @@ import (
 	"encoding/binary"
 	"strconv"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/subnetworks"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/subnetworks"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 )
 
 const (

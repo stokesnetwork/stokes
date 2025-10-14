@@ -8,14 +8,14 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/util/network"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/util/network"
 
 	"github.com/pkg/errors"
 
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/util"
 )
 
 // These variables are the DAG proof-of-work limit parameters for each default

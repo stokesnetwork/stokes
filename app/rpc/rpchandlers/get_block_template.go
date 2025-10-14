@@ -1,14 +1,14 @@
 package rpchandlers
 
 import (
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/app/rpc/rpccontext"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionhelper"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
-	"github.com/Sam-Stokes/stokes/util"
-	"github.com/Sam-Stokes/stokes/version"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/rpc/rpccontext"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/transactionhelper"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/txscript"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/util"
+	"github.com/stokesnetwork/stokes/version"
 )
 
 // HandleGetBlockTemplate handles the respectively named RPC command

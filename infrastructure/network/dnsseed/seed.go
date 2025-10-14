@@ -12,15 +12,15 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	pb2 "github.com/Sam-Stokes/stokes/infrastructure/network/dnsseed/pb"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	pb2 "github.com/stokesnetwork/stokes/infrastructure/network/dnsseed/pb"
 	"google.golang.org/grpc"
 
-	"github.com/Sam-Stokes/stokes/util/mstime"
+	"github.com/stokesnetwork/stokes/util/mstime"
 
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
 )
 
 const (

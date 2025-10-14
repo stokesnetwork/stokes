@@ -3,10 +3,10 @@ package rpc
 import (
 	"time"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/rpcclient"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/infrastructure/network/rpcclient"
 
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
 )
 
 const defaultRPCServer = "localhost"

@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/util"
 
-	"github.com/Sam-Stokes/stokes/version"
+	"github.com/stokesnetwork/stokes/version"
 
 	"github.com/pkg/errors"
 
 	_ "net/http/pprof"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/os/signal"
-	"github.com/Sam-Stokes/stokes/util/panics"
-	"github.com/Sam-Stokes/stokes/util/profiling"
+	"github.com/stokesnetwork/stokes/infrastructure/os/signal"
+	"github.com/stokesnetwork/stokes/util/panics"
+	"github.com/stokesnetwork/stokes/util/profiling"
 )
 
 func main() {

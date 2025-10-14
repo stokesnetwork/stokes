@@ -4,18 +4,18 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/util/mstime"
+	"github.com/stokesnetwork/stokes/util/mstime"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 
-	"github.com/Sam-Stokes/stokes/domain"
+	"github.com/stokesnetwork/stokes/domain"
 
-	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/connmanager"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/id"
+	peerpkg "github.com/stokesnetwork/stokes/app/protocol/peer"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/network/addressmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/network/connmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/id"
 )
 
 // OnNewBlockTemplateHandler is a handler function that's triggered when a new block template is available

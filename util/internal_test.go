@@ -12,7 +12,7 @@ interface. The functions are only exported while the tests are being run.
 package util
 
 import (
-	"github.com/Sam-Stokes/stokes/util/bech32"
+	"github.com/stokesnetwork/stokes/util/bech32"
 	"golang.org/x/crypto/blake2b"
 )
 

@@ -5,7 +5,7 @@
 package bech32_test
 
 import (
-	"github.com/Sam-Stokes/stokes/util/bech32"
+	"github.com/stokesnetwork/stokes/util/bech32"
 	"testing"
 )
 

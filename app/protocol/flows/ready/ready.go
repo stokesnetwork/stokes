@@ -1,13 +1,13 @@
 package ready
 
 import (
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/app/protocol/common"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/protocol/common"
 	"sync/atomic"
 
-	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
-	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
-	routerpkg "github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	peerpkg "github.com/stokesnetwork/stokes/app/protocol/peer"
+	"github.com/stokesnetwork/stokes/app/protocol/protocolerrors"
+	routerpkg "github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

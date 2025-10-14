@@ -3,10 +3,10 @@ package server
 import (
 	"context"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet"
+	"github.com/stokesnetwork/stokes/util"
 )
 
 func (s *server) GetExternalSpendableUTXOs(_ context.Context, request *pb.GetExternalSpendableUTXOsRequest) (*pb.GetExternalSpendableUTXOsResponse, error) {

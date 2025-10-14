@@ -3,15 +3,15 @@ package mempool
 import (
 	"sync"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/ruleerrors"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/ruleerrors"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
 	"github.com/pkg/errors"
 
-	"github.com/Sam-Stokes/stokes/domain/consensusreference"
+	"github.com/stokesnetwork/stokes/domain/consensusreference"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	miningmanagermodel "github.com/Sam-Stokes/stokes/domain/miningmanager/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	miningmanagermodel "github.com/stokesnetwork/stokes/domain/miningmanager/model"
 )
 
 type mempool struct {

@@ -6,13 +6,13 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/server"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/keys"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/serialization"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
-	"github.com/Sam-Stokes/stokes/util/txmass"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/server"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/keys"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet/serialization"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/txscript"
+	"github.com/stokesnetwork/stokes/util/txmass"
 	"github.com/pkg/errors"
 )
 

@@ -3,8 +3,8 @@ package server
 import (
 	"time"
 
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/rpcclient"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/infrastructure/network/rpcclient"
 )
 
 func connectToRPC(params *dagconfig.Params, rpcServer string, timeout uint32) (*rpcclient.RPCClient, error) {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/standalone"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/standalone"
 )
 
 func connectToNode() *standalone.Routes {

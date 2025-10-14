@@ -6,15 +6,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/dnsseed"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/infrastructure/network/dnsseed"
 	"github.com/pkg/errors"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/network/addressmanager"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
 )
 
 // connectionRequest represents a user request (either through CLI or RPC) to connect to a certain node

@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/client"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/server"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/utils"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/client"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/server"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/utils"
 )
 
 func createUnsignedTransaction(conf *createUnsignedTransactionConfig) error {

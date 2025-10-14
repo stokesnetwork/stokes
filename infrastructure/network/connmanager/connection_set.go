@@ -1,7 +1,7 @@
 package connmanager
 
 import (
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter"
 )
 
 type connectionSet map[string]*netadapter.NetConnection

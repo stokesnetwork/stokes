@@ -1,10 +1,10 @@
 package consensusstatemanager
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/ruleerrors"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/ruleerrors"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
 )
 
 // PopulateTransactionWithUTXOEntries populates the transaction UTXO entries with data from the virtual's UTXO set.

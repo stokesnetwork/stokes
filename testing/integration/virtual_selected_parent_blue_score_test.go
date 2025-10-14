@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/appmessage"
 	"testing"
 )
 

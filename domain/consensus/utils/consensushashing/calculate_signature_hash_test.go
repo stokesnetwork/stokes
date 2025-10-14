@@ -5,17 +5,17 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/subnetworks"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/subnetworks"
 
 	"github.com/kaspanet/go-secp256k1"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/utxo"
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/txscript"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/utxo"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/util"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 )
 
 // shortened versions of SigHash types to fit in single line of test case

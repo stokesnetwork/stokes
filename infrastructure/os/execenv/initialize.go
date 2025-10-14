@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/os/limits"
+	"github.com/stokesnetwork/stokes/infrastructure/os/limits"
 )
 
 // Initialize initializes the execution environment required to run kaspad

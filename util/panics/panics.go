@@ -2,7 +2,7 @@ package panics
 
 import (
 	"fmt"
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
 	"os"
 	"runtime/debug"
 	"sync/atomic"

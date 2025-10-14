@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/stability-tests/common/rpc"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/stability-tests/common/rpc"
 	"github.com/pkg/errors"
 	"time"
 )

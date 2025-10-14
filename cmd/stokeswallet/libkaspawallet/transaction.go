@@ -1,14 +1,14 @@
 package libkaspawallet
 
 import (
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/bip32"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/serialization"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/subnetworks"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/utxo"
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet/bip32"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet/serialization"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/subnetworks"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/txscript"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/utxo"
+	"github.com/stokesnetwork/stokes/util"
 	"github.com/pkg/errors"
 )
 

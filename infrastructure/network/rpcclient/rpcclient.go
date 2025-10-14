@@ -4,12 +4,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
-	routerpkg "github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/rpcclient/grpcclient"
-	"github.com/Sam-Stokes/stokes/util/panics"
-	"github.com/Sam-Stokes/stokes/version"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
+	routerpkg "github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/infrastructure/network/rpcclient/grpcclient"
+	"github.com/stokesnetwork/stokes/util/panics"
+	"github.com/stokesnetwork/stokes/version"
 	"github.com/pkg/errors"
 )
 

@@ -1,6 +1,6 @@
 package model
 
-import "github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+import "github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 
 // BlockHeap represents a heap of block hashes, providing a priority-queue functionality
 type BlockHeap interface {

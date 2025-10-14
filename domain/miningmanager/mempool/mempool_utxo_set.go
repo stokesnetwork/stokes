@@ -3,13 +3,13 @@ package mempool
 import (
 	"fmt"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/utxo"
-	"github.com/Sam-Stokes/stokes/domain/miningmanager/mempool/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/utxo"
+	"github.com/stokesnetwork/stokes/domain/miningmanager/mempool/model"
 )
 
 type mempoolUTXOSet struct {

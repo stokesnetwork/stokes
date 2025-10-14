@@ -8,20 +8,20 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/version"
+	"github.com/stokesnetwork/stokes/version"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 
-	"github.com/Sam-Stokes/stokes/util/txmass"
+	"github.com/stokesnetwork/stokes/util/txmass"
 
-	"github.com/Sam-Stokes/stokes/util/profiling"
+	"github.com/stokesnetwork/stokes/util/profiling"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/keys"
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/rpcclient"
-	"github.com/Sam-Stokes/stokes/infrastructure/os/signal"
-	"github.com/Sam-Stokes/stokes/util/panics"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/keys"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/infrastructure/network/rpcclient"
+	"github.com/stokesnetwork/stokes/infrastructure/os/signal"
+	"github.com/stokesnetwork/stokes/util/panics"
 	"github.com/pkg/errors"
 
 	"google.golang.org/grpc"

@@ -3,7 +3,7 @@ package bip32
 import (
 	"encoding/binary"
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/bip32/base58"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet/bip32/base58"
 	"github.com/pkg/errors"
 )
 

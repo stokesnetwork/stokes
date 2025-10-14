@@ -5,8 +5,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 

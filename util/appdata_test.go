@@ -12,7 +12,7 @@ import (
 	"testing"
 	"unicode"
 
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/util"
 )
 
 // TestAppDataDir tests the API for AppDir to ensure it gives expected

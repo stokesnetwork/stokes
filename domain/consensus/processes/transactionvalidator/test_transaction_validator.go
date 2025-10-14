@@ -1,9 +1,9 @@
 package transactionvalidator
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/testapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/testapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/txscript"
 )
 
 type testTransactionValidator struct {

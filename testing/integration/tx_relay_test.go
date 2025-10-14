@@ -6,17 +6,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/app/protocol/flowcontext"
+	"github.com/stokesnetwork/stokes/app/protocol/flowcontext"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/utxo"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/utxo"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionhelper"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/transactionhelper"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/txscript"
+	"github.com/stokesnetwork/stokes/util"
 	"github.com/kaspanet/go-secp256k1"
 )
 

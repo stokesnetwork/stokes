@@ -4,11 +4,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/server"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/server"
 
 	"github.com/pkg/errors"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/pb"
 	"google.golang.org/grpc"
 )
 

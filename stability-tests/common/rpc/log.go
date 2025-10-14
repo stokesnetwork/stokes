@@ -1,8 +1,8 @@
 package rpc
 
 import (
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
-	"github.com/Sam-Stokes/stokes/util/panics"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/util/panics"
 )
 
 // log is a logger that is initialized with no output filters. This

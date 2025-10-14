@@ -1,8 +1,8 @@
 package rpcclient
 
 import (
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
-	"github.com/Sam-Stokes/stokes/util/panics"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/util/panics"
 )
 
 var log = logger.RegisterSubSystem("RPCC")

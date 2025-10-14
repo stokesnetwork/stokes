@@ -3,9 +3,9 @@ package ghostdagmanager
 import (
 	"math/big"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/util/difficulty"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/util/difficulty"
 	"github.com/pkg/errors"
 )
 

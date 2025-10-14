@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/stability-tests/common"
-	"github.com/Sam-Stokes/stokes/util/profiling"
+	"github.com/stokesnetwork/stokes/stability-tests/common"
+	"github.com/stokesnetwork/stokes/util/profiling"
 )
 
 const timeout = 5 * time.Second

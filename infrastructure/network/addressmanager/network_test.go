@@ -8,7 +8,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/appmessage"
 )
 
 // TestIPTypes ensures the various functions which determine the type of an IP

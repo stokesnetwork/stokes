@@ -8,7 +8,7 @@ package database_test
 import (
 	"bytes"
 	"fmt"
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database"
 	"reflect"
 	"strings"
 	"testing"

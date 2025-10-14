@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
+	"github.com/stokesnetwork/stokes/app/protocol/protocolerrors"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/appmessage"
 	"github.com/pkg/errors"
 )
 

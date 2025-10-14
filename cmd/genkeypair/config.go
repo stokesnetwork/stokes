@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/jessevdk/go-flags"
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
 )
 
 type configFlags struct {

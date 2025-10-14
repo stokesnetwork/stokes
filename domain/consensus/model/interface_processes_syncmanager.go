@@ -1,6 +1,6 @@
 package model
 
-import "github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+import "github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 
 // SyncManager exposes functions to support sync between kaspad nodes
 type SyncManager interface {

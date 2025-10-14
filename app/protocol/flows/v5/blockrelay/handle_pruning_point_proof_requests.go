@@ -1,10 +1,10 @@
 package blockrelay
 
 import (
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
-	"github.com/Sam-Stokes/stokes/domain"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	peerpkg "github.com/stokesnetwork/stokes/app/protocol/peer"
+	"github.com/stokesnetwork/stokes/domain"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 )
 
 // PruningPointProofRequestsContext is the interface for the context needed for the HandlePruningPointProofRequests flow.

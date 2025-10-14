@@ -2,19 +2,19 @@ package libkaspawallet_test
 
 import (
 	"fmt"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/serialization"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet/serialization"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
 	"strings"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
-	"github.com/Sam-Stokes/stokes/domain/consensus"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/testutils"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/utxo"
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet"
+	"github.com/stokesnetwork/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/testutils"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/txscript"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/utxo"
+	"github.com/stokesnetwork/stokes/util"
 )
 
 func forSchnorrAndECDSA(t *testing.T, testFunc func(t *testing.T, ecdsa bool)) {

@@ -2,14 +2,14 @@ package headersselectedchainstore
 
 import (
 	"encoding/binary"
-	"github.com/Sam-Stokes/stokes/util/staging"
+	"github.com/stokesnetwork/stokes/util/staging"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/database"
-	"github.com/Sam-Stokes/stokes/domain/consensus/database/binaryserialization"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/lrucache"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/lrucacheuint64tohash"
+	"github.com/stokesnetwork/stokes/domain/consensus/database"
+	"github.com/stokesnetwork/stokes/domain/consensus/database/binaryserialization"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/lrucache"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/lrucacheuint64tohash"
 	"github.com/pkg/errors"
 )
 

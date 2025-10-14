@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database/ldb"
-	"github.com/Sam-Stokes/stokes/stability-tests/common"
-	"github.com/Sam-Stokes/stokes/stability-tests/common/mine"
+	"github.com/stokesnetwork/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database/ldb"
+	"github.com/stokesnetwork/stokes/stability-tests/common"
+	"github.com/stokesnetwork/stokes/stability-tests/common/mine"
 	"github.com/pkg/errors"
 )
 

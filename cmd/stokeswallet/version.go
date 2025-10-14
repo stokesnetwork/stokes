@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/Sam-Stokes/stokes/version"
+	"github.com/stokesnetwork/stokes/version"
 	"os"
 	"path/filepath"
 	"strings"

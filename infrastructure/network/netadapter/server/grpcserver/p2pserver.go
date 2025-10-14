@@ -2,9 +2,9 @@ package grpcserver
 
 import (
 	"context"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/server"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/server/grpcserver/protowire"
-	"github.com/Sam-Stokes/stokes/util/panics"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/server"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/stokesnetwork/stokes/util/panics"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding/gzip"

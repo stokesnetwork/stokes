@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
 	"github.com/pkg/errors"
 
 	"github.com/jessevdk/go-flags"

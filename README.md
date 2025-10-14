@@ -1,7 +1,7 @@
 # 🚀 Stokes (STKS)
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/Sam-Stokes/stokes)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/stokesnetwork/stokes)
 [![Testnet](https://img.shields.io/badge/testnet-live-green.svg)](https://sam-stokes.github.io/stokes)
 
 **Stokes - also known as StokesCoin in its early release** is a proof-of-work, fair, decentralized cryptocurrency combining the speed of Kaspa's blockDAG with Bitcoin's proven halving economics.
@@ -92,7 +92,7 @@ Stokes has unique genesis blocks for all networks:
 
 ### Option 1: Download Pre-Built Binaries (Recommended)
 
-**Coming Soon:** Pre-built binaries for Linux, macOS, and Windows will be available on the [Releases](https://github.com/Sam-Stokes/stokes/releases) page.
+**Coming Soon:** Pre-built binaries for Linux, macOS, and Windows will be available on the [Releases](https://github.com/stokesnetwork/stokes/releases) page.
 
 ### Option 2: Build from Source
 
@@ -124,7 +124,7 @@ Stokes has unique genesis blocks for all networks:
 2. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Sam-Stokes/stokes
+   git clone https://github.com/stokesnetwork/stokes
    cd stokes
    ```
 
@@ -512,7 +512,7 @@ We welcome contributions! Here's how you can help:
 
 ```bash
 # Clone repo
-git clone https://github.com/Sam-Stokes/stokes
+git clone https://github.com/stokesnetwork/stokes
 cd stokes
 
 # Run tests
@@ -527,7 +527,7 @@ go fmt ./...
 
 ## 📞 Support & Community
 
-- **GitHub Issues:** [Report bugs](https://github.com/Sam-Stokes/stokes/issues)
+- **GitHub Issues:** [Report bugs](https://github.com/stokesnetwork/stokes/issues)
 - **Documentation:** This README and [docs/](docs/)
 - **Website:** [https://sam-stokes.github.io/stokes](https://sam-stokes.github.io/stokes)
 
@@ -552,6 +552,6 @@ Contributions are welcome! Please see our documentation for guidelines.
 
 ## Support
 
-- **Issues:** [GitHub Issues](https://github.com/Sam-Stokes/stokes/issues)
+- **Issues:** [GitHub Issues](https://github.com/stokesnetwork/stokes/issues)
 - **Documentation:** See docs in this repository
 - **Community:** Coming in Phase 2

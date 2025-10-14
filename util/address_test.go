@@ -13,7 +13,7 @@ import (
 
 	"golang.org/x/crypto/blake2b"
 
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/util"
 )
 
 func TestAddresses(t *testing.T) {

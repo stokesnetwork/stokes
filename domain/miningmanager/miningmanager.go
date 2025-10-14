@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensusreference"
-	miningmanagermodel "github.com/Sam-Stokes/stokes/domain/miningmanager/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensusreference"
+	miningmanagermodel "github.com/stokesnetwork/stokes/domain/miningmanager/model"
 )
 
 // MiningManager creates block templates for mining as well as maintaining

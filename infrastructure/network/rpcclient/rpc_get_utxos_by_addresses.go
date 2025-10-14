@@ -1,6 +1,6 @@
 package rpcclient
 
-import "github.com/Sam-Stokes/stokes/app/appmessage"
+import "github.com/stokesnetwork/stokes/app/appmessage"
 
 // GetUTXOsByAddresses sends an RPC request respective to the function's name and returns the RPC server's response
 func (c *RPCClient) GetUTXOsByAddresses(addresses []string) (*appmessage.GetUTXOsByAddressesResponseMessage, error) {

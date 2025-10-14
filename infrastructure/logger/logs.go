@@ -35,7 +35,7 @@ package logger
 import (
 	"bytes"
 	"fmt"
-	"github.com/Sam-Stokes/stokes/util/mstime"
+	"github.com/stokesnetwork/stokes/util/mstime"
 	"os"
 	"runtime"
 	"sync/atomic"

@@ -9,7 +9,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database"
 )
 
 func TestDatabasePut(t *testing.T) {

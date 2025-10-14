@@ -3,9 +3,9 @@ package consensus_test
 import (
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/testutils"
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/testutils"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
 )
 
 func TestPruningDepth(t *testing.T) {

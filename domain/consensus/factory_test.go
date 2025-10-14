@@ -4,10 +4,10 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/domain/prefixmanager/prefix"
+	"github.com/stokesnetwork/stokes/domain/prefixmanager/prefix"
 
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database/ldb"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database/ldb"
 )
 
 func TestNewConsensus(t *testing.T) {

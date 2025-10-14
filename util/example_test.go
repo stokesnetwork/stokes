@@ -2,11 +2,11 @@ package util_test
 
 import (
 	"fmt"
-	"github.com/Sam-Stokes/stokes/util/difficulty"
+	"github.com/stokesnetwork/stokes/util/difficulty"
 	"math"
 	"math/big"
 
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/util"
 )
 
 func ExampleAmount() {

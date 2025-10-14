@@ -4,13 +4,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/id"
-	mathUtil "github.com/Sam-Stokes/stokes/util/math"
-	"github.com/Sam-Stokes/stokes/util/mstime"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/id"
+	mathUtil "github.com/stokesnetwork/stokes/util/math"
+	"github.com/stokesnetwork/stokes/util/mstime"
 )
 
 // Peer holds data about a peer.

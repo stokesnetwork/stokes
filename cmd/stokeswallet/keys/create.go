@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/utils"
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/utils"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"
 )

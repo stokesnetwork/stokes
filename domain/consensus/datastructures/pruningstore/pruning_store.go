@@ -3,13 +3,13 @@ package pruningstore
 import (
 	"encoding/binary"
 	"github.com/golang/protobuf/proto"
-	"github.com/Sam-Stokes/stokes/domain/consensus/database"
-	"github.com/Sam-Stokes/stokes/domain/consensus/database/binaryserialization"
-	"github.com/Sam-Stokes/stokes/domain/consensus/database/serialization"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/lrucacheuint64tohash"
-	"github.com/Sam-Stokes/stokes/util/staging"
+	"github.com/stokesnetwork/stokes/domain/consensus/database"
+	"github.com/stokesnetwork/stokes/domain/consensus/database/binaryserialization"
+	"github.com/stokesnetwork/stokes/domain/consensus/database/serialization"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/lrucacheuint64tohash"
+	"github.com/stokesnetwork/stokes/util/staging"
 	"github.com/pkg/errors"
 )
 

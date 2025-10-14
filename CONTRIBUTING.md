@@ -31,7 +31,7 @@ Welcome! Here's how to get started:
 2. **Set up your development environment**
    ```bash
    # Clone the repository
-   git clone https://github.com/Sam-Stokes/stokes
+   git clone https://github.com/stokesnetwork/stokes
    cd stokes
    
    # Build the project
@@ -45,7 +45,7 @@ Welcome! Here's how to get started:
    ```
 
 3. **Find something to work on**
-   - Browse [open issues](https://github.com/Sam-Stokes/stokes/issues)
+   - Browse [open issues](https://github.com/stokesnetwork/stokes/issues)
    - Look for issues tagged `good first issue` or `help wanted`
    - Ask in discussions if you need guidance
 
@@ -122,7 +122,7 @@ If you're familiar with blockchain development:
 # Fork the repository on GitHub, then:
 git clone https://github.com/YOUR_USERNAME/stokes
 cd stokes
-git remote add upstream https://github.com/Sam-Stokes/stokes
+git remote add upstream https://github.com/stokesnetwork/stokes
 ```
 
 ### 2. Create a Branch

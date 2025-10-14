@@ -4,15 +4,15 @@ import (
 	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/serialization"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/utxo"
-	"github.com/Sam-Stokes/stokes/domain/miningmanager/mempool"
-	"github.com/Sam-Stokes/stokes/util"
-	"github.com/Sam-Stokes/stokes/util/txmass"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet/serialization"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/utxo"
+	"github.com/stokesnetwork/stokes/domain/miningmanager/mempool"
+	"github.com/stokesnetwork/stokes/util"
+	"github.com/stokesnetwork/stokes/util/txmass"
 )
 
 // maybeAutoCompoundTransaction checks if a transaction's mass is higher that what is allowed for a standard

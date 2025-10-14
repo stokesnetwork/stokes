@@ -8,7 +8,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
 )
 
 // RenderDAGToDot is a helper function for debugging tests.

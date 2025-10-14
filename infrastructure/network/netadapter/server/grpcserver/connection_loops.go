@@ -2,18 +2,18 @@ package grpcserver
 
 import (
 	"github.com/davecgh/go-spew/spew"
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
 	"io"
 	"os"
 	"strconv"
 	"sync"
 	"time"
 
-	routerpkg "github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	routerpkg "github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 func (c *gRPCConnection) connectionLoops() error {

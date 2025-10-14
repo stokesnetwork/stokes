@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 )
 
 // BlocksWithTrustedDataDAAWindowStore stores the DAA window of blocks with trusted data

@@ -5,15 +5,15 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/Sam-Stokes/stokes/domain/consensusreference"
+	"github.com/stokesnetwork/stokes/domain/consensusreference"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/miningmanager"
-	"github.com/Sam-Stokes/stokes/domain/miningmanager/mempool"
-	"github.com/Sam-Stokes/stokes/domain/prefixmanager"
-	"github.com/Sam-Stokes/stokes/domain/prefixmanager/prefix"
-	infrastructuredatabase "github.com/Sam-Stokes/stokes/infrastructure/db/database"
+	"github.com/stokesnetwork/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/miningmanager"
+	"github.com/stokesnetwork/stokes/domain/miningmanager/mempool"
+	"github.com/stokesnetwork/stokes/domain/prefixmanager"
+	"github.com/stokesnetwork/stokes/domain/prefixmanager/prefix"
+	infrastructuredatabase "github.com/stokesnetwork/stokes/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

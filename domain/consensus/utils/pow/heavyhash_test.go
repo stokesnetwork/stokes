@@ -3,8 +3,8 @@ package pow
 import (
 	"bytes"
 	"encoding/hex"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/hashes"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/hashes"
 	"math/rand"
 	"testing"
 )

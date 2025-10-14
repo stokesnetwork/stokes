@@ -11,13 +11,13 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/subnetworks"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionid"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/subnetworks"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/transactionid"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 )
 
 // TestTx tests the MsgTx API.

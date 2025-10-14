@@ -3,8 +3,8 @@ package coinbasemanager
 import (
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
 )
 
 // STOKES: Updated test for Bitcoin-style halving

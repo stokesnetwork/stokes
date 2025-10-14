@@ -2,14 +2,14 @@ package difficulty_test
 
 import (
 	"fmt"
-	"github.com/Sam-Stokes/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/domain/consensus"
 	"math"
 	"math/big"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/testutils"
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
-	"github.com/Sam-Stokes/stokes/util/difficulty"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/testutils"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/util/difficulty"
 )
 
 func TestGetHashrateString(t *testing.T) {

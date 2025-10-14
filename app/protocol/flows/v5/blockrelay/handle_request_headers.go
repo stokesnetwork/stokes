@@ -1,13 +1,13 @@
 package blockrelay
 
 import (
-	"github.com/Sam-Stokes/stokes/app/protocol/peer"
-	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/app/protocol/peer"
+	"github.com/stokesnetwork/stokes/app/protocol/protocolerrors"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/domain"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/domain"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 )
 
 // This constant must be equal at both syncer and syncee. Therefore, never (!!) change this constant unless a new p2p

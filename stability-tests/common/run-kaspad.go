@@ -2,7 +2,7 @@ package common
 
 import (
 	"fmt"
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
 	"os"
 	"sync/atomic"
 	"syscall"

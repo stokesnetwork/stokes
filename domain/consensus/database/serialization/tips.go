@@ -1,7 +1,7 @@
 package serialization
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 )
 
 // TipsToDBTips converts a slice of hashes to DbTips

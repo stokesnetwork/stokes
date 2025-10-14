@@ -2,18 +2,18 @@ package main
 
 import (
 	nativeerrors "errors"
-	"github.com/Sam-Stokes/stokes/version"
+	"github.com/stokesnetwork/stokes/version"
 	"math/rand"
 	"sync/atomic"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/cmd/stokesminer/templatemanager"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/pow"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/cmd/stokesminer/templatemanager"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/pow"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/util"
 	"github.com/pkg/errors"
 )
 

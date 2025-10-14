@@ -7,7 +7,7 @@ package addressmanager
 import (
 	"net"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/appmessage"
 )
 
 var (

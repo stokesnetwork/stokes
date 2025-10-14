@@ -7,9 +7,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Sam-Stokes/stokes/stability-tests/common"
-	"github.com/Sam-Stokes/stokes/stability-tests/common/rpc"
-	"github.com/Sam-Stokes/stokes/util/profiling"
+	"github.com/stokesnetwork/stokes/stability-tests/common"
+	"github.com/stokesnetwork/stokes/stability-tests/common/rpc"
+	"github.com/stokesnetwork/stokes/util/profiling"
 )
 
 var timeout = 30 * time.Second

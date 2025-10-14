@@ -1,7 +1,7 @@
 package blockrelay
 
 import (
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 	"testing"
 )
 

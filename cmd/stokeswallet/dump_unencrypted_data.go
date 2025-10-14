@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/keys"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/utils"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/keys"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/utils"
 
 	"github.com/pkg/errors"
 )

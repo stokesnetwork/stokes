@@ -4,11 +4,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/util/txmass"
+	"github.com/stokesnetwork/stokes/util/txmass"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/util/difficulty"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/util/difficulty"
 )
 
 // blockValidator exposes a set of validation classes, after which

@@ -4,17 +4,17 @@ import (
 	"math/big"
 	"sort"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/ruleerrors"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/blockheader"
+	"github.com/stokesnetwork/stokes/domain/consensus/ruleerrors"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/blockheader"
 	"github.com/pkg/errors"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/merkle"
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
-	"github.com/Sam-Stokes/stokes/util/mstime"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/merkle"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/util/mstime"
 )
 
 type blockBuilder struct {

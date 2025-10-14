@@ -2,14 +2,14 @@ package blockrelay
 
 import (
 	"errors"
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/app/protocol/common"
-	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
-	"github.com/Sam-Stokes/stokes/domain"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/ruleerrors"
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/protocol/common"
+	"github.com/stokesnetwork/stokes/app/protocol/protocolerrors"
+	"github.com/stokesnetwork/stokes/domain"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/ruleerrors"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 )
 
 // HandleRequestPruningPointUTXOSetContext is the interface for the context needed for the HandleRequestPruningPointUTXOSet flow.

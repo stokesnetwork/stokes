@@ -3,7 +3,7 @@ package addressmanager
 import (
 	"net"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
 )
 
 // Config is a descriptor which specifies the AddressManager instance configuration.

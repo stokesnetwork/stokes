@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/Sam-Stokes/stokes/stability-tests/common"
-	"github.com/Sam-Stokes/stokes/stability-tests/common/mine"
+	"github.com/stokesnetwork/stokes/stability-tests/common"
+	"github.com/stokesnetwork/stokes/stability-tests/common/mine"
 	"github.com/pkg/errors"
 )
 

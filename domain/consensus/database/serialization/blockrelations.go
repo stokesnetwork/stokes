@@ -1,7 +1,7 @@
 package serialization
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
 )
 
 // DomainBlockRelationsToDbBlockRelations converts model.BlockRelations to DbBlockRelations

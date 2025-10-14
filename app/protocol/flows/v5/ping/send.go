@@ -1,16 +1,16 @@
 package ping
 
 import (
-	"github.com/Sam-Stokes/stokes/app/protocol/common"
-	"github.com/Sam-Stokes/stokes/app/protocol/flowcontext"
+	"github.com/stokesnetwork/stokes/app/protocol/common"
+	"github.com/stokesnetwork/stokes/app/protocol/flowcontext"
 	"github.com/pkg/errors"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
-	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
-	"github.com/Sam-Stokes/stokes/util/random"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	peerpkg "github.com/stokesnetwork/stokes/app/protocol/peer"
+	"github.com/stokesnetwork/stokes/app/protocol/protocolerrors"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/util/random"
 )
 
 // SendPingsContext is the interface for the context needed for the SendPings flow.

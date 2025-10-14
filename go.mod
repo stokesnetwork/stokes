@@ -1,4 +1,4 @@
-module github.com/Sam-Stokes/stokes
+module github.com/stokesnetwork/stokes
 
 go 1.23
 

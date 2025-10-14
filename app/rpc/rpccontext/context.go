@@ -1,13 +1,13 @@
 package rpccontext
 
 import (
-	"github.com/Sam-Stokes/stokes/app/protocol"
-	"github.com/Sam-Stokes/stokes/domain"
-	"github.com/Sam-Stokes/stokes/domain/utxoindex"
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/connmanager"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter"
+	"github.com/stokesnetwork/stokes/app/protocol"
+	"github.com/stokesnetwork/stokes/domain"
+	"github.com/stokesnetwork/stokes/domain/utxoindex"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/network/addressmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/network/connmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter"
 )
 
 // Context represents the RPC context

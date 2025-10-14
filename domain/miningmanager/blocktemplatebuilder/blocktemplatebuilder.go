@@ -1,20 +1,20 @@
 package blocktemplatebuilder
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/processes/coinbasemanager"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/merkle"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionhelper"
-	"github.com/Sam-Stokes/stokes/domain/consensusreference"
-	"github.com/Sam-Stokes/stokes/util/mstime"
+	"github.com/stokesnetwork/stokes/domain/consensus/processes/coinbasemanager"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/merkle"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/transactionhelper"
+	"github.com/stokesnetwork/stokes/domain/consensusreference"
+	"github.com/stokesnetwork/stokes/util/mstime"
 	"math"
 	"sort"
 
-	"github.com/Sam-Stokes/stokes/util/difficulty"
+	"github.com/stokesnetwork/stokes/util/difficulty"
 
-	consensusexternalapi "github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/ruleerrors"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/subnetworks"
-	miningmanagerapi "github.com/Sam-Stokes/stokes/domain/miningmanager/model"
+	consensusexternalapi "github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/ruleerrors"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/subnetworks"
+	miningmanagerapi "github.com/stokesnetwork/stokes/domain/miningmanager/model"
 	"github.com/pkg/errors"
 )
 
@@ -151,7 +151,7 @@ func (btb *blockTemplateBuilder) BuildBlockTemplate(
 		if err != nil {
 			// mempool.RemoveInvalidTransactions might return errors in situations that are perfectly fine in this context.
 			// TODO: Once the mempool invariants are clear, this should be converted back `return nil, err`:
-			// https://github.com/Sam-Stokes/stokes/issues/1553
+			// https://github.com/stokesnetwork/stokes/issues/1553
 			log.Criticalf("Error from mempool.RemoveInvalidTransactions: %+v", err)
 		}
 		// We can call this recursively without worry because this should almost never happen

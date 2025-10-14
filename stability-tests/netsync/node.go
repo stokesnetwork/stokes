@@ -2,19 +2,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/Sam-Stokes/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/domain/consensus"
 	"os/exec"
 	"strings"
 	"sync/atomic"
 	"syscall"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/stability-tests/common"
-	"github.com/Sam-Stokes/stokes/stability-tests/common/mine"
-	"github.com/Sam-Stokes/stokes/stability-tests/common/rpc"
-	"github.com/Sam-Stokes/stokes/util"
-	"github.com/Sam-Stokes/stokes/util/panics"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/stability-tests/common"
+	"github.com/stokesnetwork/stokes/stability-tests/common/mine"
+	"github.com/stokesnetwork/stokes/stability-tests/common/rpc"
+	"github.com/stokesnetwork/stokes/util"
+	"github.com/stokesnetwork/stokes/util/panics"
 	"github.com/pkg/errors"
 )
 

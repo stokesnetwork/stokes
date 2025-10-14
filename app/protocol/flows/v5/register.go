@@ -1,16 +1,16 @@
 package v5
 
 import (
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/app/protocol/common"
-	"github.com/Sam-Stokes/stokes/app/protocol/flowcontext"
-	"github.com/Sam-Stokes/stokes/app/protocol/flows/v5/addressexchange"
-	"github.com/Sam-Stokes/stokes/app/protocol/flows/v5/blockrelay"
-	"github.com/Sam-Stokes/stokes/app/protocol/flows/v5/ping"
-	"github.com/Sam-Stokes/stokes/app/protocol/flows/v5/rejects"
-	"github.com/Sam-Stokes/stokes/app/protocol/flows/v5/transactionrelay"
-	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
-	routerpkg "github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/protocol/common"
+	"github.com/stokesnetwork/stokes/app/protocol/flowcontext"
+	"github.com/stokesnetwork/stokes/app/protocol/flows/v5/addressexchange"
+	"github.com/stokesnetwork/stokes/app/protocol/flows/v5/blockrelay"
+	"github.com/stokesnetwork/stokes/app/protocol/flows/v5/ping"
+	"github.com/stokesnetwork/stokes/app/protocol/flows/v5/rejects"
+	"github.com/stokesnetwork/stokes/app/protocol/flows/v5/transactionrelay"
+	peerpkg "github.com/stokesnetwork/stokes/app/protocol/peer"
+	routerpkg "github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 )
 
 type protocolManager interface {

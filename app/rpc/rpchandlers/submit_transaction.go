@@ -1,11 +1,11 @@
 package rpchandlers
 
 import (
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/app/rpc/rpccontext"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/miningmanager/mempool"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/rpc/rpccontext"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/miningmanager/mempool"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

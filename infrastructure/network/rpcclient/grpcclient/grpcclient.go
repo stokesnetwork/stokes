@@ -2,10 +2,10 @@ package grpcclient
 
 import (
 	"context"
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/server/grpcserver"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/server/grpcserver"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/server/grpcserver/protowire"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding/gzip"

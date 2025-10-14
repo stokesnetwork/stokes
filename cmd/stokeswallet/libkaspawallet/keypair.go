@@ -6,9 +6,9 @@ import (
 	"strings"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/libkaspawallet/bip32"
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/libkaspawallet/bip32"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/util"
 	"github.com/pkg/errors"
 )
 

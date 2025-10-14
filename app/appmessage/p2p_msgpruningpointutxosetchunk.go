@@ -1,6 +1,6 @@
 package appmessage
 
-import "github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+import "github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 
 // MsgPruningPointUTXOSetChunk represents a kaspa PruningPointUTXOSetChunk message
 type MsgPruningPointUTXOSetChunk struct {

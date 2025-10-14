@@ -1,8 +1,8 @@
 package transactionrelay
 
 import (
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 )
 
 type handleRequestedTransactionsFlow struct {

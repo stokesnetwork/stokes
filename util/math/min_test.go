@@ -1,7 +1,7 @@
 package math_test
 
 import (
-	utilMath "github.com/Sam-Stokes/stokes/util/math"
+	utilMath "github.com/stokesnetwork/stokes/util/math"
 	"math"
 	"testing"
 )

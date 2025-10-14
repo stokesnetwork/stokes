@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/serialization"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionid"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/serialization"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/transactionid"
 	"github.com/pkg/errors"
 )
 

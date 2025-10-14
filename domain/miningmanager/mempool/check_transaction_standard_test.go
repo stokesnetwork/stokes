@@ -9,17 +9,17 @@ import (
 	"math"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/domain/consensusreference"
+	"github.com/stokesnetwork/stokes/domain/consensusreference"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/testutils"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/testutils"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/domain/consensus"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/txscript"
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/txscript"
+	"github.com/stokesnetwork/stokes/util"
 	"github.com/pkg/errors"
 )
 

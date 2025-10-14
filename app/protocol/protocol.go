@@ -1,20 +1,20 @@
 package protocol
 
 import (
-	"github.com/Sam-Stokes/stokes/app/protocol/common"
-	"github.com/Sam-Stokes/stokes/app/protocol/flows/ready"
-	"github.com/Sam-Stokes/stokes/app/protocol/flows/v5"
+	"github.com/stokesnetwork/stokes/app/protocol/common"
+	"github.com/stokesnetwork/stokes/app/protocol/flows/ready"
+	"github.com/stokesnetwork/stokes/app/protocol/flows/v5"
 	"sync"
 	"sync/atomic"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/app/protocol/flows/handshake"
-	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
-	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/connmanager"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter"
-	routerpkg "github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/protocol/flows/handshake"
+	peerpkg "github.com/stokesnetwork/stokes/app/protocol/peer"
+	"github.com/stokesnetwork/stokes/app/protocol/protocolerrors"
+	"github.com/stokesnetwork/stokes/infrastructure/network/addressmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/network/connmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter"
+	routerpkg "github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

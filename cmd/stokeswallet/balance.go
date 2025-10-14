@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/client"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/daemon/pb"
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/utils"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/client"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/daemon/pb"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/utils"
 )
 
 func balance(conf *balanceConfig) error {

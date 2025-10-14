@@ -5,11 +5,11 @@
 package util_test
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
 	"math"
 	"testing"
 
-	. "github.com/Sam-Stokes/stokes/util"
+	. "github.com/stokesnetwork/stokes/util"
 )
 
 func TestAmountCreation(t *testing.T) {

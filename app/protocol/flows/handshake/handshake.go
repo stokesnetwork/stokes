@@ -3,18 +3,18 @@ package handshake
 import (
 	"sync/atomic"
 
-	"github.com/Sam-Stokes/stokes/domain"
+	"github.com/stokesnetwork/stokes/domain"
 
-	"github.com/Sam-Stokes/stokes/app/protocol/common"
-	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
+	"github.com/stokesnetwork/stokes/app/protocol/common"
+	"github.com/stokesnetwork/stokes/app/protocol/protocolerrors"
+	"github.com/stokesnetwork/stokes/infrastructure/network/addressmanager"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
-	routerpkg "github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	peerpkg "github.com/stokesnetwork/stokes/app/protocol/peer"
+	routerpkg "github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

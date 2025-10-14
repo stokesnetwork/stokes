@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Sam-Stokes/stokes/infrastructure/network/rpcclient/grpcclient"
+	"github.com/stokesnetwork/stokes/infrastructure/network/rpcclient/grpcclient"
 	"github.com/pkg/errors"
 )
 

@@ -1,8 +1,8 @@
 package rpcclient
 
 import (
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	routerpkg "github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	routerpkg "github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 )
 
 type rpcRouter struct {

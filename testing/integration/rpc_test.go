@@ -1,12 +1,12 @@
 package integration
 
 import (
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
 	"runtime"
 	"testing"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/network/rpcclient"
+	"github.com/stokesnetwork/stokes/infrastructure/network/rpcclient"
 )
 
 const rpcTimeout = 10 * time.Second

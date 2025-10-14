@@ -3,7 +3,7 @@ package dagconfig_test
 import (
 	"testing"
 
-	. "github.com/Sam-Stokes/stokes/domain/dagconfig"
+	. "github.com/stokesnetwork/stokes/domain/dagconfig"
 )
 
 // Define some of the required parameters for a user-registered

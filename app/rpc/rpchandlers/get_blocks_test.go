@@ -5,18 +5,18 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/app/rpc/rpccontext"
-	"github.com/Sam-Stokes/stokes/app/rpc/rpchandlers"
-	"github.com/Sam-Stokes/stokes/domain/consensus"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/testapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/hashes"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/testutils"
-	"github.com/Sam-Stokes/stokes/domain/miningmanager"
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/app/rpc/rpccontext"
+	"github.com/stokesnetwork/stokes/app/rpc/rpchandlers"
+	"github.com/stokesnetwork/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/testapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/hashes"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/testutils"
+	"github.com/stokesnetwork/stokes/domain/miningmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
 )
 
 type fakeDomain struct {

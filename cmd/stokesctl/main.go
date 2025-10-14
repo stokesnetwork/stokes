@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/Sam-Stokes/stokes/version"
+	"github.com/stokesnetwork/stokes/version"
 	"os"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/server/grpcserver/protowire"
 
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/encoding/protojson"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/network/rpcclient/grpcclient"
+	"github.com/stokesnetwork/stokes/infrastructure/network/rpcclient/grpcclient"
 )
 
 func main() {

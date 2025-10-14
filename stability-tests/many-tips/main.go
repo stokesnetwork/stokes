@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/mining"
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/mining"
+	"github.com/stokesnetwork/stokes/util"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -15,10 +15,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/stability-tests/common"
-	"github.com/Sam-Stokes/stokes/stability-tests/common/rpc"
-	"github.com/Sam-Stokes/stokes/util/panics"
-	"github.com/Sam-Stokes/stokes/util/profiling"
+	"github.com/stokesnetwork/stokes/stability-tests/common"
+	"github.com/stokesnetwork/stokes/stability-tests/common/rpc"
+	"github.com/stokesnetwork/stokes/util/panics"
+	"github.com/stokesnetwork/stokes/util/profiling"
 	"github.com/pkg/errors"
 )
 

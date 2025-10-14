@@ -7,17 +7,17 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database"
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database/ldb"
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
-	"github.com/Sam-Stokes/stokes/infrastructure/os/execenv"
-	"github.com/Sam-Stokes/stokes/infrastructure/os/limits"
-	"github.com/Sam-Stokes/stokes/infrastructure/os/signal"
-	"github.com/Sam-Stokes/stokes/infrastructure/os/winservice"
-	"github.com/Sam-Stokes/stokes/util/panics"
-	"github.com/Sam-Stokes/stokes/util/profiling"
-	"github.com/Sam-Stokes/stokes/version"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database/ldb"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/infrastructure/os/execenv"
+	"github.com/stokesnetwork/stokes/infrastructure/os/limits"
+	"github.com/stokesnetwork/stokes/infrastructure/os/signal"
+	"github.com/stokesnetwork/stokes/infrastructure/os/winservice"
+	"github.com/stokesnetwork/stokes/util/panics"
+	"github.com/stokesnetwork/stokes/util/profiling"
+	"github.com/stokesnetwork/stokes/version"
 )
 
 const (

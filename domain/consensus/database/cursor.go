@@ -1,8 +1,8 @@
 package database
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

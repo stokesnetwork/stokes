@@ -1,16 +1,16 @@
 package testing
 
 import (
-	"github.com/Sam-Stokes/stokes/app/protocol/flows/v5/addressexchange"
+	"github.com/stokesnetwork/stokes/app/protocol/flows/v5/addressexchange"
 	"testing"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/app/appmessage"
-	peerpkg "github.com/Sam-Stokes/stokes/app/protocol/peer"
-	"github.com/Sam-Stokes/stokes/domain/consensus"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/testutils"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/addressmanager"
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/app/appmessage"
+	peerpkg "github.com/stokesnetwork/stokes/app/protocol/peer"
+	"github.com/stokesnetwork/stokes/domain/consensus"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/testutils"
+	"github.com/stokesnetwork/stokes/infrastructure/network/addressmanager"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 )
 
 type fakeReceiveAddressesContext struct{}

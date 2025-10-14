@@ -1,13 +1,13 @@
 package coinbasemanager
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/constants"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/hashset"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/subnetworks"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/transactionhelper"
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/constants"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/hashset"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/subnetworks"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/transactionhelper"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

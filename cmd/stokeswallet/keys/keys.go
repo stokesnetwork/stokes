@@ -12,10 +12,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/Sam-Stokes/stokes/cmd/stokeswallet/utils"
+	"github.com/stokesnetwork/stokes/cmd/stokeswallet/utils"
 
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
-	"github.com/Sam-Stokes/stokes/util"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/util"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/argon2"
 	"golang.org/x/crypto/chacha20poly1305"

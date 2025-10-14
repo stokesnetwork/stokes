@@ -3,10 +3,10 @@ package utxoindex
 import (
 	"encoding/binary"
 
-	"github.com/Sam-Stokes/stokes/domain/consensus/database/binaryserialization"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database"
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/domain/consensus/database/binaryserialization"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 

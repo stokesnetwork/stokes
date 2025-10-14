@@ -1,7 +1,7 @@
 package txscript
 
 import (
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
 	"os"
 	"testing"
 )

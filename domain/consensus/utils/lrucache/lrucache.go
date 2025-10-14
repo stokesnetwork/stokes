@@ -1,7 +1,7 @@
 package lrucache
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 )
 
 // LRUCache is a least-recently-used cache for any type

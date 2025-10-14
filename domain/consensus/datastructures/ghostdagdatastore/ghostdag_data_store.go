@@ -2,11 +2,11 @@ package ghostdagdatastore
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/Sam-Stokes/stokes/domain/consensus/database/serialization"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/lrucacheghostdagdata"
-	"github.com/Sam-Stokes/stokes/util/staging"
+	"github.com/stokesnetwork/stokes/domain/consensus/database/serialization"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/lrucacheghostdagdata"
+	"github.com/stokesnetwork/stokes/util/staging"
 )
 
 var ghostdagDataBucketName = []byte("block-ghostdag-data")

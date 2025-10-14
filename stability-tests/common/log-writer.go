@@ -3,7 +3,7 @@ package common
 import (
 	"strings"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
 )
 
 // LogWriter writes to the given log with the given log level and prefix

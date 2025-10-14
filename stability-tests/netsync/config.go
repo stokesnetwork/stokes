@@ -3,8 +3,8 @@ package main
 import (
 	"path/filepath"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
-	"github.com/Sam-Stokes/stokes/stability-tests/common"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/stability-tests/common"
 
 	"github.com/jessevdk/go-flags"
 )

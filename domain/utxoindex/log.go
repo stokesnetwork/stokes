@@ -5,7 +5,7 @@
 package utxoindex
 
 import (
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
 )
 
 var log = logger.RegisterSubSystem("UTIN")

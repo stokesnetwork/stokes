@@ -1,6 +1,6 @@
 package winservice
 
-import "github.com/Sam-Stokes/stokes/infrastructure/config"
+import "github.com/stokesnetwork/stokes/infrastructure/config"
 
 // ServiceDescription contains information about a service, needed to administer it
 type ServiceDescription struct {

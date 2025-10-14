@@ -1,11 +1,11 @@
 package pow
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/consensushashing"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/hashes"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/serialization"
-	"github.com/Sam-Stokes/stokes/util/difficulty"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/consensushashing"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/hashes"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/serialization"
+	"github.com/stokesnetwork/stokes/util/difficulty"
 
 	"github.com/pkg/errors"
 	"math/big"

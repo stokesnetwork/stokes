@@ -5,9 +5,9 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/network/netadapter/router"
+	"github.com/stokesnetwork/stokes/infrastructure/network/netadapter/router"
 
-	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
+	"github.com/stokesnetwork/stokes/app/protocol/protocolerrors"
 )
 
 var (

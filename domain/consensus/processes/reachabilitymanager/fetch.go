@@ -1,10 +1,10 @@
 package reachabilitymanager
 
 import (
-	"github.com/Sam-Stokes/stokes/domain/consensus/database"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/domain/consensus/utils/reachabilitydata"
+	"github.com/stokesnetwork/stokes/domain/consensus/database"
+	"github.com/stokesnetwork/stokes/domain/consensus/model"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/domain/consensus/utils/reachabilitydata"
 	"github.com/pkg/errors"
 )
 

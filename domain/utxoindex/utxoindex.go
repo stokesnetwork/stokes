@@ -1,10 +1,10 @@
 package utxoindex
 
 import (
-	"github.com/Sam-Stokes/stokes/domain"
-	"github.com/Sam-Stokes/stokes/domain/consensus/model/externalapi"
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database"
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/domain"
+	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
 	"sync"
 )
 

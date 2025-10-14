@@ -8,7 +8,7 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"github.com/Sam-Stokes/stokes/app"
+	"github.com/stokesnetwork/stokes/app"
 )
 
 func main() {

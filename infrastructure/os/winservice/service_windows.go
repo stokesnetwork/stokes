@@ -9,9 +9,9 @@ import (
 
 	"github.com/btcsuite/winsvc/eventlog"
 	"github.com/btcsuite/winsvc/svc"
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
-	"github.com/Sam-Stokes/stokes/infrastructure/os/signal"
-	"github.com/Sam-Stokes/stokes/version"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/infrastructure/os/signal"
+	"github.com/stokesnetwork/stokes/version"
 )
 
 // Service houses the main service handler which handles all service

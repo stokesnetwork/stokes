@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/app/protocol/protocolerrors"
+	"github.com/stokesnetwork/stokes/app/protocol/protocolerrors"
 	"github.com/pkg/errors"
 )
 

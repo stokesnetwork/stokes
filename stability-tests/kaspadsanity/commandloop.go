@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/logger"
-	"github.com/Sam-Stokes/stokes/stability-tests/common"
+	"github.com/stokesnetwork/stokes/infrastructure/logger"
+	"github.com/stokesnetwork/stokes/stability-tests/common"
 	"github.com/pkg/errors"
 )
 

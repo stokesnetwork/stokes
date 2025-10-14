@@ -4,14 +4,14 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Sam-Stokes/stokes/domain/dagconfig"
+	"github.com/stokesnetwork/stokes/domain/dagconfig"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database/ldb"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database/ldb"
 
-	"github.com/Sam-Stokes/stokes/infrastructure/db/database"
+	"github.com/stokesnetwork/stokes/infrastructure/db/database"
 
-	"github.com/Sam-Stokes/stokes/app"
-	"github.com/Sam-Stokes/stokes/infrastructure/config"
+	"github.com/stokesnetwork/stokes/app"
+	"github.com/stokesnetwork/stokes/infrastructure/config"
 )
 
 type appHarness struct {
