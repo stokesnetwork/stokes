@@ -399,13 +399,13 @@ go build -o stokeswallet ./cmd/stokeswallet
           [INF] TXMP: P2P Connected to 46.62.218.114:17711
         </p>
         
-        <h4 style="color: #667eea; margin-top: 20px;">Option B: Standalone Mode (If Connection Fails)</h4>
-        <p>If you see connection errors or timeouts, your firewall/ISP may be blocking the connection. Use standalone mode instead:</p>
+        <h4 style="color: #667eea; margin-top: 20px;">Option B: Standalone Mode (For Local Testing)</h4>
+        <p>If you want to test locally without connecting to the network, or if connection fails:</p>
         <pre>
 ./stokesd --testnet --utxoindex --nodnsseed --nolisten
         </pre>
         <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
-          <strong>Note:</strong> Standalone mode works perfectly for testing and mining - you'll mine on your own local chain. Your blocks won't sync with other nodes, but all features work identically.
+          <strong>Note:</strong> Standalone mode creates your own local chain. Your blocks won't sync with the public testnet, but all features work identically for testing.
         </p>
         
         <p style="margin-top: 15px; font-size: 0.9em; color: #e74c3c;">
@@ -430,15 +430,27 @@ go build -o stokeswallet ./cmd/stokeswallet
         </pre>
 
         <h3>Step 6: Start Mining (Terminal 3 - Keep Open)</h3>
+        
+        <h4 style="color: #667eea; margin-top: 20px;">If connected to seed nodes (Option A):</h4>
+        <pre>
+# Replace YOUR_ADDRESS with address from Step 5
+./stokesminer --testnet \
+  --miningaddr=stokestest:YOUR_ADDRESS
+        </pre>
+        
+        <h4 style="color: #667eea; margin-top: 20px;">If running standalone (Option B):</h4>
         <pre>
 # Replace YOUR_ADDRESS with address from Step 5
 ./stokesminer --testnet \
   --miningaddr=stokestest:YOUR_ADDRESS \
-  --rpcserver=127.0.0.1:17210 \
   --mine-when-not-synced
         </pre>
+        
+        <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+          <strong>Note:</strong> The <code>--mine-when-not-synced</code> flag is only needed for standalone/local mining. When connected to seed nodes, your node will sync existing blocks first, then start mining safely.
+        </p>
 
-        <h3>Step 6: Check Balance</h3>
+        <h3>Step 7: Check Balance</h3>
         <pre>
 # Check your balance (after mining 100+ blocks)
 ./stokeswallet --testnet balance

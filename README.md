@@ -234,9 +234,9 @@ Try connecting to the public testnet seed nodes:
 [INF] TXMP: RPC Server listening on [::]:17210
 ```
 
-**Option B: Standalone Mode (If Connection Fails)**
+**Option B: Standalone Mode (For Local Testing)**
 
-If you see connection errors or timeouts, your firewall/ISP may be blocking the connection. Use standalone mode instead:
+If you want to test locally without connecting to the network, or if connection fails:
 
 ```bash
 ./stokesd --testnet \
@@ -253,7 +253,7 @@ If you see connection errors or timeouts, your firewall/ISP may be blocking the 
 [INF] TXMP: RPC Server listening on [::]:17210
 ```
 
-**Note:** Standalone mode works perfectly for testing and mining - you'll mine on your own local chain. Your blocks won't sync with other nodes, but all features work identically.
+**Note:** Standalone mode creates your own local chain. Your blocks won't sync with the public testnet, but all features work identically for testing.
 
 **⚠️ Keep this terminal open! The node must stay running.**
 
@@ -290,15 +290,26 @@ stokestest:qpkpllexmwjp...
 
 **Copy this address - you'll need it for mining!**
 
-### Step 4: Start Mining (Terminal 4 - Keep Open)
+### Step 4: Start Mining (Terminal 3 - Keep Open)
+
+**If connected to seed nodes (Option A):**
+
+```bash
+# Replace YOUR_ADDRESS with address from Step 3
+./stokesminer --testnet \
+  --miningaddr=stokestest:YOUR_ADDRESS
+```
+
+**If running standalone (Option B):**
 
 ```bash
 # Replace YOUR_ADDRESS with address from Step 3
 ./stokesminer --testnet \
   --miningaddr=stokestest:YOUR_ADDRESS \
-  --rpcserver=127.0.0.1:17210 \
   --mine-when-not-synced
 ```
+
+**Note:** The `--mine-when-not-synced` flag is only needed for standalone/local mining. When connected to seed nodes, your node will sync existing blocks first, then start mining safely.
 
 **What you'll see:**
 
@@ -308,7 +319,7 @@ stokestest:qpkpllexmwjp...
 [INF] KSMN: Current hash rate is 160.02 Khash/s
 ```
 
-### Step 5: Check Your Balance (Terminal 4)
+### Step 5: Check Your Balance (Terminal 4 - Run When Needed)
 
 ```bash
 # Check wallet balance
