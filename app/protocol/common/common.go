@@ -10,7 +10,8 @@ import (
 
 // DefaultTimeout is the default duration to wait for enqueuing/dequeuing
 // to/from routes.
-const DefaultTimeout = 120 * time.Second
+// STOKES: Increased from 120s to 300s for better tolerance of network latency
+const DefaultTimeout = 300 * time.Second
 
 // ErrPeerWithSameIDExists signifies that a peer with the same ID already exist.
 var ErrPeerWithSameIDExists = errors.New("ready peer with the same ID already exists")
