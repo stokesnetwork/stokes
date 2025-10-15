@@ -379,7 +379,9 @@ go build -o stokeswallet ./cmd/stokeswallet
         </pre>
 
         <h3>Step 3: Start Testnet Node (Terminal 1 - Keep Open)</h3>
-        <p><strong>Connect to public testnet seed nodes:</strong></p>
+        
+        <h4 style="color: #667eea; margin-top: 20px;">Option A: Connect to Public Testnet (Recommended)</h4>
+        <p>Try connecting to the public testnet seed nodes:</p>
         <pre>
 ./stokesd --testnet \
   --utxoindex \
@@ -391,13 +393,24 @@ go build -o stokeswallet ./cmd/stokeswallet
           • 95.216.155.253:17711 (Germany)<br>
           • 46.62.218.114:17711 (Germany)
         </p>
-        <p style="margin-top: 10px; font-size: 0.9em; color: #e74c3c;">
-          <strong>⚠️ Keep this terminal open! The node must stay running.</strong>
+        <p style="margin-top: 10px; font-size: 0.9em; color: #28a745;">
+          <strong>✅ If successful, you'll see:</strong><br>
+          [INF] TXMP: P2P Connected to 95.216.155.253:17711<br>
+          [INF] TXMP: P2P Connected to 46.62.218.114:17711
         </p>
-        <p style="margin-top: 15px;"><em>Or run standalone (no network):</em></p>
+        
+        <h4 style="color: #667eea; margin-top: 20px;">Option B: Standalone Mode (If Connection Fails)</h4>
+        <p>If you see connection errors or timeouts, your firewall/ISP may be blocking the connection. Use standalone mode instead:</p>
         <pre>
 ./stokesd --testnet --utxoindex --nodnsseed --nolisten
         </pre>
+        <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+          <strong>Note:</strong> Standalone mode works perfectly for testing and mining - you'll mine on your own local chain. Your blocks won't sync with other nodes, but all features work identically.
+        </p>
+        
+        <p style="margin-top: 15px; font-size: 0.9em; color: #e74c3c;">
+          <strong>⚠️ Keep this terminal open! The node must stay running.</strong>
+        </p>
 
         <h3>Step 4: Create Wallet (Terminal 2)</h3>
         <pre>

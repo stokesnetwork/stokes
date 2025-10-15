@@ -209,7 +209,9 @@ stokesd --version
 
 ### Step 1: Run a Node (Terminal 1 - Keep Open)
 
-**Connect to public testnet seed nodes:**
+**Option A: Connect to Public Testnet (Recommended)**
+
+Try connecting to the public testnet seed nodes:
 
 ```bash
 ./stokesd --testnet \
@@ -222,7 +224,19 @@ stokesd --version
 - `95.216.155.253:17711` (Germany)
 - `46.62.218.114:17711` (Germany)
 
-**Or run a standalone node (no network connection):**
+**What you'll see if successful:**
+
+```
+[INF] STKS: Version 0.12.22
+[INF] STKS: UTXO index started
+[INF] TXMP: P2P Connected to 95.216.155.253:17711
+[INF] TXMP: P2P Connected to 46.62.218.114:17711
+[INF] TXMP: RPC Server listening on [::]:17210
+```
+
+**Option B: Standalone Mode (If Connection Fails)**
+
+If you see connection errors or timeouts, your firewall/ISP may be blocking the connection. Use standalone mode instead:
 
 ```bash
 ./stokesd --testnet \
@@ -234,10 +248,12 @@ stokesd --version
 **What you'll see:**
 
 ```
-[INF] KASD: Version 0.12.22
-[INF] KASD: UTXO index started
-[INF] TXMP: RPC Server listening on 127.0.0.1:17210
+[INF] STKS: Version 0.12.22
+[INF] STKS: UTXO index started
+[INF] TXMP: RPC Server listening on [::]:17210
 ```
+
+**Note:** Standalone mode works perfectly for testing and mining - you'll mine on your own local chain. Your blocks won't sync with other nodes, but all features work identically.
 
 **⚠️ Keep this terminal open! The node must stay running.**
 
@@ -274,7 +290,7 @@ stokestest:qpkpllexmwjp...
 
 **Copy this address - you'll need it for mining!**
 
-### Step 4: Start Mining (Terminal 3 (Keep Open))
+### Step 4: Start Mining (Terminal 4 - Keep Open)
 
 ```bash
 # Replace YOUR_ADDRESS with address from Step 3
@@ -442,6 +458,26 @@ sudo ufw allow 17711/tcp
 
 ## 🐛 Troubleshooting
 
+### Can't Connect to Seed Nodes
+
+**Problem:** Connection errors or timeouts when trying to connect to seed nodes
+
+**Error messages you might see:**
+```
+[ERR] TXMP: status error from connectionLoops for 95.216.155.253:17711
+error reading from server: read tcp ... connection timeout
+```
+
+**Cause:** Your firewall, ISP, or corporate network may be blocking port 17711.
+
+**Solution:** Use standalone mode instead:
+
+```bash
+./stokesd --testnet --utxoindex --nodnsseed --nolisten
+```
+
+Standalone mode works identically for testing and mining - you just won't sync blocks with other nodes.
+
 ### Node Won't Start
 
 **Problem:** Node fails to start or crashes immediately
@@ -456,11 +492,11 @@ lsof -i :17210
 pkill stokesd
 
 # 3. Reset database (WARNING: deletes blockchain data)
-rm -rf ~/Library/Application\ Support/stokes-testnet  # macOS
-rm -rf ~/.stokes-testnet  # Linux
+rm -rf ~/Library/Application\ Support/Kaspad/stokes-testnet  # macOS
+rm -rf ~/.kaspad/stokes-testnet  # Linux
 
 # 4. Start fresh
-./stokesd --testnet --utxoindex
+./stokesd --testnet --utxoindex --nodnsseed --nolisten
 ```
 
 ### Wallet Can't Connect

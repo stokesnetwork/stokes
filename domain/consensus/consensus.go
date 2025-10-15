@@ -1124,7 +1124,20 @@ func (s *consensus) isNearlySyncedNoLock() (bool, error) {
 		return false, err
 	}
 
+	// STOKES: If virtual parent is genesis, check if genesis is recent (empty network case)
 	if virtualGHOSTDAGData.SelectedParent().Equal(s.genesisHash) {
+		genesisHeader, err := s.blockHeaderStore.BlockHeader(s.databaseContext, stagingArea, s.genesisHash)
+		if err != nil {
+			return false, err
+		}
+		now := mstime.Now().UnixMilliseconds()
+		// If genesis is recent (within DAA window), we're synced with an empty network
+		if now-genesisHeader.TimeInMilliseconds() < s.expectedDAAWindowDurationInMilliseconds {
+			log.Debugf("Virtual parent is genesis but genesis is recent (%d), so IsNearlySynced returns true",
+				genesisHeader.TimeInMilliseconds())
+			return true, nil
+		}
+		// Genesis is old, we're not synced
 		return false, nil
 	}
 
