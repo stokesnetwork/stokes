@@ -378,7 +378,7 @@ go build -o stokesminer ./cmd/stokesminer
 go build -o stokeswallet ./cmd/stokeswallet
         </pre>
 
-        <h3>Step 3: Start Testnet Node</h3>
+        <h3>Step 3: Start Testnet Node (Terminal 1 - Keep Open)</h3>
         <p><strong>Connect to public testnet seed nodes:</strong></p>
         <pre>
 ./stokesd --testnet \
@@ -391,31 +391,37 @@ go build -o stokeswallet ./cmd/stokeswallet
           • 95.216.155.253:17711 (Germany)<br>
           • 46.62.218.114:17711 (Germany)
         </p>
+        <p style="margin-top: 10px; font-size: 0.9em; color: #e74c3c;">
+          <strong>⚠️ Keep this terminal open! The node must stay running.</strong>
+        </p>
         <p style="margin-top: 15px;"><em>Or run standalone (no network):</em></p>
         <pre>
 ./stokesd --testnet --utxoindex --nodnsseed --nolisten
         </pre>
 
-        <h3>Step 4: Create Wallet</h3>
+        <h3>Step 4: Create Wallet (Terminal 2)</h3>
         <pre>
-# Create wallet (in new terminal)
+# Create wallet (one-time setup)
 ./stokeswallet --testnet create -f ~/stokes-wallet/keys.json
 
-# Start wallet daemon
+# Start wallet daemon (keep this terminal open)
 ./stokeswallet --testnet start-daemon \
   -f ~/stokes-wallet/keys.json \
-  -s 127.0.0.1:17710
+  -s 127.0.0.1:17210
+        </pre>
 
-# Get mining address (in new terminal)
+        <h3>Step 5: Get Mining Address (Terminal 3)</h3>
+        <pre>
+# Get a new address to receive mining rewards
 ./stokeswallet --testnet new-address
         </pre>
 
-        <h3>Step 5: Start Mining</h3>
+        <h3>Step 6: Start Mining (Terminal 3 - Keep Open)</h3>
         <pre>
-# Replace YOUR_ADDRESS with address from step 4
+# Replace YOUR_ADDRESS with address from Step 5
 ./stokesminer --testnet \
   --miningaddr=stokestest:YOUR_ADDRESS \
-  --rpcserver=127.0.0.1:17710 \
+  --rpcserver=127.0.0.1:17210 \
   --mine-when-not-synced
         </pre>
 
@@ -425,7 +431,7 @@ go build -o stokeswallet ./cmd/stokeswallet
 ./stokeswallet --testnet balance
 
 # Check block count
-./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetBlockCount
+./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetBlockCount
         </pre>
 
         <p style="margin-top: 30px; font-size: 1.1em; color: #28a745; font-weight: 600;">

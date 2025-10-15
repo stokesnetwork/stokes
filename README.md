@@ -207,7 +207,7 @@ stokesd --version
 
 ## 🚀 Quick Start (Testnet)
 
-### Step 1: Run a Node
+### Step 1: Run a Node (Terminal 1 - Keep Open)
 
 **Connect to public testnet seed nodes:**
 
@@ -236,10 +236,12 @@ stokesd --version
 ```
 [INF] KASD: Version 0.12.22
 [INF] KASD: UTXO index started
-[INF] TXMP: RPC Server listening on 127.0.0.1:17710
+[INF] TXMP: RPC Server listening on 127.0.0.1:17210
 ```
 
-### Step 2: Create a Wallet
+**⚠️ Keep this terminal open! The node must stay running.**
+
+### Step 2: Create a Wallet (Terminal 2 - One Time Setup)
 
 ```bash
 # Create new wallet
@@ -248,12 +250,18 @@ stokesd --version
 # You'll be prompted for a password
 # SAVE YOUR SEED PHRASE - This is your backup!
 
-# Start wallet daemon (in new terminal)
+# Start wallet daemon (keep this terminal open too)
 ./stokeswallet --testnet start-daemon \
   -f ~/stokes-wallet/keys.json \
-  -s 127.0.0.1:17710
+  -s 127.0.0.1:17210
+```
 
-# Get your mining address (in new terminal)
+**⚠️ Keep Terminal 2 open! The wallet daemon must stay running.**
+
+### Step 3: Get Mining Address (Terminal 3)
+
+```bash
+# Get a new address to receive mining rewards
 ./stokeswallet --testnet new-address
 ```
 
@@ -261,16 +269,18 @@ stokesd --version
 
 ```
 New address:
-stokestest:qpkpllexmwjpdfru335psxssd3v8hs2l2gp8qv74gm8ajrrpxv2e7mmsr4ucq
+stokestest:qpkpllexmwjp...
 ```
 
-### Step 3: Start Mining
+**Copy this address - you'll need it for mining!**
+
+### Step 4: Start Mining (Terminal 3 (Keep Open))
 
 ```bash
-# Replace YOUR_ADDRESS with address from Step 2
+# Replace YOUR_ADDRESS with address from Step 3
 ./stokesminer --testnet \
   --miningaddr=stokestest:YOUR_ADDRESS \
-  --rpcserver=127.0.0.1:17710 \
+  --rpcserver=127.0.0.1:17210 \
   --mine-when-not-synced
 ```
 
@@ -278,18 +288,18 @@ stokestest:qpkpllexmwjpdfru335psxssd3v8hs2l2gp8qv74gm8ajrrpxv2e7mmsr4ucq
 
 ```
 [INF] KSMN: Found block 761dc037... with parents [97b58165...]
-[INF] KSMN: Submitting block 761dc037... to 127.0.0.1:17710
+[INF] KSMN: Submitting block 761dc037... to 127.0.0.1:17210
 [INF] KSMN: Current hash rate is 160.02 Khash/s
 ```
 
-### Step 4: Check Your Balance
+### Step 5: Check Your Balance (Terminal 4)
 
 ```bash
-# Check balance (after mining 100+ blocks)
+# Check wallet balance
 ./stokeswallet --testnet balance
 
 # Check block count
-./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetBlockCount
+./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetBlockCount
 ```
 
 **Congratulations! You're now mining Stokes!** 🎉
@@ -355,7 +365,7 @@ stokestest:qpkpllexmwjpdfru335psxssd3v8hs2l2gp8qv74gm8ajrrpxv2e7mmsr4ucq
 # Basic solo mining
 ./stokesminer --testnet \
   --miningaddr=stokestest:YOUR_ADDRESS \
-  --rpcserver=127.0.0.1:17710 \
+  --rpcserver=127.0.0.1:17210 \
   --mine-when-not-synced
 ```
 
@@ -377,7 +387,7 @@ stokestest:qpkpllexmwjpdfru335psxssd3v8hs2l2gp8qv74gm8ajrrpxv2e7mmsr4ucq
 
 ```bash
 # Check how many blocks you've mined
-./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetBlockCount
+./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetBlockCount
 
 # Check your balance (includes pending rewards)
 ./stokeswallet --testnet balance
@@ -397,7 +407,7 @@ To help the network, run a public node that accepts connections:
 ./stokesd --testnet \
   --utxoindex \
   --listen=0.0.0.0:17711 \
-  --rpclisten=0.0.0.0:17710 \
+  --rpclisten=0.0.0.0:17210 \
   --externalip=YOUR_PUBLIC_IP
 ```
 
@@ -409,7 +419,7 @@ sudo ufw allow 17711/tcp
 
 # Allow RPC (only if you want remote access)
 # WARNING: Secure your RPC with authentication!
-# sudo ufw allow 17710/tcp
+# sudo ufw allow 17210/tcp
 ```
 
 ### Connecting to Seed Nodes
@@ -440,7 +450,7 @@ sudo ufw allow 17711/tcp
 
 ```bash
 # 1. Check if port is already in use
-lsof -i :17710
+lsof -i :17210
 
 # 2. Kill existing process
 pkill stokesd
@@ -461,7 +471,7 @@ rm -rf ~/.stokes-testnet  # Linux
 
 ```bash
 # 1. Verify node is running
-./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetBlockCount
+./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetBlockCount
 
 # 2. Check node started with --utxoindex flag
 # Restart node with:
@@ -471,7 +481,7 @@ rm -rf ~/.stokes-testnet  # Linux
 pkill stokeswallet
 ./stokeswallet --testnet start-daemon \
   -f ~/stokes-wallet/keys.json \
-  -s 127.0.0.1:17710
+  -s 127.0.0.1:17210
 ```
 
 ### Miner Not Finding Blocks
@@ -501,7 +511,7 @@ pkill stokeswallet
 
 ```bash
 # Get current block count
-./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetBlockCount
+./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetBlockCount
 
 # Your first rewards become spendable at block 100
 # Second rewards at block 101, etc.
@@ -531,7 +541,7 @@ go build -o stokesd .
 | Network | P2P Port | RPC Port |
 | ------- | -------- | -------- |
 | Mainnet | 17611    | 17610    |
-| Testnet | 17711    | 17710    |
+| Testnet | 17711    | 17210    |
 | Simnet  | 17511    | 17510    |
 | Devnet  | 17611    | 17610    |
 
@@ -548,16 +558,16 @@ go build -o stokesd .
 
 ```bash
 # Get node info
-./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetInfo
+./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetInfo
 
 # Get block DAG info
-./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetBlockDagInfo
+./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetBlockDagInfo
 
 # Get peer info
-./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetConnectedPeerInfo
+./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetConnectedPeerInfo
 
 # Get mempool info
-./stokesctl --testnet --rpcserver=127.0.0.1:17710 GetMempoolEntries
+./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetMempoolEntries
 ```
 
 ## 🤝 Contributing
