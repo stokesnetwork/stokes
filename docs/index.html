@@ -380,8 +380,20 @@ go build -o stokeswallet ./cmd/stokeswallet
         </pre>
 
         <h3>Step 3: Start Testnet Node</h3>
+        <p><strong>Connect to public testnet seed nodes:</strong></p>
         <pre>
-# Start testnet node
+./stokesd --testnet \
+  --utxoindex \
+  --connect=95.216.155.253:17711 \
+  --connect=46.62.218.114:17711
+        </pre>
+        <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+          <strong>Seed Nodes:</strong><br>
+          • 95.216.155.253:17711 (Germany)<br>
+          • 46.62.218.114:17711 (Germany)
+        </p>
+        <p style="margin-top: 15px;"><em>Or run standalone (no network):</em></p>
+        <pre>
 ./stokesd --testnet --utxoindex --nodnsseed --nolisten
         </pre>
 

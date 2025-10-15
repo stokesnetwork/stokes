@@ -208,18 +208,26 @@ stokesd --version
 
 ### Step 1: Run a Node
 
+**Connect to public testnet seed nodes:**
+
 ```bash
-# Start testnet node
+./stokesd --testnet \
+  --utxoindex \
+  --connect=95.216.155.253:17711 \
+  --connect=46.62.218.114:17711
+```
+
+**Seed Nodes:**
+- `95.216.155.253:17711` (Germany)
+- `46.62.218.114:17711` (Germany)
+
+**Or run a standalone node (no network connection):**
+
+```bash
 ./stokesd --testnet \
   --utxoindex \
   --nodnsseed \
   --nolisten
-
-# For public node (accepts connections):
-./stokesd --testnet \
-  --utxoindex \
-  --listen=0.0.0.0:17711 \
-  --rpclisten=0.0.0.0:17710
 ```
 
 **What you'll see:**
