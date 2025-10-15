@@ -3,6 +3,7 @@
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/stokesnetwork/stokes)
 [![Testnet](https://img.shields.io/badge/testnet-live-green.svg)](https://stokesnetwork.github.io/stokes)
+[![Discord](https://img.shields.io/badge/discord-join-7289da.svg)](https://discord.gg/eMAcvMev)
 
 > **🧪 Currently in Public Testnet - [Join Testing Now!](#-quick-start-testnet)**
 
