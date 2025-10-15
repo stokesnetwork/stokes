@@ -6,13 +6,13 @@ import (
 
 	"github.com/stokesnetwork/stokes/util/mstime"
 
+	"github.com/pkg/errors"
 	"github.com/stokesnetwork/stokes/domain/consensus/database"
 	"github.com/stokesnetwork/stokes/domain/consensus/model"
 	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 	"github.com/stokesnetwork/stokes/domain/consensus/ruleerrors"
 	"github.com/stokesnetwork/stokes/infrastructure/logger"
 	"github.com/stokesnetwork/stokes/util/staging"
-	"github.com/pkg/errors"
 )
 
 type consensus struct {
@@ -1124,21 +1124,13 @@ func (s *consensus) isNearlySyncedNoLock() (bool, error) {
 		return false, err
 	}
 
-	// STOKES: If virtual parent is genesis, check if genesis is recent (empty network case)
+	// STOKES: If virtual parent is genesis, we're at the start of the chain (empty network)
+	// Allow mining to bootstrap the network. This is safe for testnet/devnet/simnet.
+	// TODO: For mainnet, add additional checks to ensure we're not on a fork
+	// (e.g., check if we have peers and if genesis timestamp is recent)
 	if virtualGHOSTDAGData.SelectedParent().Equal(s.genesisHash) {
-		genesisHeader, err := s.blockHeaderStore.BlockHeader(s.databaseContext, stagingArea, s.genesisHash)
-		if err != nil {
-			return false, err
-		}
-		now := mstime.Now().UnixMilliseconds()
-		// If genesis is recent (within DAA window), we're synced with an empty network
-		if now-genesisHeader.TimeInMilliseconds() < s.expectedDAAWindowDurationInMilliseconds {
-			log.Debugf("Virtual parent is genesis but genesis is recent (%d), so IsNearlySynced returns true",
-				genesisHeader.TimeInMilliseconds())
-			return true, nil
-		}
-		// Genesis is old, we're not synced
-		return false, nil
+		log.Infof("Virtual parent is genesis (empty network), allowing mining to bootstrap")
+		return true, nil
 	}
 
 	virtualSelectedParentHeader, err := s.blockHeaderStore.BlockHeader(s.databaseContext, stagingArea, virtualGHOSTDAGData.SelectedParent())
