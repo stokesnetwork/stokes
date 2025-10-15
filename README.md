@@ -591,10 +591,10 @@ go fmt ./...
 
 - **GitHub Issues:** [Report bugs](https://github.com/stokesnetwork/stokes/issues)
 - **Website:** [https://stokesnetwork.github.io/stokes](https://stokesnetwork.github.io/stokes)
+- **Discord:** [https://discord.gg/stokes](https://discord.gg/stokes)
 
 **Coming Soon:**
 
-- Discord server
 - Telegram group
 - Block explorer
 - Mining pools
