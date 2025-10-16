@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Stokes (StokesCoin) - Fair-launch cryptocurrency combining Kaspa's speed, Bitcoin's halving, and Ethereum's innovation. 12.6B fixed supply, sub-second blocks, pure PoW." />
+    <meta name="description" content="Stokes (StokesCoin) - Fair-launch cryptocurrency combining Kaspa's speed with Bitcoin's 21M supply and halving schedule. Bitcoin-equivalent emission, 50 blocks/sec, pure PoW." />
     <title>Stokes (STKS) - Kaspa's Speed, Bitcoin's Halving</title>
     <style>
       * {
@@ -217,8 +217,8 @@
 
         <h3>What's Working</h3>
         <ul style="font-size: 1.05em; line-height: 2; margin-left: 40px;">
-          <li>✅ Bitcoin-style halving (50 STKS → 25 → 12.5...)</li>
-          <li>✅ Sub-second block times via blockDAG</li>
+          <li>✅ Bitcoin-equivalent emission (21M supply, 4-year halvings)</li>
+          <li>✅ Sub-second block times via blockDAG (50 blocks/sec)</li>
           <li>✅ Solo and multi-node mining</li>
           <li>✅ Wallet creation and transactions</li>
           <li>✅ Full node synchronization</li>
@@ -251,8 +251,8 @@
           <p>Sub-second block times via blockDAG architecture powered by Kaspa's PHANTOM protocol</p>
         </div>
         <div class="feature">
-          <h3>💎 Bitcoin-Style Halving</h3>
-          <p>50 STKS → 25 → 12.5... every ~4 years. Proven deflationary model</p>
+          <h3>💎 Bitcoin-Equivalent Emission</h3>
+          <p>21M total supply with 4-year halvings. Same scarcity as Bitcoin, 500x the speed</p>
         </div>
         <div class="feature">
           <h3>🎯 Fair Launch</h3>
@@ -260,11 +260,11 @@
         </div>
         <div class="feature">
           <h3>🔒 Fixed Supply Cap</h3>
-          <p>12.6 billion STKS maximum supply. Predictable, deflationary economics</p>
+          <p>21 million STKS maximum supply. Bitcoin's proven scarcity model</p>
         </div>
         <div class="feature">
           <h3>🌐 High Throughput</h3>
-          <p>Scalable parallel block processing for real-world adoption</p>
+          <p>50 blocks/sec parallel processing - 500x faster than Bitcoin</p>
         </div>
         <div class="feature">
           <h3>🔐 Proven Security</h3>
@@ -311,7 +311,7 @@
           </tr>
           <tr>
             <td><strong>Supply</strong></td>
-            <td>12.6B fixed</td>
+            <td>21M fixed</td>
             <td>21M fixed</td>
             <td>28.7B fixed</td>
           </tr>
@@ -621,9 +621,10 @@ pkill stokeswallet
 
         <h3>Mining Rewards</h3>
         <ul style="font-size: 1.1em; line-height: 2; margin-left: 40px;">
-          <li><strong>Current Reward:</strong> 50 STKS per block</li>
+          <li><strong>Current Reward:</strong> 0.0016667 STKS per block</li>
+          <li><strong>Daily Emission:</strong> ~7,200 STKS/day (same as Bitcoin's 7,200 BTC/day)</li>
           <li><strong>Maturity:</strong> 100 blocks (coins spendable after 100 confirmations)</li>
-          <li><strong>Block Time:</strong> ~1 second average</li>
+          <li><strong>Block Time:</strong> ~1 second average (50 blocks/sec throughput)</li>
         </ul>
 
         <h3>Useful Commands</h3>
@@ -670,51 +671,65 @@ pkill stokeswallet
 
       <h2 class="section-title">Emission Schedule</h2>
       <div class="guide-section">
+        <p style="font-size: 1.15em; margin-bottom: 20px; color: #667eea; font-weight: 600;">
+          Bitcoin-Equivalent Emission: 21M total supply, 4-year halvings, identical daily issuance rate
+        </p>
         <table class="comparison-table">
           <thead>
             <tr>
               <th>Era</th>
-              <th>Block Range</th>
-              <th>Reward</th>
-              <th>Duration</th>
-              <th>Total Mined</th>
+              <th>Years</th>
+              <th>Reward/Block</th>
+              <th>STKS This Era</th>
+              <th>Cumulative</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>0</td>
-              <td>0 - 126.23M</td>
-              <td>50 STKS</td>
-              <td>~4 years</td>
-              <td>6.31B STKS</td>
-            </tr>
-            <tr>
               <td>1</td>
-              <td>126.23M - 252.46M</td>
-              <td>25 STKS</td>
-              <td>~4 years</td>
-              <td>3.16B STKS</td>
+              <td>0-4</td>
+              <td>0.0016667 STKS</td>
+              <td>10.52M</td>
+              <td>10.52M (50%)</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>252.46M - 378.69M</td>
-              <td>12.5 STKS</td>
-              <td>~4 years</td>
-              <td>1.58B STKS</td>
+              <td>4-8</td>
+              <td>0.00083335 STKS</td>
+              <td>5.26M</td>
+              <td>15.78M (75%)</td>
             </tr>
             <tr>
-              <td>3+</td>
-              <td>...</td>
+              <td>3</td>
+              <td>8-12</td>
+              <td>0.000416675 STKS</td>
+              <td>2.63M</td>
+              <td>18.41M (87.7%)</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>12-16</td>
+              <td>0.0002083375 STKS</td>
+              <td>1.31M</td>
+              <td>19.72M (93.9%)</td>
+            </tr>
+            <tr>
+              <td>5+</td>
+              <td>16+</td>
               <td>Continues halving</td>
-              <td>~4 years each</td>
               <td>...</td>
+              <td>→ 21M</td>
             </tr>
             <tr style="background: #f0f0f0; font-weight: 600;">
               <td colspan="4"><strong>Total Maximum Supply</strong></td>
-              <td><strong>12.6 Billion STKS</strong></td>
+              <td><strong>21 Million STKS</strong></td>
             </tr>
           </tbody>
         </table>
+        <p style="margin-top: 20px; font-size: 1.05em; color: #666;">
+          <strong>Daily Issuance:</strong> ~7,200 STKS/day (first era) - identical to Bitcoin's 7,200 BTC/day<br>
+          <strong>Comparison:</strong> Same total supply and emission timeline as Bitcoin, but 500x more throughput
+        </p>
       </div>
 
       <h2 class="section-title">Contributing</h2>

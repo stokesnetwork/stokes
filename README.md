@@ -24,10 +24,10 @@ Stokes is a **fair-launch cryptocurrency** designed for long-term value accrual 
 ### Core Features
 
 - ⚡ **Instant Confirmations** - Sub-second block times via blockDAG architecture
-- 💎 **Bitcoin-Style Halving** - 50 STKS → 25 → 12.5... every ~4 years
-- 🔒 **Fixed Supply Cap** - 12.6 billion STKS maximum (vs Bitcoin's 21M)
+- 💎 **Bitcoin-Style Halving** - 0.0016667 STKS → 0.00083335 → ... every ~4 years
+- 🔒 **Fixed Supply Cap** - 21 million STKS maximum (Bitcoin-equivalent)
 - 🎯 **Fair Launch** - No premine, no ICO, no VC allocation
-- 🌐 **High Throughput** - Scalable parallel block processing
+- 🌐 **High Throughput** - 50 blocks/sec parallel processing (500x Bitcoin)
 - 🔐 **Proven Security** - Battle-tested PHANTOM consensus
 
 ### Why Stokes?
@@ -48,20 +48,27 @@ Stokes is a **fair-launch cryptocurrency** designed for long-term value accrual 
 | Feature        | Stokes                | Kaspa                     |
 | -------------- | --------------------- | ------------------------- |
 | **Emission**   | Bitcoin-style halving | Smooth chromatic emission |
-| **Supply**     | 12.6B fixed cap       | 28.7B fixed cap           |
+| **Supply**     | 21M fixed cap         | 28.7B fixed cap           |
 | **Halvings**   | Every ~4 years        | No halvings               |
-| **Philosophy** | Deflationary scarcity | Smooth distribution       |
+| **Philosophy** | Bitcoin scarcity      | Smooth distribution       |
 | **Network**    | Independent genesis   | Original Kaspa network    |
 
 ## 📊 Emission Schedule
 
-| Block Range       | Reward    | Duration | Total STKS |
-| ----------------- | --------- | -------- | ---------- |
-| 0 - 126.23M       | 50 STKS   | ~4 years | 6.31B      |
-| 126.23M - 252.46M | 25 STKS   | ~4 years | 3.16B      |
-| 252.46M - 378.69M | 12.5 STKS | ~4 years | 1.58B      |
-| ...               | ...       | ...      | ...        |
-| **Total**         |           |          | **12.6B**  |
+**Bitcoin-Equivalent Emission:** 21M total supply, 4-year halvings
+
+| Era | Years | Reward/Block | STKS This Era | Cumulative |
+| --- | ----- | ------------ | ------------- | ---------- |
+| 1   | 0-4   | 0.0016667    | 10.52M        | 10.52M (50%) |
+| 2   | 4-8   | 0.00083335   | 5.26M         | 15.78M (75%) |
+| 3   | 8-12  | 0.000416675  | 2.63M         | 18.41M (87.7%) |
+| 4   | 12-16 | 0.0002083375 | 1.31M         | 19.72M (93.9%) |
+| ... | ...   | ...          | ...           | ...        |
+| **Total** |   |              |               | **21M STKS** |
+
+**Daily Issuance:** ~7,200 STKS/day (first era) - identical to Bitcoin's 7,200 BTC/day
+
+See [EMISSION_SCHEDULE.md](EMISSION_SCHEDULE.md) for complete details.
 
 ## 🚀 Current Status
 
@@ -71,13 +78,14 @@ We're in public testnet to ensure a fair, bug-free mainnet launch. Join us in te
 
 **What's Working:**
 
-- ✅ Bitcoin-style halving (50 STKS → 25 → 12.5...)
-- ✅ Sub-second block times via blockDAG
+- ✅ Bitcoin-equivalent emission (21M supply, 4-year halvings)
+- ✅ Sub-second block times via blockDAG (50 blocks/sec)
 - ✅ Solo and multi-node mining
 - ✅ Wallet creation and transactions
 - ✅ Full node synchronization
 
 **What We're Testing:**
+
 - 🧪 Network stability under load
 - 🧪 Halving mechanism accuracy
 - 🧪 Mining difficulty adjustment
@@ -85,6 +93,7 @@ We're in public testnet to ensure a fair, bug-free mainnet launch. Join us in te
 - 🧪 Wallet security and usability
 
 **Coming Soon:**
+
 - 📅 Mainnet launch date announcement
 - 🌐 Public seed nodes
 - 📊 Block explorer
@@ -100,6 +109,7 @@ We're in public testnet to ensure a fair, bug-free mainnet launch. Join us in te
 **Current Status:** Public Testnet Testing
 
 Stokes is currently in **testnet phase** to:
+
 - 🧪 Test the Bitcoin-style halving implementation
 - 🐛 Identify and fix bugs before mainnet
 - 👥 Build community and gather feedback
@@ -111,6 +121,7 @@ Stokes is currently in **testnet phase** to:
 ### Why Testnet First?
 
 We're committed to a **fair launch** where everyone starts together. By removing the mainnet genesis until launch day, we ensure:
+
 - ✅ No pre-mining possible
 - ✅ No insider advantage
 - ✅ Transparent development process
@@ -221,6 +232,7 @@ Try connecting to the public testnet seed nodes:
 ```
 
 **Seed Nodes:**
+
 - `95.216.155.253:17711` (Germany)
 - `46.62.218.114:17711` (Germany)
 
@@ -406,23 +418,35 @@ stokestest:qpkpllexmwjp...
 
 **Mining rewards:**
 
-- Current: **50 STKS** per block
+- Current: **0.0016667 STKS** per block (Bitcoin-equivalent emission)
+- Daily emission: **~7,200 STKS/day** (same as Bitcoin's 7,200 BTC/day)
 - Coinbase maturity: **100 blocks** (coins spendable after 100 confirmations)
-- Block time: ~1 second average
+- Block time: ~1 second average (50 blocks/sec throughput)
 
 ### Checking Mining Progress
 
-```bash
+````bash
 # Check how many blocks you've mined
 ./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetBlockCount
 
 # Check your balance (includes pending rewards)
+Ensure your wallet daemon is running:
+
+```bash
+./stokeswallet --testnet start-daemon \
+   ~/stokes-wallet-testnet/keys.json \
+  -s 127.0.0.1:17210
+````
+
 ./stokeswallet --testnet balance
 
 # Monitor miner output for:
+
 # [INF] KSMN: Found block ...
+
 # [INF] KSMN: Current hash rate is X Khash/s
-```
+
+````
 
 ## 🔧 Advanced Configuration
 
@@ -436,7 +460,7 @@ To help the network, run a public node that accepts connections:
   --listen=0.0.0.0:17711 \
   --rpclisten=0.0.0.0:17210 \
   --externalip=YOUR_PUBLIC_IP
-```
+````
 
 **Firewall configuration:**
 
@@ -474,6 +498,7 @@ sudo ufw allow 17711/tcp
 **Problem:** Connection errors or timeouts when trying to connect to seed nodes
 
 **Error messages you might see:**
+
 ```
 [ERR] TXMP: status error from connectionLoops for 95.216.155.253:17711
 error reading from server: read tcp ... connection timeout
@@ -527,7 +552,7 @@ rm -rf ~/.kaspad/stokes-testnet  # Linux
 # 3. Restart wallet daemon
 pkill stokeswallet
 ./stokeswallet --testnet start-daemon \
-  -f ~/stokes-wallet/keys.json \
+  -f ~/stokes-wallet-testnet/keys.json \
   -s 127.0.0.1:17210
 ```
 

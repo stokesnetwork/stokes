@@ -48,13 +48,17 @@ const (
 	// in block take longer)
 	defaultMergeSetSizeLimit                       = defaultGHOSTDAGK * 10
 	
-	// STOKES: Bitcoin-style halving emission parameters
+	// STOKES: Bitcoin-style halving emission parameters scaled for DAG
+	// Replicates Bitcoin's 21M supply and emission curve for high-throughput DAG
+	// At 50 blocks/sec, reward is scaled down to match Bitcoin's issuance rate
 	// Genesis block reward (first block only)
-	defaultSubsidyGenesisReward                    = 50 * constants.SompiPerStokes
-	// Initial block reward: 50 STKS (matches Bitcoin's initial reward)
-	defaultPreDeflationaryPhaseBaseSubsidy         = 50 * constants.SompiPerStokes
+	defaultSubsidyGenesisReward                    = 0.0016667 * constants.SompiPerStokes
+	// Initial block reward: 0.0016667 STKS (equivalent to Bitcoin's 50 BTC scaled for DAG)
+	// At 50 blocks/sec: ~7,200 STKS/day, ~2.63M STKS/year (first era)
+	// Total supply: 21M STKS with 4-year halving schedule (Bitcoin-equivalent)
+	defaultPreDeflationaryPhaseBaseSubsidy         = 0.0016667 * constants.SompiPerStokes
 	// This is unused in halving model but kept for compatibility
-	defaultDeflationaryPhaseBaseSubsidy            = 50 * constants.SompiPerStokes
+	defaultDeflationaryPhaseBaseSubsidy            = 0.0016667 * constants.SompiPerStokes
 	
 	defaultCoinbasePayloadScriptPublicKeyMaxLength = 150
 	// defaultDifficultyAdjustmentWindowSize is the number of blocks in a block's past used to calculate its difficulty
