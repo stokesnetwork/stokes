@@ -412,35 +412,36 @@ go build -o stokeswallet ./cmd/stokeswallet
           <strong>⚠️ Keep this terminal open! The node must stay running.</strong>
         </p>
 
-        <h3>Step 4: Create Wallet (Terminal 2)</h3>
+        <h3>Step 4: Create Wallet & Get Mining Address (One Time Setup)</h3>
         <pre>
-# Create wallet (one-time setup)
-./stokeswallet --testnet create -f ~/stokes-wallet/keys.json
+# Create wallet
+./stokeswallet --testnet create -f ~/stokes-wallet-testnet/keys.json
 
-# Start wallet daemon (keep this terminal open)
-./stokeswallet --testnet start-daemon \
-  -f ~/stokes-wallet/keys.json \
-  -s 127.0.0.1:17210
-        </pre>
+# You'll be prompted for a password
+# SAVE YOUR SEED PHRASE - This is your backup!
 
-        <h3>Step 5: Get Mining Address (Terminal 3)</h3>
-        <pre>
 # Get a new address to receive mining rewards
-./stokeswallet --testnet new-address
+./stokeswallet --testnet new-address -f ~/stokes-wallet-testnet/keys.json
         </pre>
+        
+        <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+          <strong>Example output:</strong><br>
+          New address: stokestest:qpkqllexmwjp...<br>
+          <strong>Copy this address - you'll need it for mining!</strong>
+        </p>
 
-        <h3>Step 6: Start Mining (Terminal 3 - Keep Open)</h3>
+        <h3>Step 5: Start Mining (Terminal 2 - Keep Open)</h3>
         
         <h4 style="color: #667eea; margin-top: 20px;">If connected to seed nodes (Option A):</h4>
         <pre>
-# Replace YOUR_ADDRESS with address from Step 5
+# Replace YOUR_ADDRESS with address from Step 4
 ./stokesminer --testnet \
   --miningaddr=stokestest:YOUR_ADDRESS
         </pre>
         
         <h4 style="color: #667eea; margin-top: 20px;">If running standalone (Option B):</h4>
         <pre>
-# Replace YOUR_ADDRESS with address from Step 5
+# Replace YOUR_ADDRESS with address from Step 4
 ./stokesminer --testnet \
   --miningaddr=stokestest:YOUR_ADDRESS \
   --mine-when-not-synced
@@ -450,7 +451,18 @@ go build -o stokeswallet ./cmd/stokeswallet
           <strong>Note:</strong> The <code>--mine-when-not-synced</code> flag is only needed for standalone/local mining. When connected to seed nodes, your node will sync existing blocks first, then start mining safely.
         </p>
 
-        <h3>Step 7: Check Balance</h3>
+        <h3>Step 6: Start Wallet Daemon (Terminal 3 - Keep Open)</h3>
+        <p><strong>To check your balance, you need the wallet daemon running:</strong></p>
+        <pre>
+./stokeswallet --testnet start-daemon \
+  -f ~/stokes-wallet-testnet/keys.json \
+  -s 127.0.0.1:17210
+        </pre>
+        <p style="margin-top: 10px; font-size: 0.9em; color: #e74c3c;">
+          <strong>⚠️ Keep Terminal 3 open! The wallet daemon must stay running to check balances.</strong>
+        </p>
+
+        <h3>Step 7: Check Balance (Terminal 4 - Run When Needed)</h3>
         <pre>
 # Check your balance (after mining 100+ blocks)
 ./stokeswallet --testnet balance

@@ -57,14 +57,14 @@ Stokes is a **fair-launch cryptocurrency** designed for long-term value accrual 
 
 **Bitcoin-Equivalent Emission:** 21M total supply, 4-year halvings
 
-| Era | Years | Reward/Block | STKS This Era | Cumulative |
-| --- | ----- | ------------ | ------------- | ---------- |
-| 1   | 0-4   | 0.0016667    | 10.52M        | 10.52M (50%) |
-| 2   | 4-8   | 0.00083335   | 5.26M         | 15.78M (75%) |
-| 3   | 8-12  | 0.000416675  | 2.63M         | 18.41M (87.7%) |
-| 4   | 12-16 | 0.0002083375 | 1.31M         | 19.72M (93.9%) |
-| ... | ...   | ...          | ...           | ...        |
-| **Total** |   |              |               | **21M STKS** |
+| Era       | Years | Reward/Block | STKS This Era | Cumulative     |
+| --------- | ----- | ------------ | ------------- | -------------- |
+| 1         | 0-4   | 0.0016667    | 10.52M        | 10.52M (50%)   |
+| 2         | 4-8   | 0.00083335   | 5.26M         | 15.78M (75%)   |
+| 3         | 8-12  | 0.000416675  | 2.63M         | 18.41M (87.7%) |
+| 4         | 12-16 | 0.0002083375 | 1.31M         | 19.72M (93.9%) |
+| ...       | ...   | ...          | ...           | ...            |
+| **Total** |       |              |               | **21M STKS**   |
 
 **Daily Issuance:** ~7,200 STKS/day (first era) - identical to Bitcoin's 7,200 BTC/day
 
@@ -228,13 +228,13 @@ Try connecting to the public testnet seed nodes:
 ./stokesd --testnet \
   --utxoindex \
   --connect=95.216.155.253:17711 \
-  --connect=46.62.218.114:17711
+  --connect=157.90.151.188:17711
 ```
 
 **Seed Nodes:**
 
 - `95.216.155.253:17711` (Germany)
-- `46.62.218.114:17711` (Germany)
+- `157.90.151.188:17711` (Germany)
 
 **What you'll see if successful:**
 
@@ -242,7 +242,7 @@ Try connecting to the public testnet seed nodes:
 [INF] STKS: Version 0.12.22
 [INF] STKS: UTXO index started
 [INF] TXMP: P2P Connected to 95.216.155.253:17711
-[INF] TXMP: P2P Connected to 46.62.218.114:17711
+[INF] TXMP: P2P Connected to 157.90.151.188:17711
 [INF] TXMP: RPC Server listening on [::]:17210
 ```
 
@@ -269,40 +269,29 @@ If you want to test locally without connecting to the network, or if connection 
 
 **⚠️ Keep this terminal open! The node must stay running.**
 
-### Step 2: Create a Wallet (Terminal 2 - One Time Setup)
+### Step 2: Create a Wallet & Get Mining Address (One Time Setup)
 
 ```bash
 # Create new wallet
-./stokeswallet --testnet create -f ~/stokes-wallet/keys.json
+./stokeswallet --testnet create -f ~/stokes-wallet-testnet/keys.json
 
 # You'll be prompted for a password
 # SAVE YOUR SEED PHRASE - This is your backup!
 
-# Start wallet daemon (keep this terminal open too)
-./stokeswallet --testnet start-daemon \
-  -f ~/stokes-wallet/keys.json \
-  -s 127.0.0.1:17210
-```
-
-**⚠️ Keep Terminal 2 open! The wallet daemon must stay running.**
-
-### Step 3: Get Mining Address (Terminal 3)
-
-```bash
 # Get a new address to receive mining rewards
-./stokeswallet --testnet new-address
+./stokeswallet --testnet new-address -f ~/stokes-wallet-testnet/keys.json
 ```
 
 **Example output:**
 
 ```
 New address:
-stokestest:qpkpllexmwjp...
+stokestest:qpkqllexmwjp...
 ```
 
 **Copy this address - you'll need it for mining!**
 
-### Step 4: Start Mining (Terminal 3 - Keep Open)
+### Step 3: Start Mining (Terminal 2 - Keep Open)
 
 **If connected to seed nodes (Option A):**
 
@@ -331,6 +320,18 @@ stokestest:qpkpllexmwjp...
 [INF] KSMN: Current hash rate is 160.02 Khash/s
 ```
 
+### Step 4: Start Wallet Daemon (Terminal 3 - Keep Open)
+
+**To check your balance, you need the wallet daemon running:**
+
+```bash
+./stokeswallet --testnet start-daemon \
+  -f ~/stokes-wallet-testnet/keys.json \
+  -s 127.0.0.1:17210
+```
+
+**⚠️ Keep Terminal 3 open! The wallet daemon must stay running to check balances.**
+
 ### Step 5: Check Your Balance (Terminal 4 - Run When Needed)
 
 ```bash
@@ -340,6 +341,8 @@ stokestest:qpkpllexmwjp...
 # Check block count
 ./stokesctl --testnet --rpcserver=127.0.0.1:17210 GetBlockCount
 ```
+
+**Note:** Coins need 100 blocks of confirmations before they're spendable.
 
 **Congratulations! You're now mining Stokes!** 🎉
 
