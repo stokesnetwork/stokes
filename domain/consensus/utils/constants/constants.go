@@ -20,10 +20,10 @@ const (
 	SompiPerKaspa = SompiPerStokes
 
 	// MaxSompi is the maximum transaction amount allowed in sompi.
-	// STOKES: Set to 21M STKS to replicate Bitcoin's scarcity and emission curve
-	// Formula: 6,311,520,000 blocks/halving × 0.0016667 STKS × 2 (geometric series) ≈ 21M STKS
-	// At 50 blocks/sec DAG throughput with 4-year halvings (Bitcoin-equivalent schedule)
-	MaxSompi = uint64(21_000_000 * SompiPerStokes)
+	// STOKES: Set to 12.6 billion STKS based on 50 STKS initial reward + 4-year halving
+	// Formula: 126,230,400 blocks/halving × 50 STKS × 2 (geometric series) = 12,623,040,000 STKS
+	// To change to 21M supply, reduce initial reward to 8.32 STKS in consensus_defaults.go
+	MaxSompi = uint64(12_623_040_000 * SompiPerStokes)
 
 	// MaxTxInSequenceNum is the maximum sequence number the sequence field
 	// of a transaction input can be.
