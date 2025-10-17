@@ -20,9 +20,12 @@ const (
 	SompiPerKaspa = SompiPerStokes
 
 	// MaxSompi is the maximum transaction amount allowed in sompi.
-	// STOKES: Set to 12.6 billion STKS based on 50 STKS initial reward + 4-year halving
-	// Formula: 126,230,400 blocks/halving × 50 STKS × 2 (geometric series) = 12,623,040,000 STKS
-	// To change to 21M supply, reduce initial reward to 8.32 STKS in consensus_defaults.go
+	// STOKES: Network-specific max supplies:
+	//   - TESTNET/MAINNET: ~12.6B STKS (50 STKS/block, 1 BPS, 4-year halving)
+	//     Formula: 126,230,400 blocks/halving × 50 STKS × 2 (geometric series) = 12,623,040,000 STKS
+	//   - DEVNET: 100M STKS (0.001585 STKS/block, 50 BPS, 4-year halving)
+	//     Formula: 6,311,520,000 blocks/halving × 0.001585 STKS × 2 (geometric series) ≈ 100,000,000 STKS
+	// This constant is set to the larger value to accommodate all networks
 	MaxSompi = uint64(12_623_040_000 * SompiPerStokes)
 
 	// MaxTxInSequenceNum is the maximum sequence number the sequence field

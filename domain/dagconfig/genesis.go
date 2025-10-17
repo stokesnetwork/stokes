@@ -5,18 +5,19 @@
 package dagconfig
 
 import (
+	"math/big"
+
 	"github.com/kaspanet/go-muhash"
 	"github.com/stokesnetwork/stokes/domain/consensus/model/externalapi"
 	"github.com/stokesnetwork/stokes/domain/consensus/utils/blockheader"
 	"github.com/stokesnetwork/stokes/domain/consensus/utils/subnetworks"
 	"github.com/stokesnetwork/stokes/domain/consensus/utils/transactionhelper"
-	"math/big"
 )
 
 // ============================================================
 // MAINNET GENESIS - STOKES
 // ============================================================
-// 
+//
 // ⚠️ MAINNET GENESIS REMOVED FOR FAIR LAUNCH ⚠️
 //
 // Mainnet genesis will be generated on launch day to ensure:
@@ -43,9 +44,11 @@ var genesisBlock = externalapi.DomainBlock{} // Empty - will be set on launch
 
 var devnetGenesisTxOuts = []*externalapi.DomainTransactionOutput{}
 
+// STOKES: Updated devnet genesis payload with new reward structure
+// Subsidy: 0.007922022 STKS = 792,202 sompi = 0xC168A in hex (little-endian: 0x8A, 0x16, 0x0C)
 var devnetGenesisTxPayload = []byte{
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Blue score
-	0x00, 0xf2, 0x05, 0x2a, 0x01, 0x00, 0x00, 0x00, // Subsidy (50 STKS)
+	0x8A, 0x16, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, // Subsidy (0.007922022 STKS = 792,202 sompi)
 	0x00, 0x00, 0x0e, 0x00, 0x73, 0x74, 0x6f, 0x6b, // Script version
 	0x65, 0x73, 0x2d, 0x64, 0x65, 0x76, 0x6e, 0x65, // stokes-devnet
 	0x74,
@@ -59,24 +62,28 @@ var devnetGenesisCoinbaseTx = transactionhelper.NewSubnetworkTransaction(0,
 
 // devGenesisHash is the hash of the first block in the block DAG for the development
 // network (genesis block).
+// STOKES: Updated for new devnet economic model (0.007922022 STKS/block, 100M max supply)
+// Using testnet bits (511705087) for easier local mining
 var devnetGenesisHash = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
-	0x90, 0xd1, 0x69, 0xc8, 0x33, 0x6c, 0xa6, 0x20,
-	0x88, 0x27, 0x11, 0x41, 0xa5, 0xd2, 0xc6, 0x10,
-	0xfd, 0x20, 0xac, 0x91, 0x3f, 0x67, 0x8e, 0x17,
-	0x11, 0x54, 0x2b, 0xfd, 0x9a, 0x73, 0x20, 0x58,
+	0x52, 0xab, 0x24, 0xbf, 0x79, 0xf7, 0x2d, 0xc5,
+	0x37, 0xb5, 0xf3, 0x5e, 0xec, 0x8c, 0x0a, 0xde,
+	0xb0, 0xf8, 0xab, 0x7b, 0x81, 0x4a, 0xb8, 0xbd,
+	0xf1, 0xf3, 0xc5, 0x79, 0xa5, 0x8e, 0xb7, 0x3e,
 })
 
 // devnetGenesisMerkleRoot is the hash of the first transaction in the genesis block
 // for the devopment network.
+// STOKES: Updated for new devnet economic model (0.007922022 STKS/block, 100M max supply)
 var devnetGenesisMerkleRoot = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
-	0x71, 0x70, 0x4e, 0x57, 0x9b, 0x26, 0x9d, 0xd6,
-	0x8f, 0xa8, 0x42, 0xcd, 0xca, 0x04, 0x38, 0x33,
-	0x19, 0xab, 0x11, 0x6c, 0xd4, 0xbf, 0x17, 0xda,
-	0xd7, 0x4a, 0x9b, 0x5d, 0x13, 0x49, 0xa8, 0xd6,
+	0x19, 0x03, 0x36, 0xdb, 0xa4, 0xe7, 0xa3, 0x6e,
+	0xd3, 0x61, 0x60, 0xb9, 0x47, 0xad, 0xc4, 0xa5,
+	0xf7, 0x7c, 0x5d, 0xeb, 0x70, 0x00, 0x7f, 0x92,
+	0xf9, 0x67, 0x38, 0xf1, 0x68, 0xd3, 0xb9, 0x56,
 })
 
 // devnetGenesisBlock defines the genesis block of the block DAG which serves as the
 // public transaction ledger for the development network.
+// STOKES: Using same bits as testnet (511705087) for easier local mining
 var devnetGenesisBlock = externalapi.DomainBlock{
 	Header: blockheader.NewImmutableBlockHeader(
 		0,
@@ -85,7 +92,7 @@ var devnetGenesisBlock = externalapi.DomainBlock{
 		&externalapi.DomainHash{},
 		externalapi.NewDomainHashFromByteArray(muhash.EmptyMuHashHash.AsArray()),
 		1760309945665,
-		298590,
+		511705087,
 		0,
 		0,
 		0,

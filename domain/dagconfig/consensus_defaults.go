@@ -48,13 +48,27 @@ const (
 	// in block take longer)
 	defaultMergeSetSizeLimit                       = defaultGHOSTDAGK * 10
 	
-	// STOKES: Bitcoin-style halving emission parameters
+	// STOKES: Bitcoin-style halving emission parameters (TESTNET/MAINNET)
 	// Genesis block reward (first block only)
 	defaultSubsidyGenesisReward                    = 50 * constants.SompiPerStokes
 	// Initial block reward: 50 STKS (matches Bitcoin's initial reward)
 	defaultPreDeflationaryPhaseBaseSubsidy         = 50 * constants.SompiPerStokes
 	// This is unused in halving model but kept for compatibility
 	defaultDeflationaryPhaseBaseSubsidy            = 50 * constants.SompiPerStokes
+	
+	// STOKES: DEVNET-specific emission parameters (100M max supply)
+	// Devnet uses a much lower reward to test the new economic model
+	// Calculation for 100M max supply with 4-year halving:
+	//   - Halving interval: 6,311,520,000 blocks (4 years at 50 BPS)
+	//   - Geometric series: max_supply = first_period × 2
+	//   - First period: 100M / 2 = 50M STKS
+	//   - Reward per block: 50M / 6,311,520,000 = 0.007922022 STKS/block
+	//   - In sompi: 0.007922022 × 100,000,000 = 792,202.2 sompi ≈ 792,202 sompi
+	// Blocks per second: 50 (20ms per block)
+	// Daily emission: ~34,239 STKS (4,320,000 blocks/day × 0.007922022)
+	devnetSubsidyGenesisReward                     = 792202 // 0.007922022 STKS in sompi
+	devnetPreDeflationaryPhaseBaseSubsidy          = 792202 // 0.007922022 STKS in sompi
+	devnetDeflationaryPhaseBaseSubsidy             = 792202 // 0.007922022 STKS in sompi
 	
 	defaultCoinbasePayloadScriptPublicKeyMaxLength = 150
 	// defaultDifficultyAdjustmentWindowSize is the number of blocks in a block's past used to calculate its difficulty
@@ -78,14 +92,21 @@ const (
 	// Should be parametrized such that the average width of the DAG is about defaultMaxBlockParents and such that most of the
 	// time the width of the DAG is at most defaultGHOSTDAGK.
 	defaultTargetTimePerBlock = 1 * time.Second
+	
+	// STOKES: DEVNET uses 50 blocks/second (20ms per block) for high-throughput testing
+	devnetTargetTimePerBlock = 20 * time.Millisecond
 
 	defaultPruningProofM = 1000
 
-	// STOKES: Halving interval configuration
+	// STOKES: Halving interval configuration (TESTNET/MAINNET)
 	// Bitcoin halves every 210,000 blocks (~4 years at 10 min/block)
 	// STOKES targets 1 block/second, so 4 years = 4 * 365.25 * 24 * 60 * 60 = 126,230,400 seconds
 	// We use DAA score (which approximates seconds) for halving intervals
 	defaultHalvingIntervalDaaScore = uint64(4 * 365.25 * 24 * 60 * 60) // ~126.23M blocks (4 years)
+	
+	// STOKES: DEVNET halving interval (50 blocks/second)
+	// 4 years at 50 blocks/second = 4 * 365.25 * 24 * 60 * 60 * 50 = 6,311,520,000 blocks
+	devnetHalvingIntervalDaaScore = uint64(4 * 365.25 * 24 * 60 * 60 * 50) // ~6.31B blocks (4 years at 50 BPS)
 	
 	// defaultDeflationaryPhaseDaaScore is kept for compatibility but unused in halving model
 	// In STOKES, halving starts immediately after genesis (no pre-deflationary phase)

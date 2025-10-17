@@ -409,6 +409,7 @@ var SimnetParams = Params{
 }
 
 // DevnetParams defines the network parameters for the development Kaspa network.
+// STOKES: Devnet uses new economic model with 100M max supply and 50 blocks/second
 var DevnetParams = Params{
 	K:           defaultGHOSTDAGK,
 	Name:        "stokes-devnet",
@@ -422,10 +423,12 @@ var DevnetParams = Params{
 	GenesisHash:                     devnetGenesisHash,
 	PowMax:                          devnetPowMax,
 	BlockCoinbaseMaturity:           100,
-	SubsidyGenesisReward:            defaultSubsidyGenesisReward,
-	PreDeflationaryPhaseBaseSubsidy: defaultPreDeflationaryPhaseBaseSubsidy,
-	DeflationaryPhaseBaseSubsidy:    defaultDeflationaryPhaseBaseSubsidy,
-	TargetTimePerBlock:              defaultTargetTimePerBlock,
+	// STOKES: Devnet-specific rewards (0.001585 STKS/block for 100M max supply)
+	SubsidyGenesisReward:            devnetSubsidyGenesisReward,
+	PreDeflationaryPhaseBaseSubsidy: devnetPreDeflationaryPhaseBaseSubsidy,
+	DeflationaryPhaseBaseSubsidy:    devnetDeflationaryPhaseBaseSubsidy,
+	// STOKES: Devnet runs at 50 blocks/second (20ms per block)
+	TargetTimePerBlock:              devnetTargetTimePerBlock,
 	FinalityDuration:                defaultFinalityDuration,
 	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
 	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
@@ -453,7 +456,8 @@ var DevnetParams = Params{
 	// EnableNonNativeSubnetworks enables non-native/coinbase transactions
 	EnableNonNativeSubnetworks: false,
 
-	DisableDifficultyAdjustment: false,
+	// STOKES: Disable difficulty adjustment for devnet to make local testing easier
+	DisableDifficultyAdjustment: true,
 
 	MaxCoinbasePayloadLength:                defaultMaxCoinbasePayloadLength,
 	MaxBlockMass:                            defaultMaxBlockMass,
@@ -465,7 +469,8 @@ var DevnetParams = Params{
 	CoinbasePayloadScriptPublicKeyMaxLength: defaultCoinbasePayloadScriptPublicKeyMaxLength,
 	PruningProofM:                           defaultPruningProofM,
 	DeflationaryPhaseDaaScore:               defaultDeflationaryPhaseDaaScore,
-	HalvingIntervalDaaScore:                 defaultHalvingIntervalDaaScore,
+	// STOKES: Devnet halving interval (4 years at 50 blocks/second)
+	HalvingIntervalDaaScore:                 devnetHalvingIntervalDaaScore,
 
 	MaxBlockLevel: 250,
 	MergeDepth:    defaultMergeDepth,

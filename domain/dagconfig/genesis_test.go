@@ -13,6 +13,12 @@ import (
 // TestGenesisBlock tests the genesis block of the main network for validity by
 // checking the encoded hash.
 func TestGenesisBlock(t *testing.T) {
+	// STOKES: Mainnet genesis is nil for fair launch - skip this test
+	if MainnetParams.GenesisBlock == nil || MainnetParams.GenesisHash == nil {
+		t.Skip("Mainnet genesis not yet generated (fair launch)")
+		return
+	}
+	
 	// Check hash of the block against expected hash.
 	hash := consensushashing.BlockHash(MainnetParams.GenesisBlock)
 	if !MainnetParams.GenesisHash.Equal(hash) {
